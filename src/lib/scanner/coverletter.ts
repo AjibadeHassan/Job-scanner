@@ -1,5 +1,5 @@
-// Cover Letter Generator — creates professional, heavily humanized cover letters
-import ZAI from 'z-ai-web-dev-sdk'
+// Cover Letter Generator — uses Gemini API with template fallback
+import { getAIClient, type ChatMessage } from './ai'
 import { type CandidateProfile, buildProfileContext } from './profile'
 import { type MatchedJob } from './matcher'
 
@@ -7,11 +7,15 @@ export async function generateCoverLetter(
   job: MatchedJob,
   profile: CandidateProfile
 ): Promise<string> {
-  // Retry with exponential backoff (handles 429 rate limits)
+  const client = getAIClient()
+
+  if (!client.isAvailable()) {
+    return generateTemplateCoverLetter(job, profile)
+  }
+
   let lastError: any
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const zai = await ZAI.create()
       const profileContext = buildProfileContext(profile)
 
       const systemPrompt = `You are an expert cover letter writer. Write a professional, heavily humanized cover letter for a job application.
@@ -44,24 +48,45 @@ Experience Fit: ${job.experienceFit}
 
 Write a professional, heavily humanized cover letter for this job. Make it feel authentic and specific to this role.`
 
-      const completion = await zai.chat.completions.create({
-        messages: [
-          { role: 'assistant', content: systemPrompt },
-          { role: 'user', content: userMessage },
-        ],
-        thinking: { type: 'disabled' },
-      })
+      const messages: ChatMessage[] = [
+        { role: 'assistant', content: systemPrompt },
+        { role: 'user', content: userMessage },
+      ]
 
-      return completion.choices?.[0]?.message?.content || ''
+      return await client.create(messages)
     } catch (err: any) {
       lastError = err
-      if (err.message?.includes('429') && attempt < 3) {
-        console.log(`    Rate limited, retrying in ${attempt * 5}s...`)
-        await new Promise((r) => setTimeout(r, attempt * 5000))
+      if (attempt < 3) {
+        console.log(`    Retry ${attempt}/3...`)
+        await new Promise((r) => setTimeout(r, attempt * 3000))
         continue
       }
-      throw err
+      // Fall back to template
+      return generateTemplateCoverLetter(job, profile)
     }
   }
-  throw lastError
+  return generateTemplateCoverLetter(job, profile)
+}
+
+export function generateTemplateCoverLetter(
+  job: MatchedJob,
+  profile: CandidateProfile
+): string {
+  const topRepos = profile.topRepos.slice(0, 2)
+  const repoMention = topRepos.length > 0
+    ? `In my recent work, I built ${topRepos[0].name}${topRepos[1] ? ` and ${topRepos[1].name}` : ''} — projects that required deep problem-solving and attention to user experience. `
+    : ''
+
+  return `Dear ${job.company} Team,
+
+I came across the ${job.title} role at ${job.company} and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.
+
+I'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. ${repoMention}I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.
+
+What stands out about this opportunity is the chance to work with a distributed team. I've spent the last few years building applications end-to-end — from database schema design to pixel-perfect UIs — and I'm looking for a team where that range is valued. I'm comfortable working across time zones and communicating asynchronously.
+
+I'd welcome the chance to discuss how my experience could contribute to ${job.company}. Thank you for taking the time to review my application.
+
+Best regards,
+${profile.name}`
 }

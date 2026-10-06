@@ -1,16 +1,16 @@
 // Main scanner orchestrator — runs the full pipeline:
 // 1. Load profile (GitHub + resume)
 // 2. Scrape all job boards
-// 3. AI match + score jobs
-// 4. Generate cover letters for top matches
+// 3. AI match + score jobs (with keyword fallback if AI unavailable)
+// 4. Generate cover letters for top matches (with template fallback)
 // 5. Save results
-// 6. Send WhatsApp notification
+// 6. Send Telegram notification
 
 import { loadProfile } from './profile'
 import { scrapeAllJobs } from './jobs/scrapers'
 import { matchJobs, type MatchedJob } from './matcher'
-import { generateCoverLetter } from './coverletter'
-import { sendWhatsAppNotification } from './notifier'
+import { generateCoverLetter, generateTemplateCoverLetter } from './coverletter'
+import { sendTelegramNotification } from './notifier'
 import { saveResults, type ScanResult } from './storage'
 
 export async function runScan(): Promise<ScanResult> {
@@ -40,8 +40,8 @@ export async function runScan(): Promise<ScanResult> {
     return result
   }
 
-  // Step 3: AI match + score
-  console.log('Step 3: AI matching...')
+  // Step 3: AI match + score (with keyword fallback)
+  console.log('Step 3: Matching jobs...')
   const matchedJobs = await matchJobs(jobs, profile)
   console.log(`✓ ${matchedJobs.length} jobs matched\n`)
 
@@ -53,7 +53,8 @@ export async function runScan(): Promise<ScanResult> {
       job.coverLetter = await generateCoverLetter(job, profile)
       console.log(`  ✓ Cover letter for: ${job.title} at ${job.company}`)
     } catch (err) {
-      console.error(`  ✗ Cover letter failed for ${job.title}:`, err)
+      console.log(`  → Using template cover letter for: ${job.title}`)
+      job.coverLetter = generateTemplateCoverLetter(job, profile)
     }
   }
   console.log(`✓ Cover letters generated for ${topMatches.length} jobs\n`)
@@ -70,11 +71,11 @@ export async function runScan(): Promise<ScanResult> {
   saveResults(result)
   console.log('✓ Results saved\n')
 
-  // Step 6: Send WhatsApp notification
-  console.log('Step 6: Sending WhatsApp notification...')
-  const notified = await sendWhatsAppNotification(matchedJobs)
+  // Step 6: Send Telegram notification
+  console.log('Step 6: Sending Telegram notification...')
+  const notified = await sendTelegramNotification(matchedJobs)
   result.notified = notified
-  saveResults(result) // re-save with notification status
+  saveResults(result)
   console.log(`✓ Notification ${notified ? 'sent' : 'skipped'}\n`)
 
   console.log('=== Scan Complete ===')
@@ -85,12 +86,10 @@ export async function runScan(): Promise<ScanResult> {
   return result
 }
 
-// If run directly (not imported), execute the scan
-if (require.main === module) {
-  runScan()
-    .then(() => process.exit(0))
-    .catch((err) => {
-      console.error('Scan failed:', err)
-      process.exit(1)
-    })
-}
+// Run the scan — works with both bun and node
+runScan()
+  .then(() => process.exit(0))
+  .catch((err) => {
+    console.error('Scan failed:', err)
+    process.exit(1)
+  })

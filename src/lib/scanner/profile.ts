@@ -1,5 +1,5 @@
 // Profile loader — fetches GitHub repos + parses resume to build a candidate profile
-import ZAI from 'z-ai-web-dev-sdk'
+import { getAIClient } from './ai'
 import { readFileSync, existsSync, writeFileSync } from 'fs'
 import { join } from 'path'
 
@@ -110,15 +110,15 @@ export async function loadProfile(): Promise<CandidateProfile> {
 }
 
 async function parseResumeWithLLM(): Promise<string> {
-  const zai = await ZAI.create()
-  const completion = await zai.chat.completions.create({
-    messages: [
-      { role: 'assistant', content: 'You are a resume parser. Extract key professional highlights from this candidate info. Return a concise summary of experience, skills, and achievements in 200 words or less.' },
-      { role: 'user', content: PORTFOLIO_CONTEXT },
-    ],
-    thinking: { type: 'disabled' },
-  })
-  return completion.choices?.[0]?.message?.content || PORTFOLIO_CONTEXT
+  const client = getAIClient()
+  if (!client.isAvailable()) {
+    return PORTFOLIO_CONTEXT
+  }
+  const response = await client.create([
+    { role: 'assistant', content: 'You are a resume parser. Extract key professional highlights from this candidate info. Return a concise summary of experience, skills, and achievements in 200 words or less.' },
+    { role: 'user', content: PORTFOLIO_CONTEXT },
+  ])
+  return response || PORTFOLIO_CONTEXT
 }
 
 export function buildProfileContext(profile: CandidateProfile): string {
