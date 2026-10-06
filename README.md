@@ -1,13 +1,13 @@
 # Job Scanner — AI-Powered Remote Job Hunter
 
-Scans 6 free remote job boards every hour, uses AI to match jobs to your profile, generates humanized cover letters, and sends WhatsApp notifications.
+Scans 6 free remote job boards every hour, uses AI to match jobs to your profile, generates humanized cover letters, and sends Telegram notifications.
 
 ## Features
 
 - **6 Free Job Board APIs**: RemoteOK, Remotive, WeWorkRemotely, Hacker News, Working Nomads, Europe Remote
 - **AI Job Matching**: LLM scores each job 0-100 against your GitHub repos + resume
 - **AI Cover Letters**: Professional, heavily humanized cover letters for each matched job
-- **WhatsApp Notifications**: Free alerts via CallMeBot API (top 5 jobs per scan)
+- **Telegram Notifications**: Free, unlimited alerts via Telegram Bot API
 - **Dashboard**: View matched jobs, read cover letters, apply directly
 - **Hourly Scanning**: GitHub Actions cron runs every hour automatically
 - **100% Free**: No paid APIs or services
@@ -16,8 +16,8 @@ Scans 6 free remote job boards every hour, uses AI to match jobs to your profile
 
 ### 1. Clone and install
 ```bash
-git clone https://github.com/AjibadeHassan/job-scanner.git
-cd job-scanner
+git clone https://github.com/AjibadeHassan/Job-scanner.git
+cd Job-scanner
 bun install
 ```
 
@@ -28,14 +28,16 @@ cp .env.example .env
 Edit `.env` with your details:
 - `GITHUB_TOKEN` — GitHub PAT (scope: `repo`) from https://github.com/settings/tokens/new
 - `GITHUB_USERNAME` — Your GitHub username
-- `CALLMEBOT_API_KEY` — From CallMeBot (see below)
-- `WHATSAPP_PHONE` — Your phone in international format (e.g., `2348012345678`)
+- `TELEGRAM_BOT_TOKEN` — From @BotFather (see below)
+- `TELEGRAM_CHAT_ID` — Your Telegram chat ID (see below)
 
-### 3. Set up WhatsApp notifications (CallMeBot)
-1. Go to https://www.callmebot.com/blog/free-api-whatsapp-messages/
-2. Add the bot's phone number to your WhatsApp contacts
-3. Send this message to the bot: `I allow callmebot to send me messages`
-4. The bot replies with your API key — put it in `.env`
+### 3. Set up Telegram notifications (free, 2 minutes)
+1. Open Telegram and search for **@BotFather**
+2. Send `/newbot` and follow the prompts to create a bot
+3. BotFather gives you a **bot token** — save it
+4. Search for your new bot and send `/start` to it (this initializes the chat)
+5. Get your **chat ID**: search for **@userinfobot** on Telegram and send any message — it replies with your chat ID
+6. Add both to your `.env` file
 
 ### 4. Run locally
 ```bash
@@ -46,8 +48,8 @@ bun run scan         # Run a manual scan
 ### 5. Set up GitHub Actions (hourly scanning)
 In your GitHub repo settings → Secrets and variables → Actions, add:
 - `GITHUB_USERNAME` — Your GitHub username
-- `CALLMEBOT_API_KEY` — Your CallMeBot API key
-- `WHATSAPP_PHONE` — Your phone number
+- `TELEGRAM_BOT_TOKEN` — Your Telegram bot token
+- `TELEGRAM_CHAT_ID` — Your Telegram chat ID
 
 The `.github/workflows/scan.yml` workflow runs every hour automatically.
 
@@ -58,7 +60,7 @@ The `.github/workflows/scan.yml` workflow runs every hour automatically.
 3. **AI Matcher** — LLM scores each job (0-100) for skill/experience match
 4. **Cover Letter Generator** — LLM writes a humanized, job-specific cover letter
 5. **Storage** — Results saved as JSON in `data/results.json`
-6. **WhatsApp Notifier** — Top 5 jobs sent via CallMeBot
+6. **Telegram Notifier** — Top 8 jobs sent via Telegram Bot API
 7. **Dashboard** — Next.js UI to view jobs, cover letters, and apply
 
 ## Apply Flow
@@ -74,7 +76,7 @@ The `.github/workflows/scan.yml` workflow runs every hour automatically.
 - Next.js 16 + TypeScript
 - z-ai-web-dev-sdk (LLM for matching + cover letters)
 - GitHub Actions (hourly cron)
-- CallMeBot (WhatsApp API)
+- Telegram Bot API (notifications)
 - Tailwind CSS + shadcn/ui (dashboard)
 
 ## License

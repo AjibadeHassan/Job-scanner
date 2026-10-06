@@ -244,7 +244,7 @@ export default function Home() {
               <CardContent className="p-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">WhatsApp</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Telegram</p>
                     <p className="text-sm font-bold mt-1">
                       {data.results.notified ? '✓ Sent' : 'Pending'}
                     </p>
