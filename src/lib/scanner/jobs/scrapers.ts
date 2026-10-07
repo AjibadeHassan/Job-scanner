@@ -1,4 +1,4 @@
-// Job scrapers — 11 free remote job APIs/RSS feeds
+// Job scrapers — 15 free remote job APIs/RSS feeds
 // All return normalized JobPosting objects
 
 export interface JobPosting {
@@ -22,7 +22,7 @@ async function fetchWithTimeout(url: string, options: RequestInit = {}, timeoutM
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), timeoutMs)
   try {
-    return await fetchWithTimeout(url, { ...options, signal: controller.signal })
+    return await fetch(url, { ...options, signal: controller.signal })
   } finally {
     clearTimeout(timeout)
   }
@@ -147,34 +147,7 @@ async function scrapeHackerNews(): Promise<JobPosting[]> {
   } catch (err) { console.error('HackerNews: failed'); return [] }
 }
 
-// 5. Working Nomads — RSS feed
-async function scrapeWorkingNomads(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://www.workingnomads.com/jobsfeed', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`WorkingNomads: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      return {
-        id: `wn-${idx}`,
-        title, company: title.split(/[|\-–at:]/)[0].trim() || 'Unknown',
-        description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'WorkingNomads',
-      }
-    })
-  } catch (err) { console.error('WorkingNomads error:', err); return [] }
-}
-
-// 6. Europe Remote — RSS feed
+// 5. Europe Remote — RSS feed
 async function scrapeEuropeRemote(): Promise<JobPosting[]> {
   try {
     const res = await fetchWithTimeout('https://europeremote.com/jobs.rss', {
@@ -285,34 +258,7 @@ async function scrapeJobicy(): Promise<JobPosting[]> {
   } catch (err) { console.error('Jobicy: failed'); return [] }
 }
 
-// 10. Jobspresso — RSS feed
-async function scrapeJobspresso(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://jobspresso.co/feed/', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`Jobspresso: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      return {
-        id: `jobspresso-${idx}`,
-        title, company: title.split(/[|\-–at:]/)[0].trim() || 'Unknown',
-        description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'Jobspresso',
-      }
-    })
-  } catch (err) { console.error('Jobspresso error:', err); return [] }
-}
-
-// 11. Remote.co — RSS/JSON feed
+// 10. Remote.co — RSS/JSON feed
 async function scrapeRemoteCo(): Promise<JobPosting[]> {
   try {
     const res = await fetchWithTimeout('https://remote.co/remote-jobs/feed/', {
