@@ -1,6 +1,6 @@
 {
-  "scanDate": "2026-10-07T07:42:38.656Z",
-  "totalScraped": 183,
+  "scanDate": "2026-10-07T08:12:43.895Z",
+  "totalScraped": 184,
   "totalMatched": 30,
   "jobs": [
     {
@@ -668,26 +668,6 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "arbeitnow-devops-engineer-backend-entwicklerin-berlin-116212",
-      "title": "DevOps Engineer/ Backend Entwickler:in (m/w/d)",
-      "company": "Nitrado (marbis GmbH)",
-      "description": "Einleitung\nZur Verstärkung unseres technischen Customer Application Development Teams suchen wir eine:n DevOps Engineer (m/w/d) zum nächstmöglichen Zeitpunkt der/die nicht nur mitarbeiten, sondern den Bereich aktiv mitgestalten möchte.\nDeine Aufgaben\nDu arbeitest gemeinsam mit Backend- und Frontend-Entwickler:innen und bist verantwortlich für den Betrieb der Webapplikationen.\nDu hilfst bei der Automatisierung unserer Prozesse und optimierst das Configuration Management mit Hilfe von CI/CD Pipelines.\nDu benutzt Kubernetes as a Service und konfigurierst mit Docker-Containern und Helm-Charts die Deployments.\nDu kümmerst dich um die Sichtbarkeit und Überwachbarkeit von Applikationen.\nDu unterstützt das Team und verwendest 30% deiner Zeit für DevOps Aufgaben und unterstützt 70% deiner Zeit mit der Entwicklung.\nDu integrierst neue Features in unsere Backends und erweiterst die Features bestehender Produkte.\nDein Profil\n​​​​​​​​​​​​Du hast ein abgeschlossenes Studium im IT-Bereich oder eine I",
-      "url": "https://www.arbeitnow.com/jobs/companies/nitrado-marbis-gmbh/devops-engineer-backend-entwicklerin-berlin-116212",
-      "applyUrl": "https://www.arbeitnow.com/jobs/companies/nitrado-marbis-gmbh/devops-engineer-backend-entwicklerin-berlin-116212",
-      "location": "Remote",
-      "category": "berufserfahren",
-      "tags": [
-        "Remote",
-        "Software Development"
-      ],
-      "postedAt": "2026-10-07T05:30:57.000Z",
-      "source": "Arbeitnow",
-      "matchScore": 60,
-      "matchReason": "Matches 1 skills: Docker",
-      "experienceFit": "junior-mid",
-      "matchMethod": "keyword"
-    },
-    {
       "id": "python-1",
       "title": "Django Developer",
       "company": "The Developer Society",
@@ -699,7 +679,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T07:40:49.470Z",
+      "postedAt": "2026-10-07T08:10:56.233Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Django",
@@ -718,7 +698,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T07:40:49.470Z",
+      "postedAt": "2026-10-07T08:10:56.233Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -737,7 +717,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T07:40:49.470Z",
+      "postedAt": "2026-10-07T08:10:56.233Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -756,7 +736,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T07:40:49.470Z",
+      "postedAt": "2026-10-07T08:10:56.233Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -775,7 +755,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T07:40:49.470Z",
+      "postedAt": "2026-10-07T08:10:56.233Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -794,7 +774,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T07:40:49.470Z",
+      "postedAt": "2026-10-07T08:10:56.233Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -813,7 +793,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T07:40:49.470Z",
+      "postedAt": "2026-10-07T08:10:56.233Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -832,7 +812,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T07:40:49.470Z",
+      "postedAt": "2026-10-07T08:10:56.233Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -909,6 +889,23 @@
       "description": "",
       "url": "https://weworkremotely.com/remote-jobs/dremio-software-engineer-query-execution",
       "applyUrl": "https://weworkremotely.com/remote-jobs/dremio-software-engineer-query-execution",
+      "location": "Remote",
+      "category": "General",
+      "tags": [],
+      "postedAt": "2026-10-07T07:30:53.000Z",
+      "source": "WeWorkRemotely",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior-mid",
+      "matchMethod": "keyword"
+    },
+    {
+      "id": "wwr-12",
+      "title": "Cloud Engineer",
+      "company": "BeyondTrust",
+      "description": "",
+      "url": "https://weworkremotely.com/remote-jobs/beyondtrust-cloud-engineer",
+      "applyUrl": "https://weworkremotely.com/remote-jobs/beyondtrust-cloud-engineer",
       "location": "Remote",
       "category": "General",
       "tags": [],
