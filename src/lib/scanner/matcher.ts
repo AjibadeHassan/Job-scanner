@@ -1,5 +1,6 @@
 // AI Matcher — uses Gemini API to score jobs, with keyword-based fallback
-// If Gemini is overloaded (503) or fails per-job, falls back to keyword matching
+// Smart fallback: tests AI on first batch; if Gemini is overloaded, switches
+// ALL jobs to keyword matching immediately (no 10-minute waits)
 import { getAIClient, type ChatMessage } from './ai'
 import { type CandidateProfile, buildProfileContext } from './profile'
 import { type JobPosting } from './jobs/scrapers'
@@ -36,27 +37,54 @@ export async function matchJobs(
 
   const client = getAIClient()
 
-  if (client.isAvailable()) {
-    console.log('  AI matching enabled (Gemini API)')
-    return matchWithAI(jobs, profile)
-  } else {
+  if (!client.isAvailable()) {
     console.log('  AI not available — using keyword matching')
     return matchWithKeywords(jobs, profile)
   }
+
+  console.log('  Testing AI availability on first 3 jobs...')
+  
+  // Test AI on first 3 jobs — if all fail, Gemini is overloaded → switch to keywords
+  const testBatch = jobs.slice(0, 3)
+  const profileContext = buildProfileContext(profile)
+  const testResults = await Promise.all(
+    testBatch.map((job) => matchSingleJobAI(client, job, profileContext))
+  )
+  
+  const aiWorking = testResults.some((r) => r !== null && r.matchMethod === 'ai')
+  
+  if (!aiWorking) {
+    console.log('  ⚠️  Gemini unavailable (overloaded) — switching to keyword matching for all jobs')
+    return matchWithKeywords(jobs, profile)
+  }
+
+  console.log('  ✅ Gemini is working — AI matching enabled')
+  return matchWithAI(jobs, profile, profileContext, testResults)
 }
 
 async function matchWithAI(
   jobs: JobPosting[],
-  profile: CandidateProfile
+  profile: CandidateProfile,
+  profileContext: string,
+  initialResults: (MatchedJob | null)[]
 ): Promise<MatchedJob[]> {
   const client = getAIClient()
-  const profileContext = buildProfileContext(profile)
   const matched: MatchedJob[] = []
   let aiSuccessCount = 0
   let keywordFallbackCount = 0
 
-  const batchSize = 3 // Smaller batches to reduce API load
-  for (let i = 0; i < jobs.length; i += batchSize) {
+  // Process the test batch results first
+  for (const result of initialResults) {
+    if (result && result.matchScore >= 50) {
+      matched.push(result)
+      if (result.matchMethod === 'ai') aiSuccessCount++
+      else keywordFallbackCount++
+    }
+  }
+
+  // Process remaining jobs in batches of 5
+  const batchSize = 5
+  for (let i = 3; i < jobs.length; i += batchSize) {
     const batch = jobs.slice(i, i + batchSize)
     console.log(`  AI batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(jobs.length / batchSize)}...`)
 
@@ -64,18 +92,12 @@ async function matchWithAI(
       batch.map((job) => matchSingleJobAI(client, job, profileContext))
     )
 
-    for (let idx = 0; idx < batchResults.length; idx++) {
-      const result = batchResults[idx]
+    for (const result of batchResults) {
       if (result && result.matchScore >= 50) {
         matched.push(result)
         if (result.matchMethod === 'ai') aiSuccessCount++
         else keywordFallbackCount++
       }
-    }
-
-    // Small delay between batches to avoid overwhelming Gemini
-    if (i + batchSize < jobs.length) {
-      await new Promise((r) => setTimeout(r, 500))
     }
   }
 
@@ -88,7 +110,7 @@ function matchWithKeywords(
   jobs: JobPosting[],
   profile: CandidateProfile
 ): Promise<MatchedJob[]> {
-  console.log('  Scoring jobs by keyword overlap...')
+  console.log('  Scoring all jobs by keyword overlap...')
   const matched = jobs.map((job) => scoreJobWithKeywords(job, profile))
   const filtered = matched.filter((j) => j.matchScore >= 40 && j.matchScore > 0)
   filtered.sort((a, b) => b.matchScore - a.matchScore)
@@ -96,7 +118,6 @@ function matchWithKeywords(
   return Promise.resolve(filtered.slice(0, 30))
 }
 
-// Keyword scoring for a single job (used as fallback when AI fails)
 function scoreJobWithKeywords(job: JobPosting, profile: CandidateProfile): MatchedJob {
   const text = `${job.title} ${job.description}`.toLowerCase()
 
@@ -198,10 +219,8 @@ Evaluate this job. Return JSON.`
       experienceFit: result.experienceFit,
       matchMethod: 'ai',
     }
-  } catch (err) {
-    // AI failed (503, rate limit, etc.) → fall back to keyword matching for this job
-    // Extract profile from the context string (it's passed as profileContext)
-    // We need the profile object — let's use a simplified keyword scorer
+  } catch {
+    // AI failed for this job → keyword fallback
     const profile: CandidateProfile = {
       name: 'Ajibade Hassan',
       role: 'Full-Stack Web Developer & AI Engineer',
@@ -223,9 +242,6 @@ Evaluate this job. Return JSON.`
       updatedAt: new Date().toISOString(),
     }
     const keywordResult = scoreJobWithKeywords(job, profile)
-    if (keywordResult.matchScore >= 40) {
-      return keywordResult
-    }
-    return null
+    return keywordResult.matchScore >= 40 ? keywordResult : null
   }
 }
