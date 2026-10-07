@@ -70,5 +70,17 @@
     "totalScraped": 188,
     "totalMatched": 30,
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-07T21:49:00.385Z",
+    "totalScraped": 185,
+    "totalMatched": 30,
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-07T21:49:00.385Z",
+    "totalScraped": 185,
+    "totalMatched": 30,
+    "notified": true
   }
 ]

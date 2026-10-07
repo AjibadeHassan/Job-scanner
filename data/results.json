@@ -1,6 +1,6 @@
 {
-  "scanDate": "2026-10-07T16:08:18.919Z",
-  "totalScraped": 188,
+  "scanDate": "2026-10-07T21:49:00.385Z",
+  "totalScraped": 185,
   "totalMatched": 30,
   "jobs": [
     {
@@ -529,6 +529,27 @@
       "coverLetter": "Dear Credit Wellness, LLC Team,\n\nI came across the Inside Sales Contractor role at Credit Wellness, LLC and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nWhat stands out about this opportunity is the chance to work with a distributed team. I've spent the last few years building applications end-to-end — from database schema design to pixel-perfect UIs — and I'm looking for a team where that range is valued. I'm comfortable working across time zones and communicating asynchronously.\n\nI'd welcome the chance to discuss how my experience could contribute to Credit Wellness, LLC. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
     },
     {
+      "id": "arbeitnow-forward-deployed-ai-engineer-energy-lennestadt-469857",
+      "title": "Forward Deployed AI Engineer Energy (m/w/d)",
+      "company": "KnowWay GmbH",
+      "description": "Wir bei KnowWay entwickeln KI-Agenten für kritische Infrastruktur – Energie, Telekommunikation und öffentlicher Sektor. Überall dort, wo Compliance, Nachvollziehbarkeit und Datensouveränität keine Kompromisse zulassen, automatisieren wir Geschäftsprozesse mit KI.\nDie Rolle\nWir bauen eine KI-Plattform für die Energiewirtschaft. Unsere Agenten unterstützen Prozesse wie Lieferantenwechsel, Netzanschluss, Abrechnung und Messstellenbetrieb.\nAls Forward Deployed AI Engineer übernimmst Du einen Use Case von Discovery bis Go-Live. Du arbeitest direkt mit Fachbereichen bei Stadtwerken und Energieversorgern, verstehst ihre Prozesse und übersetzt dieses Wissen in produktive KI-Agenten.\nDabei verbindest Du GenAI Engineering mit Kundenarbeit: Du führst Fachinterviews und Workshops, entwickelst mit Python, LLMs, RAG und Tools funktionierende Lösungen und stellst durch systematische Evaluation sicher, dass sie im Alltag zuverlässig funktionieren.\nAufgaben\n\nWorkshops und Fachinterviews durchführen und",
+      "url": "https://www.arbeitnow.com/jobs/companies/knowway-gmbh/forward-deployed-ai-engineer-energy-lennestadt-469857",
+      "applyUrl": "https://www.arbeitnow.com/jobs/companies/knowway-gmbh/forward-deployed-ai-engineer-energy-lennestadt-469857",
+      "location": "Remote",
+      "category": "General",
+      "tags": [
+        "Remote",
+        "Consulting",
+        "Engineering"
+      ],
+      "postedAt": "2026-10-07T20:00:42.000Z",
+      "source": "Arbeitnow",
+      "matchScore": 70,
+      "matchReason": "Matches 2 skills: Python, RAG",
+      "experienceFit": "junior-mid",
+      "matchMethod": "keyword"
+    },
+    {
       "id": "python-19",
       "title": "Python + TypeScript Engineers",
       "company": "Fusionbox",
@@ -540,7 +561,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T16:06:30.022Z",
+      "postedAt": "2026-10-07T21:47:11.750Z",
       "source": "PythonJobs",
       "matchScore": 70,
       "matchReason": "Matches 2 skills: TypeScript, Python",
@@ -667,58 +688,19 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "arbeitnow-remote-engineering-manager-algorithms-team-47686",
-      "title": "Remote Engineering Manager (Algorithms Team) (m/f/d)",
-      "company": "Roompricegenie",
-      "description": "About RoomPriceGenie ✨🧞‍♂️Founded in 2017, RoomPriceGenie is dedicated to helping hoteliers around the globe achieve optimal pricing. 🌍 We understand that many small hotels face challenges with digitalization, making their operations increasingly complex and often resulting in lost revenue. This is where we come in!We have developed a powerful solution that enables hotels to set the right prices in just seconds. ⏱️ Our state-of-the-art algorithm analyzes both internal hotel data and market trends to recommend pricing strategies that enhance revenue and improve booking rates. With customers spanning the globe—from the USA and Canada to Iceland, South Africa, China, Slovenia, Italy, and the UK—RoomPriceGenie has made a meaningful impact in the hospitality industry, and our clients love the results. ❤️Now, we are excited to expand our customer base and spread the word about how we can support hoteliers in optimizing their pricing strategies. We invite you to join us on this journey! We ",
-      "url": "https://www.arbeitnow.com/jobs/companies/roompricegenie/remote-engineering-manager-algorithms-team-47686",
-      "applyUrl": "https://www.arbeitnow.com/jobs/companies/roompricegenie/remote-engineering-manager-algorithms-team-47686",
-      "location": "Remote Germany",
-      "category": "Full Time",
-      "tags": [
-        "Product & Engineering"
-      ],
-      "postedAt": "2026-10-07T14:40:04.000Z",
-      "source": "Arbeitnow",
-      "matchScore": 60,
-      "matchReason": "Matches 1 skills: Git",
-      "experienceFit": "junior",
-      "matchMethod": "keyword"
-    },
-    {
-      "id": "arbeitnow-l1-reports-engineer-berlin-85633",
-      "title": "L1- Reports Engineer (m/w/d)",
-      "company": "Boardwise GmbH",
-      "description": "Deine Aufgaben\n\nErste Anlaufstelle für Anfragen unserer Kunden\nKlare, freundliche und strukturierte Kommunikation mit Kunden\nAnalyse und Lösung eingehender Kundensupport-Tickets\nErstellung und Anpassung von Reports mit Handlebars.js gemäß Kundenanforderungen\nUnterstützung bei Fragen zur Software-Konfiguration\nIdentifikation von Problemen und Sammlung relevanter technischer Informationen\nErkennen, wann eine Eskalation an Level 2 oder das Product-Team notwendig ist\nStrukturierte Dokumentation von Problemen und Lösungen\nSicherstellung einer hohen Kundenzufriedenheit durch zeitnahe Kommunikation\n\nDein Profil\n\nSehr gute Kommunikations- und Problemlösungsfähigkeiten\nKundenorientierte und strukturierte Arbeitsweise\nAusgeprägtes Troubleshooting-Mindset und Freude daran, Ursachen zu identifizieren\nGrundkenntnisse in Handlebars.js oder vergleichbaren Templating-Sprachen (bzw. Bereitschaft, sich zügig einzuarbeiten)\nFähigkeit, sowohl eigenständig als auch im Team zu arbeiten\nDeutsch auf Mutterspr",
-      "url": "https://www.arbeitnow.com/jobs/companies/boardwise-gmbh/l1-reports-engineer-berlin-85633",
-      "applyUrl": "https://www.arbeitnow.com/jobs/companies/boardwise-gmbh/l1-reports-engineer-berlin-85633",
+      "id": "arbeitnow-remote-junior-cloud-operations-engineer-all-genders-ch-baar-284023",
+      "title": "Junior Cloud Operations Engineer (all genders) CH",
+      "company": "BSI Software",
+      "description": "Alle reden von Digitalisierung – Wir machen es. Als Hersteller von Europas #1 CRM/CX-Plattform entwickeln wir innovative Softwareprodukte in den Bereichen Kundenbeziehungsmanagement, Marketing Automation und Machine Learning. Unternehmen bei der Digitalisierung und der konsequenten Kundenzentrierung zu begleiten, ist unsere Leidenschaft. Wir lieben modernste Technologie, Handwerk und Innovation. Du auch? Dann bist du bei BSI goldrichtig!  Deine AufgabenDu sorgst dafür, dass unsere SaaS-Plattform auf AWS, Azure und T-Systems zuverlässig und performant läuft und übernimmst dabei Verantwortung für eigene Bereiche und ThemenDu analysierst und behebst Störungen, führst Root-Cause-Analysen durch und bringst dich aktiv in die Weiterentwicklung unserer Observability ein. Als Teil des Teams bist du Anlaufstelle für interne Teams, Kunden und Partner und übernimmst im Turnus die 2nd-Level-Support-Bereitschaft und RufbereitschaftDu entwickelst unser Monitoring mit Prometheus und Grafana aktiv weit",
+      "url": "https://www.arbeitnow.ch/jobs/companies/bsi-software/remote-junior-cloud-operations-engineer-all-genders-ch-baar-284023",
+      "applyUrl": "https://www.arbeitnow.ch/jobs/companies/bsi-software/remote-junior-cloud-operations-engineer-all-genders-ch-baar-284023",
       "location": "Remote",
-      "category": "berufserfahren",
+      "category": "Mid",
       "tags": [
-        "Remote",
-        "Customer Service"
+        "Services",
+        "Remote"
       ],
-      "postedAt": "2026-10-07T14:01:30.000Z",
-      "source": "Arbeitnow",
-      "matchScore": 60,
-      "matchReason": "Matches 1 skills: RAG",
-      "experienceFit": "junior-mid",
-      "matchMethod": "keyword"
-    },
-    {
-      "id": "arbeitnow-pflichtpraktikum-als-marketing-manager-im-b2b-bochum-410301",
-      "title": "Pflichtpraktikum als Marketing-Manager im B2B (m/w/d)",
-      "company": "CENDAS GmbH",
-      "description": "CENDAS wurde 2021 mit der Vision gegründet, Bauprojekte von der Planung bis zur Umsetzung zu digitalisieren. Unsere Software verbindet echtes Handwerk mit digitalen Prozessen: Vorbereitung, Abwicklung, Steuerung – alle Phasen des Bauprojekts in einer Anwendung. Heute setzen wir als schnell wachsendes Scale-Up mit unserem internationalen Team aus rund 65 Expert:innen neue Maßstäbe für Effizienz und Innovation in der Bauindustrie.\nBei uns kannst du echten Start-up-Spirit erleben und gleichzeitig von strukturierten Prozessen profitieren. Unser Vertriebsteam bietet dir die Möglichkeit, aktiv an unseren Vertriebs- und Marketingprozessen mitzuwirken. Wenn du in einem flexiblen, innovativen und schnell wachsenden Unternehmen echte Verantwortung übernehmen möchtest, freuen wir uns auf deine Bewerbung!\nAufgaben\nIm Rahmen deines Pflichtpraktikums steigst du ins Marketing eines wachsenden B2B-SaaS-Unternehmens ein und lernst, wie Kampagnen, Events und Kundenkommunikation geplant, umgesetzt und da",
-      "url": "https://www.arbeitnow.com/jobs/companies/cendas-gmbh/pflichtpraktikum-als-marketing-manager-im-b2b-bochum-410301",
-      "applyUrl": "https://www.arbeitnow.com/jobs/companies/cendas-gmbh/pflichtpraktikum-als-marketing-manager-im-b2b-bochum-410301",
-      "location": "Remote",
-      "category": "Internship",
-      "tags": [
-        "Remote",
-        "Marketing Manager"
-      ],
-      "postedAt": "2026-10-07T13:31:01.000Z",
+      "postedAt": "2026-10-07T17:30:55.000Z",
       "source": "Arbeitnow",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Git",
@@ -737,7 +719,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T16:06:30.022Z",
+      "postedAt": "2026-10-07T21:47:11.749Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -756,7 +738,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T16:06:30.022Z",
+      "postedAt": "2026-10-07T21:47:11.750Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -775,7 +757,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T16:06:30.022Z",
+      "postedAt": "2026-10-07T21:47:11.750Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -794,7 +776,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T16:06:30.022Z",
+      "postedAt": "2026-10-07T21:47:11.750Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -813,7 +795,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T16:06:30.022Z",
+      "postedAt": "2026-10-07T21:47:11.750Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -832,7 +814,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T16:06:30.022Z",
+      "postedAt": "2026-10-07T21:47:11.750Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -851,7 +833,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T16:06:30.022Z",
+      "postedAt": "2026-10-07T21:47:11.750Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -919,6 +901,23 @@
       "matchScore": 50,
       "matchReason": "Relevant developer role",
       "experienceFit": "junior",
+      "matchMethod": "keyword"
+    },
+    {
+      "id": "wwr-10",
+      "title": "Software Engineer - Query Execution",
+      "company": "Dremio",
+      "description": "",
+      "url": "https://weworkremotely.com/remote-jobs/dremio-software-engineer-query-execution",
+      "applyUrl": "https://weworkremotely.com/remote-jobs/dremio-software-engineer-query-execution",
+      "location": "Remote",
+      "category": "General",
+      "tags": [],
+      "postedAt": "2026-10-07T07:30:53.000Z",
+      "source": "WeWorkRemotely",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior-mid",
       "matchMethod": "keyword"
     }
   ],
