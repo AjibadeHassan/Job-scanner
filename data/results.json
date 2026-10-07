@@ -1,6 +1,6 @@
 {
-  "scanDate": "2026-10-07T08:12:43.895Z",
-  "totalScraped": 184,
+  "scanDate": "2026-10-07T16:08:18.919Z",
+  "totalScraped": 188,
   "totalMatched": 30,
   "jobs": [
     {
@@ -529,6 +529,25 @@
       "coverLetter": "Dear Credit Wellness, LLC Team,\n\nI came across the Inside Sales Contractor role at Credit Wellness, LLC and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nWhat stands out about this opportunity is the chance to work with a distributed team. I've spent the last few years building applications end-to-end — from database schema design to pixel-perfect UIs — and I'm looking for a team where that range is valued. I'm comfortable working across time zones and communicating asynchronously.\n\nI'd welcome the chance to discuss how my experience could contribute to Credit Wellness, LLC. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
     },
     {
+      "id": "python-19",
+      "title": "Python + TypeScript Engineers",
+      "company": "Fusionbox",
+      "description": "",
+      "url": "https://www.python.org/jobs/8111/",
+      "applyUrl": "https://www.python.org/jobs/8111/",
+      "location": "Remote",
+      "category": "Python",
+      "tags": [
+        "python"
+      ],
+      "postedAt": "2026-10-07T16:06:30.022Z",
+      "source": "PythonJobs",
+      "matchScore": 70,
+      "matchReason": "Matches 2 skills: TypeScript, Python",
+      "experienceFit": "junior-mid",
+      "matchMethod": "keyword"
+    },
+    {
       "id": "hn-22753397",
       "title": "Telehealth - Ambra Health (https:&#x2F;&#x2F;ambrahealth.com) | REMOTE | Java &#x2F; Scala &#x2F; Li",
       "company": "Telehe",
@@ -648,46 +667,66 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "arbeitnow-product-owner-digital-products-ai-hamburg-151254",
-      "title": "Product Owner Digital Products & AI (m/w/d)",
+      "id": "arbeitnow-remote-engineering-manager-algorithms-team-47686",
+      "title": "Remote Engineering Manager (Algorithms Team) (m/f/d)",
+      "company": "Roompricegenie",
+      "description": "About RoomPriceGenie ✨🧞‍♂️Founded in 2017, RoomPriceGenie is dedicated to helping hoteliers around the globe achieve optimal pricing. 🌍 We understand that many small hotels face challenges with digitalization, making their operations increasingly complex and often resulting in lost revenue. This is where we come in!We have developed a powerful solution that enables hotels to set the right prices in just seconds. ⏱️ Our state-of-the-art algorithm analyzes both internal hotel data and market trends to recommend pricing strategies that enhance revenue and improve booking rates. With customers spanning the globe—from the USA and Canada to Iceland, South Africa, China, Slovenia, Italy, and the UK—RoomPriceGenie has made a meaningful impact in the hospitality industry, and our clients love the results. ❤️Now, we are excited to expand our customer base and spread the word about how we can support hoteliers in optimizing their pricing strategies. We invite you to join us on this journey! We ",
+      "url": "https://www.arbeitnow.com/jobs/companies/roompricegenie/remote-engineering-manager-algorithms-team-47686",
+      "applyUrl": "https://www.arbeitnow.com/jobs/companies/roompricegenie/remote-engineering-manager-algorithms-team-47686",
+      "location": "Remote Germany",
+      "category": "Full Time",
+      "tags": [
+        "Product & Engineering"
+      ],
+      "postedAt": "2026-10-07T14:40:04.000Z",
+      "source": "Arbeitnow",
+      "matchScore": 60,
+      "matchReason": "Matches 1 skills: Git",
+      "experienceFit": "junior",
+      "matchMethod": "keyword"
+    },
+    {
+      "id": "arbeitnow-l1-reports-engineer-berlin-85633",
+      "title": "L1- Reports Engineer (m/w/d)",
       "company": "Boardwise GmbH",
-      "description": "Deine Aufgaben\nTogether, we set the standard for modern board decisions.\nWerde Teil unserer Mission, die Governance-Infrastruktur von Vorstandsbüros weltweit neu zu definieren und entscheidend voranzutreiben – und setze Maßstäbe, die Organisationen nachhaltig prägen.\nAls Product Owner (m/w/d) verantwortest Du die operative Steuerung und kontinuierliche Weiterentwicklung unseres Softwareproduktes Boardwise im agilen Umfeld. Du fungierst als zentrale Schnittstelle zwischen Business, Stakeholdern und Entwicklungsteams und stellst sicher, dass aus Anforderungen konkrete, umsetzbare und wertschöpfende Produktinkremente entstehen.\nDabei treibst Du aktiv unter anderem die Integration von AI-Technologien – insbesondere im Microsoft-Umfeld – voran und übersetzt strategische Ziele in priorisierte Backlog-Items und greifbare Ergebnisse.\n\nVerantwortungfür das Product Backlog (Pflege,Priorisierung, Refinement)\nÜbersetzung von Anforderungen aus Fachbereichen und Stakeholdern in klare User Stories un",
-      "url": "https://www.arbeitnow.com/jobs/companies/boardwise-gmbh/product-owner-digital-products-ai-hamburg-151254",
-      "applyUrl": "https://www.arbeitnow.com/jobs/companies/boardwise-gmbh/product-owner-digital-products-ai-hamburg-151254",
+      "description": "Deine Aufgaben\n\nErste Anlaufstelle für Anfragen unserer Kunden\nKlare, freundliche und strukturierte Kommunikation mit Kunden\nAnalyse und Lösung eingehender Kundensupport-Tickets\nErstellung und Anpassung von Reports mit Handlebars.js gemäß Kundenanforderungen\nUnterstützung bei Fragen zur Software-Konfiguration\nIdentifikation von Problemen und Sammlung relevanter technischer Informationen\nErkennen, wann eine Eskalation an Level 2 oder das Product-Team notwendig ist\nStrukturierte Dokumentation von Problemen und Lösungen\nSicherstellung einer hohen Kundenzufriedenheit durch zeitnahe Kommunikation\n\nDein Profil\n\nSehr gute Kommunikations- und Problemlösungsfähigkeiten\nKundenorientierte und strukturierte Arbeitsweise\nAusgeprägtes Troubleshooting-Mindset und Freude daran, Ursachen zu identifizieren\nGrundkenntnisse in Handlebars.js oder vergleichbaren Templating-Sprachen (bzw. Bereitschaft, sich zügig einzuarbeiten)\nFähigkeit, sowohl eigenständig als auch im Team zu arbeiten\nDeutsch auf Mutterspr",
+      "url": "https://www.arbeitnow.com/jobs/companies/boardwise-gmbh/l1-reports-engineer-berlin-85633",
+      "applyUrl": "https://www.arbeitnow.com/jobs/companies/boardwise-gmbh/l1-reports-engineer-berlin-85633",
       "location": "Remote",
       "category": "berufserfahren",
       "tags": [
         "Remote",
-        "Project Management"
+        "Customer Service"
       ],
-      "postedAt": "2026-10-07T05:31:03.000Z",
+      "postedAt": "2026-10-07T14:01:30.000Z",
+      "source": "Arbeitnow",
+      "matchScore": 60,
+      "matchReason": "Matches 1 skills: RAG",
+      "experienceFit": "junior-mid",
+      "matchMethod": "keyword"
+    },
+    {
+      "id": "arbeitnow-pflichtpraktikum-als-marketing-manager-im-b2b-bochum-410301",
+      "title": "Pflichtpraktikum als Marketing-Manager im B2B (m/w/d)",
+      "company": "CENDAS GmbH",
+      "description": "CENDAS wurde 2021 mit der Vision gegründet, Bauprojekte von der Planung bis zur Umsetzung zu digitalisieren. Unsere Software verbindet echtes Handwerk mit digitalen Prozessen: Vorbereitung, Abwicklung, Steuerung – alle Phasen des Bauprojekts in einer Anwendung. Heute setzen wir als schnell wachsendes Scale-Up mit unserem internationalen Team aus rund 65 Expert:innen neue Maßstäbe für Effizienz und Innovation in der Bauindustrie.\nBei uns kannst du echten Start-up-Spirit erleben und gleichzeitig von strukturierten Prozessen profitieren. Unser Vertriebsteam bietet dir die Möglichkeit, aktiv an unseren Vertriebs- und Marketingprozessen mitzuwirken. Wenn du in einem flexiblen, innovativen und schnell wachsenden Unternehmen echte Verantwortung übernehmen möchtest, freuen wir uns auf deine Bewerbung!\nAufgaben\nIm Rahmen deines Pflichtpraktikums steigst du ins Marketing eines wachsenden B2B-SaaS-Unternehmens ein und lernst, wie Kampagnen, Events und Kundenkommunikation geplant, umgesetzt und da",
+      "url": "https://www.arbeitnow.com/jobs/companies/cendas-gmbh/pflichtpraktikum-als-marketing-manager-im-b2b-bochum-410301",
+      "applyUrl": "https://www.arbeitnow.com/jobs/companies/cendas-gmbh/pflichtpraktikum-als-marketing-manager-im-b2b-bochum-410301",
+      "location": "Remote",
+      "category": "Internship",
+      "tags": [
+        "Remote",
+        "Marketing Manager"
+      ],
+      "postedAt": "2026-10-07T13:31:01.000Z",
       "source": "Arbeitnow",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Git",
-      "experienceFit": "junior-mid",
+      "experienceFit": "junior",
       "matchMethod": "keyword"
     },
     {
-      "id": "python-1",
-      "title": "Django Developer",
-      "company": "The Developer Society",
-      "description": "",
-      "url": "https://www.python.org/jobs/8137/",
-      "applyUrl": "https://www.python.org/jobs/8137/",
-      "location": "Remote",
-      "category": "Python",
-      "tags": [
-        "python"
-      ],
-      "postedAt": "2026-10-07T08:10:56.233Z",
-      "source": "PythonJobs",
-      "matchScore": 60,
-      "matchReason": "Matches 1 skills: Django",
-      "experienceFit": "junior-mid",
-      "matchMethod": "keyword"
-    },
-    {
-      "id": "python-5",
+      "id": "python-4",
       "title": "Agentic Python Engineer",
       "company": "Evaboot",
       "description": "",
@@ -698,7 +737,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T08:10:56.233Z",
+      "postedAt": "2026-10-07T16:06:30.022Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -706,7 +745,7 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "python-7",
+      "id": "python-6",
       "title": "Agentic Python Engineer",
       "company": "Evaboot",
       "description": "",
@@ -717,7 +756,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T08:10:56.233Z",
+      "postedAt": "2026-10-07T16:06:30.022Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -725,7 +764,7 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "python-8",
+      "id": "python-7",
       "title": "Python developer",
       "company": "Eleks",
       "description": "",
@@ -736,7 +775,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T08:10:56.233Z",
+      "postedAt": "2026-10-07T16:06:30.022Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -744,7 +783,7 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "python-9",
+      "id": "python-8",
       "title": "Python/DevOps Engineer",
       "company": "NordVpn/NordSecurity",
       "description": "",
@@ -755,7 +794,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T08:10:56.233Z",
+      "postedAt": "2026-10-07T16:06:30.022Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -763,7 +802,7 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "python-11",
+      "id": "python-10",
       "title": "Agentic Python Engineer",
       "company": "Evaboot",
       "description": "",
@@ -774,7 +813,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T08:10:56.233Z",
+      "postedAt": "2026-10-07T16:06:30.022Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -782,7 +821,7 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "python-14",
+      "id": "python-13",
       "title": "Python Backend Engineer",
       "company": "Constelli Signals",
       "description": "",
@@ -793,7 +832,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T08:10:56.233Z",
+      "postedAt": "2026-10-07T16:06:30.022Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -801,7 +840,7 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "python-16",
+      "id": "python-15",
       "title": "Python Developer",
       "company": "Micro1",
       "description": "",
@@ -812,7 +851,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T08:10:56.233Z",
+      "postedAt": "2026-10-07T16:06:30.022Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -880,40 +919,6 @@
       "matchScore": 50,
       "matchReason": "Relevant developer role",
       "experienceFit": "junior",
-      "matchMethod": "keyword"
-    },
-    {
-      "id": "wwr-8",
-      "title": "Software Engineer - Query Execution",
-      "company": "Dremio",
-      "description": "",
-      "url": "https://weworkremotely.com/remote-jobs/dremio-software-engineer-query-execution",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/dremio-software-engineer-query-execution",
-      "location": "Remote",
-      "category": "General",
-      "tags": [],
-      "postedAt": "2026-10-07T07:30:53.000Z",
-      "source": "WeWorkRemotely",
-      "matchScore": 50,
-      "matchReason": "Relevant developer role",
-      "experienceFit": "junior-mid",
-      "matchMethod": "keyword"
-    },
-    {
-      "id": "wwr-12",
-      "title": "Cloud Engineer",
-      "company": "BeyondTrust",
-      "description": "",
-      "url": "https://weworkremotely.com/remote-jobs/beyondtrust-cloud-engineer",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/beyondtrust-cloud-engineer",
-      "location": "Remote",
-      "category": "General",
-      "tags": [],
-      "postedAt": "2026-10-07T07:30:53.000Z",
-      "source": "WeWorkRemotely",
-      "matchScore": 50,
-      "matchReason": "Relevant developer role",
-      "experienceFit": "junior-mid",
       "matchMethod": "keyword"
     }
   ],
