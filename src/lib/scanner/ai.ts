@@ -1,9 +1,15 @@
 // Unified AI client — uses Google Gemini API (works anywhere with GEMINI_API_KEY)
-// Falls back to z-ai-web-dev-sdk if in Z.ai sandbox
-// Throws if neither available (caller should use keyword fallback)
+// Retries on 503/429 with exponential backoff
+// Falls back to alternative models if the primary one is unavailable
 
-const GEMINI_MODEL = 'gemini-flash-latest'
-const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`
+const GEMINI_MODELS = [
+  'gemini-flash-latest',
+  'gemini-2.0-flash',
+  'gemini-1.5-flash',
+]
+
+const MAX_RETRIES = 3
+const BASE_DELAY = 2000 // 2 seconds
 
 export interface ChatMessage {
   role: 'user' | 'assistant'
@@ -22,24 +28,20 @@ export class AIClient {
   }
 
   async create(messages: ChatMessage[]): Promise<string> {
-    if (this.geminiKey) {
-      return this.callGemini(messages)
+    if (!this.geminiKey) {
+      throw new Error('No AI provider available (set GEMINI_API_KEY)')
     }
-    throw new Error('No AI provider available (set GEMINI_API_KEY)')
+    return this.callGemini(messages)
   }
 
   private async callGemini(messages: ChatMessage[]): Promise<string> {
-    // The first assistant message is the system prompt in our format
-    // Gemini uses system_instruction separately
     let systemPrompt = ''
     const conversation: { role: string; parts: { text: string }[] }[] = []
 
     for (const msg of messages) {
       if (msg.role === 'assistant' && !systemPrompt) {
-        // First assistant message = system prompt
         systemPrompt = msg.content
       } else {
-        // Gemini uses "model" for assistant, "user" for user
         const role = msg.role === 'assistant' ? 'model' : 'user'
         conversation.push({ role, parts: [{ text: msg.content }] })
       }
@@ -57,29 +59,64 @@ export class AIClient {
       body.system_instruction = { parts: [{ text: systemPrompt }] }
     }
 
-    const res = await fetch(`${GEMINI_ENDPOINT}?key=${this.geminiKey}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    })
+    let lastError: any
 
-    if (!res.ok) {
-      const err = await res.text()
-      throw new Error(`Gemini API error (${res.status}): ${err.slice(0, 200)}`)
+    // Try each model in order, with retries on 503/429
+    for (const model of GEMINI_MODELS) {
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`
+
+      for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+        try {
+          const res = await fetch(`${endpoint}?key=${this.geminiKey}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+          })
+
+          if (res.ok) {
+            const data = await res.json()
+            const text = data.candidates?.[0]?.content?.parts?.[0]?.text
+            if (text) return text
+            throw new Error('Empty response')
+          }
+
+          const errText = await res.text()
+
+          // 503 = overloaded, 429 = rate limited → retry with backoff
+          if (res.status === 503 || res.status === 429) {
+            lastError = new Error(`Gemini ${res.status}: ${errText.slice(0, 100)}`)
+            if (attempt < MAX_RETRIES) {
+              const delay = BASE_DELAY * attempt * attempt // 2s, 8s, 18s
+              await new Promise((r) => setTimeout(r, delay))
+              continue
+            }
+            break // try next model
+          }
+
+          // 400 = bad request (model not found, etc.) → try next model
+          if (res.status === 400 || res.status === 404) {
+            lastError = new Error(`Gemini ${res.status}: ${errText.slice(0, 100)}`)
+            break // try next model
+          }
+
+          // Other errors → throw immediately
+          throw new Error(`Gemini API error (${res.status}): ${errText.slice(0, 200)}`)
+        } catch (err: any) {
+          // Network errors → retry
+          lastError = err
+          if (attempt < MAX_RETRIES && !err.message?.includes('400') && !err.message?.includes('404')) {
+            const delay = BASE_DELAY * attempt
+            await new Promise((r) => setTimeout(r, delay))
+            continue
+          }
+        }
+      }
     }
 
-    const data = await res.json()
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text
-
-    if (!text) {
-      throw new Error('Gemini returned empty response')
-    }
-
-    return text
+    throw lastError || new Error('All Gemini models failed')
   }
 }
 
-// Singleton instance
 let _client: AIClient | null = null
 
 export function getAIClient(): AIClient {
