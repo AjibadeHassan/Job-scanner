@@ -1,6 +1,6 @@
 {
-  "scanDate": "2026-10-08T01:47:59.197Z",
-  "totalScraped": 190,
+  "scanDate": "2026-10-08T08:43:30.451Z",
+  "totalScraped": 196,
   "totalMatched": 30,
   "jobs": [
     {
@@ -43,7 +43,7 @@
       "matchReason": "Matches 5 skills: React, TypeScript, JavaScript, Node.js",
       "experienceFit": "mid",
       "matchMethod": "keyword",
-      "coverLetter": "Dear CodeForAI Team,\n\nI came across the Software Engineer / AI Code Trainer (Python, Web, Full Stack) role at CodeForAI and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nWhat stands out about this opportunity is the chance to work with a distributed team. I've spent the last few years building applications end-to-end — from database schema design to pixel-perfect UIs — and I'm looking for a team where that range is valued. I'm comfortable working across time zones and communicating asynchronously.\n\nI'd welcome the chance to discuss how my experience could contribute to CodeForAI. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+      "coverLetter": "Dear CodeForAI Hiring Team,\n\nTeaching an AI model to produce dependable code requires more than knowing syntax—it takes an eye for subtle edge cases, clean architectural habits, and an understanding of why one implementation is genuinely better than another. As someone who builds daily across Python, TypeScript, and modern full-stack frameworks, CodeForAI's focus on sharpening code intelligence immediately caught my attention.\n\nOver the past three years building web applications and working with language models, I have developed a habit of critiquing code for clarity and maintainability. When building my E-Hospital Management platform, I paired a Next.js and Prisma backend with an LLM triage chatbot, designing the retrieval-augmented generation (RAG) pipeline to keep responses strictly grounded and hallucination-free. Alongside web development, I regularly maintain my My-Dsa repository, breaking down core data structures and algorithm patterns in Python. Whether I am dissecting an asynchronous Node.js flow, evaluating a Python script for algorithmic efficiency, or identifying subtle logic bugs in a React component, I care deeply about the details that separate functional code from great code.\n\nThis role feels like a natural intersection of the two areas I spend the most time exploring: software engineering and applied AI. I would welcome the opportunity to bring my hands-on development background to CodeForAI and help train models that developers can rely on in production. Thank you for your time, and I look forward to the possibility of discussing this further.\n\nWarm regards,\n\nAjibade Hassan"
     },
     {
       "id": "remotive-2091141",
@@ -80,7 +80,7 @@
       "matchReason": "Matches 8 skills: React, TypeScript, Python, Django",
       "experienceFit": "junior",
       "matchMethod": "keyword",
-      "coverLetter": "Dear KoboToolbox Team,\n\nI came across the Frontend Web Application Developer role at KoboToolbox and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nWhat stands out about this opportunity is the chance to work with a distributed team. I've spent the last few years building applications end-to-end — from database schema design to pixel-perfect UIs — and I'm looking for a team where that range is valued. I'm comfortable working across time zones and communicating asynchronously.\n\nI'd welcome the chance to discuss how my experience could contribute to KoboToolbox. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+      "coverLetter": "Dear KoboToolbox Team,\n\nKnowing that a single frontend update at KoboToolbox can directly impact aid workers, researchers, and over 32,000 organizations operating in challenging field environments makes this role stand out to me immediately. Building web applications where intuitive UI and rock-solid reliability genuinely matter is the kind of meaningful work I want to dig into. I am fully available for 35 to 40 hours per week synced to US East business hours, and I am eager to invest my energy into this platform for the long run.\n\nMy day-to-day work revolves around modern React and TypeScript, paired with an understanding of Python and Django backends that helps me communicate smoothly across the entire stack. When building my E-Hospital Management platform, for example, I focused heavily on creating accessible data flows, robust form states, and resilient UI that prevents user error under stress. Whether refactoring complex state or tuning client-side performance, I prioritize clean component architecture, defensive coding, and interfaces that feel effortless to end-users regardless of their technical comfort or device constraints.\n\nI enjoy working closely with a lead developer, absorbing thoughtful code reviews, and shipping dependable features that hold up in production. The opportunity to help evolve a platform with this degree of real-world utility would be a genuine privilege. I would love the chance to connect and talk about how my frontend toolkit can support KoboToolbox’s goals this year.\n\nBest regards,\n\nAjibade Hassan"
     },
     {
       "id": "remotive-2091140",
@@ -332,7 +332,7 @@
       "matchReason": "Matches 8 skills: React, Next.js, TypeScript, JavaScript",
       "experienceFit": "senior",
       "matchMethod": "keyword",
-      "coverLetter": "Dear Lemon.io Team,\n\nI came across the Senior AI Engineer role at Lemon.io and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nWhat stands out about this opportunity is the chance to work with a distributed team. I've spent the last few years building applications end-to-end — from database schema design to pixel-perfect UIs — and I'm looking for a team where that range is valued. I'm comfortable working across time zones and communicating asynchronously.\n\nI'd welcome the chance to discuss how my experience could contribute to Lemon.io. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+      "coverLetter": "Dear Lemon.io Team,\n\nLemon.io has caught my eye for a while because you skip the usual agency fluff and put serious builders directly in front of fast-moving US and European startups. As an engineer who bridges the gap between resilient full-stack web architecture and generative AI workflows, I want to work with founders who value velocity, lean architecture, and AI integrations that actually solve problems rather than just look good in pitch decks.\n\nOver the past few years, my focus has locked onto shipping reliable LLM pipelines embedded within full-stack products. In my E-Hospital Management platform, for example, I engineered a custom RAG triage pipeline using LangChain, vector search, and Next.js. The goal wasn't just to plug in an API key; it was to build a low-latency, context-aware assistant that safely guides patient symptom inquiries without hallucinating. Whether orchestrating retrieval chains in Python, setting up database schemas with Prisma and PostgreSQL, or building clean, reactive frontends in TypeScript and React, I like taking an idea from raw prompt architecture all the way to a polished UI.\n\nI know Lemon.io keeps a high bar for the engineers invited onto the platform, and that challenge is exactly why I'm reaching out. I’d love the chance to walk through my repos, talk about how I tackle edge cases in agentic systems, and see if my background matches what your startup partners are looking for.\n\nBest regards,\n\nAjibade Hassan"
     },
     {
       "id": "remotive-2091130",
@@ -529,27 +529,6 @@
       "coverLetter": "Dear Credit Wellness, LLC Team,\n\nI came across the Inside Sales Contractor role at Credit Wellness, LLC and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nWhat stands out about this opportunity is the chance to work with a distributed team. I've spent the last few years building applications end-to-end — from database schema design to pixel-perfect UIs — and I'm looking for a team where that range is valued. I'm comfortable working across time zones and communicating asynchronously.\n\nI'd welcome the chance to discuss how my experience could contribute to Credit Wellness, LLC. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
     },
     {
-      "id": "arbeitnow-forward-deployed-ai-engineer-energy-lennestadt-469857",
-      "title": "Forward Deployed AI Engineer Energy (m/w/d)",
-      "company": "KnowWay GmbH",
-      "description": "Wir bei KnowWay entwickeln KI-Agenten für kritische Infrastruktur – Energie, Telekommunikation und öffentlicher Sektor. Überall dort, wo Compliance, Nachvollziehbarkeit und Datensouveränität keine Kompromisse zulassen, automatisieren wir Geschäftsprozesse mit KI.\nDie Rolle\nWir bauen eine KI-Plattform für die Energiewirtschaft. Unsere Agenten unterstützen Prozesse wie Lieferantenwechsel, Netzanschluss, Abrechnung und Messstellenbetrieb.\nAls Forward Deployed AI Engineer übernimmst Du einen Use Case von Discovery bis Go-Live. Du arbeitest direkt mit Fachbereichen bei Stadtwerken und Energieversorgern, verstehst ihre Prozesse und übersetzt dieses Wissen in produktive KI-Agenten.\nDabei verbindest Du GenAI Engineering mit Kundenarbeit: Du führst Fachinterviews und Workshops, entwickelst mit Python, LLMs, RAG und Tools funktionierende Lösungen und stellst durch systematische Evaluation sicher, dass sie im Alltag zuverlässig funktionieren.\nAufgaben\n\nWorkshops und Fachinterviews durchführen und",
-      "url": "https://www.arbeitnow.com/jobs/companies/knowway-gmbh/forward-deployed-ai-engineer-energy-lennestadt-469857",
-      "applyUrl": "https://www.arbeitnow.com/jobs/companies/knowway-gmbh/forward-deployed-ai-engineer-energy-lennestadt-469857",
-      "location": "Remote",
-      "category": "General",
-      "tags": [
-        "Remote",
-        "Consulting",
-        "Engineering"
-      ],
-      "postedAt": "2026-10-07T20:00:42.000Z",
-      "source": "Arbeitnow",
-      "matchScore": 70,
-      "matchReason": "Matches 2 skills: Python, RAG",
-      "experienceFit": "junior-mid",
-      "matchMethod": "keyword"
-    },
-    {
       "id": "python-19",
       "title": "Python + TypeScript Engineers",
       "company": "Fusionbox",
@@ -561,7 +540,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-08T01:40:22.438Z",
+      "postedAt": "2026-10-08T08:28:07.390Z",
       "source": "PythonJobs",
       "matchScore": 70,
       "matchReason": "Matches 2 skills: TypeScript, Python",
@@ -688,6 +667,26 @@
       "matchMethod": "keyword"
     },
     {
+      "id": "arbeitnow-senior-fullstack-engineer-ai-backend-infrastructure-berlin-456522",
+      "title": "Senior Fullstack Engineer: AI, Backend, Infrastructure",
+      "company": "UseToday ApS",
+      "description": "TODAY revolutionizes Financial Advice by making advisors AI-native. Its AI sales operating system supports financial and insurance advisors before, during, and after client meetings, so they save time and give their clients better advice.\nIf terms such as Voice AI, workflow automation, real-time analysis, and assistance are what you're passionate about, we want to hear from you.\nTasks\n\nArchitect, build, and own core product features across our entire stack, from AI (Voice AI, STT, TTS, Microsoft Foundry, MCP, Deep Agents, LangChain, Langfuse) to Python (optionally Golang and/or TypeScript), Postgres, and Microsoft Azure infrastructure.\nDesign and implement scalable microservice architectures on a modern infrastructure stack.\nDevelop production-grade AI products, including features driven by LLMs, agents, and advanced audio ML.\nIntegrate a wide variety of third-party APIs, MCPs, and data stores to expand our platform's capabilities.\nGet hands-on with Voice AI, building systems for audio",
+      "url": "https://www.arbeitnow.com/jobs/companies/usetoday-aps/senior-fullstack-engineer-ai-backend-infrastructure-berlin-456522",
+      "applyUrl": "https://www.arbeitnow.com/jobs/companies/usetoday-aps/senior-fullstack-engineer-ai-backend-infrastructure-berlin-456522",
+      "location": "Remote",
+      "category": "professional / experienced",
+      "tags": [
+        "Remote",
+        "Engineering"
+      ],
+      "postedAt": "2026-10-08T06:00:53.000Z",
+      "source": "Arbeitnow",
+      "matchScore": 60,
+      "matchReason": "Matches 3 skills: TypeScript, Python, LangChain",
+      "experienceFit": "senior",
+      "matchMethod": "keyword"
+    },
+    {
       "id": "arbeitnow-remote-junior-cloud-operations-engineer-all-genders-ch-baar-284023",
       "title": "Junior Cloud Operations Engineer (all genders) CH",
       "company": "BSI Software",
@@ -719,7 +718,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-08T01:40:22.438Z",
+      "postedAt": "2026-10-08T08:28:07.390Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -738,7 +737,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-08T01:40:22.438Z",
+      "postedAt": "2026-10-08T08:28:07.390Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -757,7 +756,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-08T01:40:22.438Z",
+      "postedAt": "2026-10-08T08:28:07.390Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -776,7 +775,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-08T01:40:22.438Z",
+      "postedAt": "2026-10-08T08:28:07.390Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -795,7 +794,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-08T01:40:22.438Z",
+      "postedAt": "2026-10-08T08:28:07.390Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -814,7 +813,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-08T01:40:22.438Z",
+      "postedAt": "2026-10-08T08:28:07.390Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -833,7 +832,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-08T01:40:22.438Z",
+      "postedAt": "2026-10-08T08:28:07.390Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -904,16 +903,16 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "wwr-11",
-      "title": "Software Engineer - Query Execution",
-      "company": "Dremio",
+      "id": "wwr-0",
+      "title": "IT Infrastructure Engineer",
+      "company": "BlueGeko",
       "description": "",
-      "url": "https://weworkremotely.com/remote-jobs/dremio-software-engineer-query-execution",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/dremio-software-engineer-query-execution",
+      "url": "https://weworkremotely.com/remote-jobs/bluegeko-it-infrastructure-engineer",
+      "applyUrl": "https://weworkremotely.com/remote-jobs/bluegeko-it-infrastructure-engineer",
       "location": "Remote",
       "category": "General",
       "tags": [],
-      "postedAt": "2026-10-07T07:30:53.000Z",
+      "postedAt": "2026-10-08T07:54:30.000Z",
       "source": "WeWorkRemotely",
       "matchScore": 50,
       "matchReason": "Relevant developer role",
