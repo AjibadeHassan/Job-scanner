@@ -1,6 +1,6 @@
 {
-  "scanDate": "2026-10-07T21:49:00.385Z",
-  "totalScraped": 185,
+  "scanDate": "2026-10-08T01:47:59.197Z",
+  "totalScraped": 190,
   "totalMatched": 30,
   "jobs": [
     {
@@ -561,7 +561,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T21:47:11.750Z",
+      "postedAt": "2026-10-08T01:40:22.438Z",
       "source": "PythonJobs",
       "matchScore": 70,
       "matchReason": "Matches 2 skills: TypeScript, Python",
@@ -719,7 +719,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T21:47:11.749Z",
+      "postedAt": "2026-10-08T01:40:22.438Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -738,7 +738,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T21:47:11.750Z",
+      "postedAt": "2026-10-08T01:40:22.438Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -757,7 +757,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T21:47:11.750Z",
+      "postedAt": "2026-10-08T01:40:22.438Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -776,7 +776,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T21:47:11.750Z",
+      "postedAt": "2026-10-08T01:40:22.438Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -795,7 +795,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T21:47:11.750Z",
+      "postedAt": "2026-10-08T01:40:22.438Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -814,7 +814,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T21:47:11.750Z",
+      "postedAt": "2026-10-08T01:40:22.438Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -833,7 +833,7 @@
       "tags": [
         "python"
       ],
-      "postedAt": "2026-10-07T21:47:11.750Z",
+      "postedAt": "2026-10-08T01:40:22.438Z",
       "source": "PythonJobs",
       "matchScore": 60,
       "matchReason": "Matches 1 skills: Python",
@@ -904,7 +904,7 @@
       "matchMethod": "keyword"
     },
     {
-      "id": "wwr-10",
+      "id": "wwr-11",
       "title": "Software Engineer - Query Execution",
       "company": "Dremio",
       "description": "",

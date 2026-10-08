@@ -82,5 +82,17 @@
     "totalScraped": 185,
     "totalMatched": 30,
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-08T01:47:59.197Z",
+    "totalScraped": 190,
+    "totalMatched": 30,
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-08T01:47:59.197Z",
+    "totalScraped": 190,
+    "totalMatched": 30,
+    "notified": true
   }
 ]
