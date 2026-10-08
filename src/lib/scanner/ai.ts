@@ -1,11 +1,6 @@
-// Unified AI client — uses Google Gemini API (works anywhere with GEMINI_API_KEY)
-// Tries multiple models, minimal retries (no long delays — caller handles fallback)
-
-const GEMINI_MODELS = [
-  'gemini-flash-latest',
-  'gemini-2.0-flash',
-  'gemini-1.5-flash',
-]
+// Unified AI client — supports Groq (primary, fast/reliable) and Gemini (fallback)
+// Both are free. Set GROQ_API_KEY or GEMINI_API_KEY to enable AI.
+// If neither available, callers should use keyword/template fallbacks.
 
 export interface ChatMessage {
   role: 'user' | 'assistant'
@@ -13,27 +8,84 @@ export interface ChatMessage {
 }
 
 export class AIClient {
+  private groqKey: string | undefined
   private geminiKey: string | undefined
 
   constructor() {
+    this.groqKey = process.env.GROQ_API_KEY
     this.geminiKey = process.env.GEMINI_API_KEY
   }
 
   isAvailable(): boolean {
-    return !!this.geminiKey
+    return !!(this.groqKey || this.geminiKey)
+  }
+
+  get provider(): string {
+    if (this.groqKey) return 'groq'
+    if (this.geminiKey) return 'gemini'
+    return 'none'
   }
 
   async create(messages: ChatMessage[]): Promise<string> {
-    if (!this.geminiKey) {
-      throw new Error('No AI provider available (set GEMINI_API_KEY)')
+    // Try Groq first (fast, reliable, free 30 req/min)
+    if (this.groqKey) {
+      try {
+        return await this.callGroq(messages)
+      } catch (err: any) {
+        // If Groq fails with 429/503, try Gemini
+        if (this.geminiKey && (err.message?.includes('429') || err.message?.includes('503'))) {
+          return await this.callGemini(messages)
+        }
+        throw err
+      }
     }
-    return this.callGemini(messages)
+    // Groq not configured — try Gemini
+    if (this.geminiKey) {
+      return await this.callGemini(messages)
+    }
+    throw new Error('No AI provider available (set GROQ_API_KEY or GEMINI_API_KEY)')
+  }
+
+  private async callGroq(messages: ChatMessage[]): Promise<string> {
+    const model = 'llama-3.3-70b-versatile'
+    const endpoint = 'https://api.groq.com/openai/v1/chat/completions'
+
+    // Convert to OpenAI-compatible format
+    const openaiMessages = messages.map((m) => ({
+      role: m.role === 'assistant' ? 'system' : 'user',
+      content: m.content,
+    }))
+
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.groqKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        messages: openaiMessages,
+        temperature: 0.7,
+        max_tokens: 2048,
+      }),
+    })
+
+    if (!res.ok) {
+      const err = await res.text()
+      throw new Error(`Groq API error (${res.status}): ${err.slice(0, 200)}`)
+    }
+
+    const data = await res.json()
+    const text = data.choices?.[0]?.message?.content
+    if (!text) throw new Error('Groq returned empty response')
+    return text
   }
 
   private async callGemini(messages: ChatMessage[]): Promise<string> {
+    const models = ['gemini-flash-latest', 'gemini-2.0-flash', 'gemini-1.5-flash']
+
     let systemPrompt = ''
     const conversation: { role: string; parts: { text: string }[] }[] = []
-
     for (const msg of messages) {
       if (msg.role === 'assistant' && !systemPrompt) {
         systemPrompt = msg.content
@@ -45,18 +97,11 @@ export class AIClient {
 
     const body: any = {
       contents: conversation,
-      generationConfig: {
-        temperature: 0.7,
-        maxOutputTokens: 2048,
-      },
+      generationConfig: { temperature: 0.7, maxOutputTokens: 2048 },
     }
+    if (systemPrompt) body.system_instruction = { parts: [{ text: systemPrompt }] }
 
-    if (systemPrompt) {
-      body.system_instruction = { parts: [{ text: systemPrompt }] }
-    }
-
-    // Try each model once (no retries, no delays — caller handles fallback)
-    for (const model of GEMINI_MODELS) {
+    for (const model of models) {
       try {
         const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`
         const res = await fetch(`${endpoint}?key=${this.geminiKey}`, {
@@ -64,38 +109,27 @@ export class AIClient {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(body),
         })
-
         if (res.ok) {
           const data = await res.json()
           const text = data.candidates?.[0]?.content?.parts?.[0]?.text
           if (text) return text
         }
-
-        // 503/429 → try next model immediately (no delay)
-        // 400/404 → model not available, try next
-        // Other errors → throw
-        if (res.status === 503 || res.status === 429 || res.status === 400 || res.status === 404) {
-          continue
+        if (res.status !== 503 && res.status !== 429 && res.status !== 400 && res.status !== 404) {
+          const err = await res.text()
+          throw new Error(`Gemini API error (${res.status}): ${err.slice(0, 200)}`)
         }
-
-        const errText = await res.text()
-        throw new Error(`Gemini API error (${res.status}): ${errText.slice(0, 200)}`)
       } catch (err: any) {
-        // Network error → try next model
         if (err.message?.includes('fetch')) continue
+        if (err.message?.includes('503') || err.message?.includes('429')) continue
         throw err
       }
     }
-
-    throw new Error('All Gemini models unavailable (503/429)')
+    throw new Error('All Gemini models unavailable')
   }
 }
 
 let _client: AIClient | null = null
-
 export function getAIClient(): AIClient {
-  if (!_client) {
-    _client = new AIClient()
-  }
+  if (!_client) _client = new AIClient()
   return _client
 }

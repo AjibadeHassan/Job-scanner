@@ -1,4 +1,4 @@
-// Storage — saves and loads scan results as JSON
+// Storage — saves and loads scan results + history
 import { readFileSync, existsSync, writeFileSync, mkdirSync } from 'fs'
 import { join } from 'path'
 import { type MatchedJob } from './matcher'
@@ -10,49 +10,46 @@ const HISTORY_FILE = join(DATA_DIR, 'history.json')
 export interface ScanResult {
   scanDate: string
   totalScraped: number
+  totalNew: number // after dedup
   totalMatched: number
+  sourcesUsed: string[]
+  sourcesSkipped: number
   jobs: MatchedJob[]
   notified: boolean
+  aiProvider: string
 }
 
 export interface ScanHistoryEntry {
   scanDate: string
   totalScraped: number
+  totalNew: number
   totalMatched: number
+  sourcesUsed: string[]
   notified: boolean
 }
 
 export function saveResults(result: ScanResult): void {
   if (!existsSync(DATA_DIR)) mkdirSync(DATA_DIR, { recursive: true })
-  // Save latest results (overwrites)
   writeFileSync(RESULTS_FILE, JSON.stringify(result, null, 2))
 
-  // Append to history (keeps last 100 scans)
   const history = loadHistory()
   history.push({
     scanDate: result.scanDate,
     totalScraped: result.totalScraped,
+    totalNew: result.totalNew,
     totalMatched: result.totalMatched,
+    sourcesUsed: result.sourcesUsed,
     notified: result.notified,
   })
-  const trimmedHistory = history.slice(-100)
-  writeFileSync(HISTORY_FILE, JSON.stringify(trimmedHistory, null, 2))
+  writeFileSync(HISTORY_FILE, JSON.stringify(history.slice(-100), null, 2))
 }
 
 export function loadResults(): ScanResult | null {
   if (!existsSync(RESULTS_FILE)) return null
-  try {
-    return JSON.parse(readFileSync(RESULTS_FILE, 'utf-8'))
-  } catch {
-    return null
-  }
+  try { return JSON.parse(readFileSync(RESULTS_FILE, 'utf-8')) } catch { return null }
 }
 
 export function loadHistory(): ScanHistoryEntry[] {
   if (!existsSync(HISTORY_FILE)) return []
-  try {
-    return JSON.parse(readFileSync(HISTORY_FILE, 'utf-8'))
-  } catch {
-    return []
-  }
+  try { return JSON.parse(readFileSync(HISTORY_FILE, 'utf-8')) } catch { return [] }
 }

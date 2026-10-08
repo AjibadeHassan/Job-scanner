@@ -1,95 +1,117 @@
-// Main scanner orchestrator — runs the full pipeline:
-// 1. Load profile (GitHub + resume)
-// 2. Scrape all job boards
-// 3. AI match + score jobs (with keyword fallback if AI unavailable)
-// 4. Generate cover letters for top matches (with template fallback)
-// 5. Save results
-// 6. Send Telegram notification
-
+// Main scanner orchestrator — v2 with source rotation + dedup + AI matching
 import { loadProfile } from './profile'
-import { scrapeAllJobs } from './jobs/scrapers'
+import { scrapeRotatedSources } from './jobs/sourceRotation'
+import { deduplicateJobs } from './jobs/dedup'
 import { matchJobs, type MatchedJob } from './matcher'
 import { generateCoverLetter, generateTemplateCoverLetter } from './coverletter'
 import { sendTelegramNotification } from './notifier'
 import { saveResults, type ScanResult } from './storage'
+import { getAIClient } from './ai'
 
 export async function runScan(): Promise<ScanResult> {
-  console.log('=== Job Scanner Started ===')
+  console.log('=== Job Scanner v2 Started ===')
   console.log(`Time: ${new Date().toISOString()}\n`)
 
-  // Step 1: Load candidate profile
+  // Step 1: Load profile
   console.log('Step 1: Loading profile...')
   const profile = await loadProfile()
   console.log(`✓ Profile loaded for ${profile.name}\n`)
 
-  // Step 2: Scrape all job boards
-  console.log('Step 2: Scraping job boards...')
-  const jobs = await scrapeAllJobs()
-  console.log(`✓ ${jobs.length} unique jobs scraped\n`)
+  // Step 2: Scrape (rotated sources, 24h cooldown)
+  console.log('Step 2: Scraping (source rotation)...')
+  const { jobs: scrapedJobs, sourcesUsed, sourcesSkipped } = await scrapeRotatedSources()
 
-  if (jobs.length === 0) {
-    console.log('No jobs found. Exiting.')
+  if (sourcesUsed.length === 0) {
+    console.log('✓ All sources on cooldown — skipping scan\n')
     const result: ScanResult = {
       scanDate: new Date().toISOString(),
-      totalScraped: 0,
-      totalMatched: 0,
-      jobs: [],
-      notified: false,
+      totalScraped: 0, totalNew: 0, totalMatched: 0,
+      sourcesUsed: [], sourcesSkipped, jobs: [], notified: false,
+      aiProvider: 'none',
     }
     saveResults(result)
     return result
   }
 
-  // Step 3: AI match + score (with keyword fallback)
-  console.log('Step 3: Matching jobs...')
-  const matchedJobs = await matchJobs(jobs, profile)
+  console.log(`✓ Scraped ${scrapedJobs.length} jobs from ${sourcesUsed.length} sources\n`)
+
+  if (scrapedJobs.length === 0) {
+    const result: ScanResult = {
+      scanDate: new Date().toISOString(),
+      totalScraped: 0, totalNew: 0, totalMatched: 0,
+      sourcesUsed, sourcesSkipped, jobs: [], notified: false,
+      aiProvider: getAIClient().provider,
+    }
+    saveResults(result)
+    return result
+  }
+
+  // Step 3: Deduplicate (filter out previously seen jobs)
+  console.log('Step 3: Deduplicating...')
+  const { newJobs, duplicates } = deduplicateJobs(scrapedJobs)
+  console.log(`✓ ${newJobs.length} new jobs (${duplicates} duplicates filtered)\n`)
+
+  if (newJobs.length === 0) {
+    console.log('No new jobs found — all were seen before. Exiting.')
+    const result: ScanResult = {
+      scanDate: new Date().toISOString(),
+      totalScraped: scrapedJobs.length, totalNew: 0, totalMatched: 0,
+      sourcesUsed, sourcesSkipped, jobs: [], notified: false,
+      aiProvider: getAIClient().provider,
+    }
+    saveResults(result)
+    return result
+  }
+
+  // Step 4: Match (AI with keyword fallback)
+  console.log('Step 4: Matching jobs...')
+  const matchedJobs = await matchJobs(newJobs, profile)
   console.log(`✓ ${matchedJobs.length} jobs matched\n`)
 
-  // Step 4: Generate cover letters for top 10 matches
-  console.log('Step 4: Generating cover letters...')
+  // Step 5: Generate cover letters for top 10
+  console.log('Step 5: Generating cover letters...')
   const topMatches = matchedJobs.slice(0, 10)
   for (const job of topMatches) {
     try {
       job.coverLetter = await generateCoverLetter(job, profile)
-      console.log(`  ✓ Cover letter for: ${job.title} at ${job.company}`)
-    } catch (err) {
-      console.log(`  → Using template cover letter for: ${job.title}`)
+      console.log(`  ✓ ${job.title.slice(0, 40)} at ${job.company}`)
+    } catch {
       job.coverLetter = generateTemplateCoverLetter(job, profile)
+      console.log(`  → template for ${job.title.slice(0, 40)}`)
     }
   }
-  console.log(`✓ Cover letters generated for ${topMatches.length} jobs\n`)
+  console.log(`✓ Cover letters done\n`)
 
-  // Step 5: Save results
-  console.log('Step 5: Saving results...')
+  // Step 6: Save results
+  console.log('Step 6: Saving results...')
   const result: ScanResult = {
     scanDate: new Date().toISOString(),
-    totalScraped: jobs.length,
+    totalScraped: scrapedJobs.length,
+    totalNew: newJobs.length,
     totalMatched: matchedJobs.length,
+    sourcesUsed,
+    sourcesSkipped,
     jobs: matchedJobs,
     notified: false,
+    aiProvider: getAIClient().provider,
   }
   saveResults(result)
   console.log('✓ Results saved\n')
 
-  // Step 6: Send Telegram notification
-  console.log('Step 6: Sending Telegram notification...')
+  // Step 7: Telegram notification
+  console.log('Step 7: Sending Telegram notification...')
   const notified = await sendTelegramNotification(matchedJobs)
   result.notified = notified
   saveResults(result)
   console.log(`✓ Notification ${notified ? 'sent' : 'skipped'}\n`)
 
   console.log('=== Scan Complete ===')
-  console.log(`Total scraped: ${result.totalScraped}`)
-  console.log(`Total matched: ${result.totalMatched}`)
-  console.log(`Notified: ${notified}`)
+  console.log(`Scraped: ${result.totalScraped} | New: ${result.totalNew} | Matched: ${result.totalMatched} | AI: ${result.aiProvider}`)
 
   return result
 }
 
-// Run the scan — works with both bun and node
-runScan()
-  .then(() => process.exit(0))
-  .catch((err) => {
-    console.error('Scan failed:', err)
-    process.exit(1)
-  })
+runScan().then(() => process.exit(0)).catch((err) => {
+  console.error('Scan failed:', err)
+  process.exit(1)
+})

@@ -1,5 +1,5 @@
-// Job scrapers — 15 free remote job APIs/RSS feeds
-// All return normalized JobPosting objects
+// Job scrapers — individual functions for each source
+// Each function returns normalized JobPosting[]
 
 export interface JobPosting {
   id: string
@@ -16,8 +16,6 @@ export interface JobPosting {
   source: string
 }
 
-
-// Helper: fetch with timeout (prevents hanging on slow/dead feeds)
 async function fetchWithTimeout(url: string, options: RequestInit = {}, timeoutMs = 10000): Promise<Response> {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), timeoutMs)
@@ -28,45 +26,94 @@ async function fetchWithTimeout(url: string, options: RequestInit = {}, timeoutM
   }
 }
 
-// 1. RemoteOK — free JSON API, no auth
-async function scrapeRemoteOK(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://remoteok.com/api?tags=remote', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`RemoteOK: ${res.status}`)
-    const data = await res.json()
-    return data
-      .slice(1)
-      .filter((j: any) => j.position && j.company)
-      .map((j: any): JobPosting => ({
-        id: `remoteok-${j.id}`,
-        title: j.position,
-        company: j.company,
-        description: `${j.description || ''} ${j.tags?.join(', ') || ''}`.trim(),
-        url: j.url || `https://remoteok.com/l/${j.id}`,
-        applyUrl: j.apply_url || j.url,
-        location: j.location || 'Remote',
-        category: j.tags?.[0] || 'General',
-        tags: j.tags || [],
-        salary: j.salary,
-        postedAt: new Date((j.epoch || Date.now() / 1000) * 1000).toISOString(),
-        source: 'RemoteOK',
-      }))
-  } catch (err) { console.error('RemoteOK: failed'); return [] }
+function parseRssItem(itemXml: string, idx: number, sourcePrefix: string, source: string): JobPosting | null {
+  const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
+  const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
+  const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] ||
+                      itemXml.match(/<description>(.*?)<\/description>/)?.[1] || ''
+  const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
+
+  if (!title || !link) return null
+
+  // Try to extract company from title (formats: "Company: Title" or "Title at Company")
+  let company = 'Unknown'
+  let jobTitle = title
+  if (title.includes(':')) {
+    const parts = title.split(':')
+    company = parts[0].trim()
+    jobTitle = parts.slice(1).join(':').trim()
+  } else if (title.includes(' at ')) {
+    const parts = title.split(' at ')
+    jobTitle = parts[0].trim()
+    company = parts.slice(1).join(' at ').trim()
+  }
+
+  return {
+    id: `${sourcePrefix}-${idx}`,
+    title: jobTitle.replace(/\(.*?\)/g, '').trim(),
+    company,
+    description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
+    url: link,
+    applyUrl: link,
+    location: 'Remote',
+    category: 'General',
+    tags: [],
+    postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
+    source,
+  }
 }
 
-// 2. Remotive — free JSON API, no auth
-async function scrapeRemotive(): Promise<JobPosting[]> {
+async function scrapeRssFeed(url: string, sourceName: string, prefix: string, limit = 40): Promise<JobPosting[]> {
+  try {
+    const res = await fetchWithTimeout(url, { headers: { 'User-Agent': 'job-scanner/2.0' } })
+    if (!res.ok) throw new Error(`${sourceName}: ${res.status}`)
+    const xml = await res.text()
+    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
+    const jobs: JobPosting[] = []
+    for (let idx = 0; idx < Math.min(items.length, limit); idx++) {
+      const job = parseRssItem(items[idx], idx, prefix, sourceName)
+      if (job) jobs.push(job)
+    }
+    return jobs
+  } catch {
+    return []
+  }
+}
+
+// === API-based scrapers ===
+
+export async function scrapeRemoteOK(): Promise<JobPosting[]> {
+  try {
+    const res = await fetchWithTimeout('https://remoteok.com/api', { headers: { 'User-Agent': 'job-scanner/2.0' } })
+    if (!res.ok) return []
+    const data = await res.json()
+    return data.slice(1).filter((j: any) => j.position && j.company).map((j: any): JobPosting => ({
+      id: `remoteok-${j.id}`,
+      title: j.position,
+      company: j.company,
+      description: `${j.description || ''} ${j.tags?.join(', ') || ''}`.trim().slice(0, 1000),
+      url: j.url || `https://remoteok.com/l/${j.id}`,
+      applyUrl: j.apply_url || j.url,
+      location: j.location || 'Remote',
+      category: j.tags?.[0] || 'General',
+      tags: j.tags || [],
+      salary: j.salary,
+      postedAt: new Date((j.epoch || Date.now() / 1000) * 1000).toISOString(),
+      source: 'RemoteOK',
+    }))
+  } catch { return [] }
+}
+
+export async function scrapeRemotive(): Promise<JobPosting[]> {
   try {
     const res = await fetchWithTimeout('https://remotive.com/api/remote-jobs?limit=100')
-    if (!res.ok) throw new Error(`Remotive: ${res.status}`)
+    if (!res.ok) return []
     const data = await res.json()
     return (data.jobs || []).map((j: any): JobPosting => ({
       id: `remotive-${j.id}`,
       title: j.title,
       company: j.company_name,
-      description: j.description || '',
+      description: (j.description || '').replace(/<[^>]*>/g, '').trim().slice(0, 1000),
       url: j.url,
       applyUrl: j.url,
       location: j.candidate_required_location || 'Remote',
@@ -76,54 +123,18 @@ async function scrapeRemotive(): Promise<JobPosting[]> {
       postedAt: j.publication_date || new Date().toISOString(),
       source: 'Remotive',
     }))
-  } catch (err) { console.error('Remotive: failed'); return [] }
+  } catch { return [] }
 }
 
-// 3. WeWorkRemotely — free RSS feed
-async function scrapeWeWorkRemotely(): Promise<JobPosting[]> {
+export async function scrapeHackerNews(): Promise<JobPosting[]> {
   try {
-    const res = await fetchWithTimeout('https://weworkremotely.com/remote-jobs.rss', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`WWR: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 50).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      const parts = title.split(':')
-      const company = parts[0]?.trim() || 'Unknown'
-      const jobTitle = parts.slice(1).join(':').trim() || title
-      return {
-        id: `wwr-${idx}`,
-        title: jobTitle.replace(/\(.*?\)/, '').trim(),
-        company,
-        description: description.replace(/<[^>]*>/g, '').trim(),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'WeWorkRemotely',
-      }
-    })
-  } catch (err) { console.error('WeWorkRemotely: failed'); return [] }
-}
-
-// 4. Hacker News "Who's Hiring" — free Algolia API
-async function scrapeHackerNews(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout(
-      `https://hn.algolia.com/api/v1/search?query=Ask+HN%3A+Who+is+hiring&tags=story&hitsPerPage=1`
-    )
-    if (!res.ok) throw new Error(`HN: ${res.status}`)
+    const res = await fetchWithTimeout('https://hn.algolia.com/api/v1/search?query=Ask+HN%3A+Who+is+hiring&tags=story&hitsPerPage=1')
+    if (!res.ok) return []
     const data = await res.json()
     const storyId = data.hits?.[0]?.objectID
     if (!storyId) return []
 
-    const commentsRes = await fetchWithTimeout(
-      `https://hn.algolia.com/api/v1/search?tags=comment,story_${storyId}&hitsPerPage=50`
-    )
+    const commentsRes = await fetchWithTimeout(`https://hn.algolia.com/api/v1/search?tags=comment,story_${storyId}&hitsPerPage=50`)
     if (!commentsRes.ok) return []
     const commentsData = await commentsRes.json()
 
@@ -140,79 +151,23 @@ async function scrapeHackerNews(): Promise<JobPosting[]> {
           description: text.slice(0, 1000),
           url: `https://news.ycombinator.com/item?id=${c.objectID}`,
           applyUrl: `https://news.ycombinator.com/item?id=${c.objectID}`,
-          location: 'Remote', category: 'General', tags: [],
-          postedAt: c.created_at, source: 'HackerNews',
+          location: 'Remote',
+          category: 'General',
+          tags: [],
+          postedAt: c.created_at,
+          source: 'HackerNews',
         }
       })
-  } catch (err) { console.error('HackerNews: failed'); return [] }
+  } catch { return [] }
 }
 
-// 5. Europe Remote — RSS feed
-async function scrapeEuropeRemote(): Promise<JobPosting[]> {
+export async function scrapeArbeitnow(): Promise<JobPosting[]> {
   try {
-    const res = await fetchWithTimeout('https://europeremote.com/jobs.rss', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`EuropeRemote: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      return {
-        id: `er-${idx}`,
-        title, company: title.split(/[|\-–at:]/)[0].trim() || 'Unknown',
-        description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: link, applyUrl: link,
-        location: 'Remote (Europe)', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'EuropeRemote',
-      }
-    })
-  } catch (err) { console.error('EuropeRemote: failed'); return [] }
-}
-
-// 7. Himalayas — free JSON API, no auth
-async function scrapeHimalayas(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://himalayas.app/api/jobs', {
-      headers: { 'User-Agent': 'job-scanner/1.0', 'Accept': 'application/json' },
-    })
-    if (!res.ok) throw new Error(`Himalayas: ${res.status}`)
-    const data = await res.json()
-    const jobs = data.jobs || data.data || data || []
-    return (Array.isArray(jobs) ? jobs : [])
-      .filter((j: any) => j.title || j.position)
-      .slice(0, 50)
-      .map((j: any, idx: number): JobPosting => ({
-        id: `himalayas-${j.id || idx}`,
-        title: j.title || j.position,
-        company: j.company?.name || j.company_name || j.company || 'Unknown',
-        description: (j.description || j.content || '').replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: j.url || j.apply_url || `https://himalayas.app/jobs/${j.id || idx}`,
-        applyUrl: j.apply_url || j.url,
-        location: j.location || 'Remote',
-        category: j.category || j.department || 'General',
-        tags: j.tags || j.skills || [],
-        salary: j.salary_range || j.salary,
-        postedAt: j.created_at || j.posted_at || new Date().toISOString(),
-        source: 'Himalayas',
-      }))
-  } catch (err) { console.error('Himalayas: failed'); return [] }
-}
-
-// 8. Arbeitnow — free JSON API, no auth
-async function scrapeArbeitnow(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://www.arbeitnow.com/api/job-board-api', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`Arbeitnow: ${res.status}`)
+    const res = await fetchWithTimeout('https://www.arbeitnow.com/api/job-board-api')
+    if (!res.ok) return []
     const data = await res.json()
     return (data.data || [])
-      .filter((j: any) => j.title && (j.remote === true || j.location?.toLowerCase().includes('remote')))
+      .filter((j: any) => j.title && (j.remote === true || (j.location || '').toLowerCase().includes('remote')))
       .slice(0, 50)
       .map((j: any): JobPosting => ({
         id: `arbeitnow-${j.slug || j.id}`,
@@ -228,209 +183,13 @@ async function scrapeArbeitnow(): Promise<JobPosting[]> {
         postedAt: j.created_at ? new Date(j.created_at * 1000).toISOString() : new Date().toISOString(),
         source: 'Arbeitnow',
       }))
-  } catch (err) { console.error('Arbeitnow: failed'); return [] }
+  } catch { return [] }
 }
 
-// 9. Jobicy — RSS feed
-async function scrapeJobicy(): Promise<JobPosting[]> {
+export async function scrapePythonJobs(): Promise<JobPosting[]> {
   try {
-    const res = await fetchWithTimeout('https://jobicy.com/jobs.rss', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`Jobicy: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      return {
-        id: `jobicy-${idx}`,
-        title, company: title.split(/[|\-–at:]/)[0].trim() || 'Unknown',
-        description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'Jobicy',
-      }
-    })
-  } catch (err) { console.error('Jobicy: failed'); return [] }
-}
-
-// 10. Remote.co — RSS/JSON feed
-async function scrapeRemoteCo(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://remote.co/remote-jobs/feed/', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`Remote.co: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      return {
-        id: `remoteco-${idx}`,
-        title, company: title.split(/[|\-–at:]/)[0].trim() || 'Unknown',
-        description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'Remote.co',
-      }
-    })
-  } catch (err) { console.error('Remote.co: failed'); return [] }
-}
-
-// 10. DailyRemote — RSS feed
-async function scrapeDailyRemote(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://dailyremote.com/jobs/feed', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`DailyRemote: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      return {
-        id: `dailyremote-${idx}`,
-        title, company: title.split(/[|\-–at:]/)[0].trim() || 'Unknown',
-        description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'DailyRemote',
-      }
-    })
-  } catch (err) { console.error('DailyRemote: failed'); return [] }
-}
-
-// 11. JustRemote — RSS feed
-async function scrapeJustRemote(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://justremote.co/remote-jobs.rss', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`JustRemote: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      return {
-        id: `justremote-${idx}`,
-        title, company: title.split(/[|\-–at:]/)[0].trim() || 'Unknown',
-        description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'JustRemote',
-      }
-    })
-  } catch (err) { console.error('JustRemote: failed'); return [] }
-}
-
-// 12. Remote People — RSS feed
-async function scrapeRemotePeople(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://remotepeople.io/jobs.rss', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`RemotePeople: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      return {
-        id: `remotepeople-${idx}`,
-        title, company: title.split(/[|\-–at:]/)[0].trim() || 'Unknown',
-        description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'RemotePeople',
-      }
-    })
-  } catch (err) { console.error('RemotePeople: failed'); return [] }
-}
-
-// 13. Crossover — RSS feed
-async function scrapeCrossover(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://www.crossover.com/jobs.rss', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`Crossover: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      return {
-        id: `crossover-${idx}`,
-        title, company: title.split(/[|\-–at:]/)[0].trim() || 'Unknown',
-        description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'General', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'Crossover',
-      }
-    })
-  } catch (err) { console.error('Crossover: failed'); return [] }
-}
-
-// 14. WeWorkRemotely (dev category) — separate RSS feed for more dev jobs
-async function scrapeWeWorkRemotelyDev(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://weworkremotely.com/categories/remote-programming-jobs.rss', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`WWR-Dev: ${res.status}`)
-    const xml = await res.text()
-    const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
-    return items.slice(0, 30).map((itemXml, idx): JobPosting => {
-      const title = itemXml.match(/<title>(.*?)<\/title>/)?.[1] || ''
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
-      const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      const parts = title.split(':')
-      const company = parts[0]?.trim() || 'Unknown'
-      const jobTitle = parts.slice(1).join(':').trim() || title
-      return {
-        id: `wwr-dev-${idx}`,
-        title: jobTitle.replace(/\(.*?\)/, '').trim(),
-        company,
-        description: description.replace(/<[^>]*>/g, '').trim(),
-        url: link, applyUrl: link,
-        location: 'Remote', category: 'Programming', tags: [],
-        postedAt: pubDate ? new Date(pubDate).toISOString() : new Date().toISOString(),
-        source: 'WeWorkRemotely-Dev',
-      }
-    })
-  } catch (err) { console.error('WeWorkRemotely-Dev: failed'); return [] }
-}
-
-// 15. Python.org jobs — RSS feed (Python-specific)
-async function scrapePythonJobs(): Promise<JobPosting[]> {
-  try {
-    const res = await fetchWithTimeout('https://www.python.org/jobs/feed/rss/', {
-      headers: { 'User-Agent': 'job-scanner/1.0' },
-    })
-    if (!res.ok) throw new Error(`PythonJobs: ${res.status}`)
+    const res = await fetchWithTimeout('https://www.python.org/jobs/feed/rss/', { headers: { 'User-Agent': 'job-scanner/2.0' } })
+    if (!res.ok) return []
     const xml = await res.text()
     const items = xml.match(/<item>([\s\S]*?)<\/item>/g) || []
     return items.slice(0, 20).map((itemXml, idx): JobPosting => {
@@ -438,13 +197,11 @@ async function scrapePythonJobs(): Promise<JobPosting[]> {
       const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || ''
       const description = itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]><\/description>/)?.[1] || ''
       const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || ''
-      // Python.org titles format: "Job Title, Company Name"
       const parts = title.split(',')
-      const jobTitle = parts[0]?.trim() || title
-      const company = parts[1]?.trim() || 'Unknown'
       return {
         id: `python-${idx}`,
-        title: jobTitle, company,
+        title: parts[0]?.trim() || title,
+        company: parts[1]?.trim() || 'Unknown',
         description: description.replace(/<[^>]*>/g, '').trim().slice(0, 1000),
         url: link, applyUrl: link,
         location: 'Remote', category: 'Python', tags: ['python'],
@@ -452,50 +209,100 @@ async function scrapePythonJobs(): Promise<JobPosting[]> {
         source: 'PythonJobs',
       }
     })
-  } catch (err) { console.error('PythonJobs: failed'); return [] }
+  } catch { return [] }
 }
 
-// Main scraper — runs all 15 in parallel
-export async function scrapeAllJobs(): Promise<JobPosting[]> {
-  console.log('Scraping all 15 job boards...')
-  const [
-    remoteok, remotive, wwr, hn, er,
-    himalayas, arbeitnow, jobicy, remoteco,
-    dailyremote, justremote, remotepeople, crossover, wwrdev, pythonjobs
-  ] = await Promise.all([
-    scrapeRemoteOK(),
-    scrapeRemotive(),
-    scrapeWeWorkRemotely(),
-    scrapeHackerNews(),
-    scrapeEuropeRemote(),
-    scrapeHimalayas(),
-    scrapeArbeitnow(),
-    scrapeJobicy(),
-    scrapeRemoteCo(),
-    scrapeDailyRemote(),
-    scrapeJustRemote(),
-    scrapeRemotePeople(),
-    scrapeCrossover(),
-    scrapeWeWorkRemotelyDev(),
-    scrapePythonJobs(),
-  ])
+// === RSS-based scrapers (20+ sources) ===
 
-  const all = [...remoteok, ...remotive, ...wwr, ...hn, ...er,
-    ...himalayas, ...arbeitnow, ...jobicy, ...remoteco,
-    ...dailyremote, ...justremote, ...remotepeople, ...crossover, ...wwrdev, ...pythonjobs]
+export async function scrapeWeWorkRemotely(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://weworkremotely.com/remote-jobs.rss', 'WeWorkRemotely', 'wwr', 50)
+}
 
-  console.log(`  RemoteOK: ${remoteok.length} | Remotive: ${remotive.length} | WWR: ${wwr.length} | HN: ${hn.length} | EuropeRemote: ${er.length}`)
-  console.log(`  Himalayas: ${himalayas.length} | Arbeitnow: ${arbeitnow.length} | Jobicy: ${jobicy.length} | Remote.co: ${remoteco.length}`)
-  console.log(`  DailyRemote: ${dailyremote.length} | JustRemote: ${justremote.length} | RemotePeople: ${remotepeople.length} | Crossover: ${crossover.length}`)
-  console.log(`  WWR-Dev: ${wwrdev.length} | PythonJobs: ${pythonjobs.length}`)
-  console.log(`✓ Scraped ${all.length} jobs total`)
+export async function scrapeWeWorkRemotelyDev(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://weworkremotely.com/categories/remote-programming-jobs.rss', 'WeWorkRemotely-Dev', 'wwr-dev', 30)
+}
 
-  const seen = new Set<string>()
-  const unique = all.filter((j) => {
-    if (seen.has(j.url)) return false
-    seen.add(j.url)
-    return true
-  })
-  console.log(`✓ ${unique.length} unique jobs after dedup`)
-  return unique
+export async function scrapeWeWorkRemotelyFrontend(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss', 'WeWorkRemotely-Frontend', 'wwr-fe', 30)
+}
+
+export async function scrapeWeWorkRemotelyFullStack(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss', 'WeWorkRemotely-FullStack', 'wwr-fs', 30)
+}
+
+export async function scrapeWeWorkRemotelyDevOps(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://weworkremotely.com/categories/remote-devops-sysadmin-jobs.rss', 'WeWorkRemotely-DevOps', 'wwr-devops', 20)
+}
+
+export async function scrapeEuropeRemote(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://europeremote.com/jobs.rss', 'EuropeRemote', 'er', 30)
+}
+
+export async function scrapeJobicy(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://jobicy.com/jobs.rss', 'Jobicy', 'jobicy', 30)
+}
+
+export async function scrapeRemoteCo(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://remote.co/remote-jobs/feed/', 'Remote.co', 'remoteco', 30)
+}
+
+export async function scrapeDailyRemote(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://dailyremote.com/jobs/feed', 'DailyRemote', 'dailyremote', 30)
+}
+
+export async function scrapeJustRemote(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://justremote.co/remote-jobs.rss', 'JustRemote', 'justremote', 30)
+}
+
+export async function scrapeRemotePeople(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://remotepeople.io/jobs.rss', 'RemotePeople', 'remotepeople', 30)
+}
+
+export async function scrapeCrossover(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://www.crossover.com/jobs.rss', 'Crossover', 'crossover', 30)
+}
+
+export async function scrapeLandingJobs(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://landing.jobs/jobs.rss', 'LandingJobs', 'landingjobs', 30)
+}
+
+export async function scrapeWellfound(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://wellfound.com/jobs.rss', 'Wellfound', 'wellfound', 30)
+}
+
+export async function scrapeOtta(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://otta.com/jobs.rss', 'Otta', 'otta', 30)
+}
+
+export async function scrapeUpwork(): Promise<JobPosting[]> {
+  // Upwork RSS for web development jobs
+  return scrapeRssFeed('https://www.upwork.com/ab/feed/jobs/rss?q=react+developer&sort=recency&paging=0%3B10', 'Upwork', 'upwork', 20)
+}
+
+export async function scrapeUpworkNode(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://www.upwork.com/ab/feed/jobs/rss?q=node+developer&sort=recency&paging=0%3B10', 'Upwork-Node', 'upwork-node', 20)
+}
+
+export async function scrapeUpworkPython(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://www.upwork.com/ab/feed/jobs/rss?q=python+developer&sort=recency&paging=0%3B10', 'Upwork-Python', 'upwork-python', 20)
+}
+
+export async function scrapeUpworkAI(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://www.upwork.com/ab/feed/jobs/rss?q=ai+engineer&sort=recency&paging=0%3B10', 'Upwork-AI', 'upwork-ai', 20)
+}
+
+export async function scrapeFreelancer(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://www.freelancer.com/rss.xml', 'Freelancer', 'freelancer', 20)
+}
+
+export async function scrapeGuru(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://www.guru.com/d/jobs/rss/', 'Guru', 'guru', 20)
+}
+
+export async function scrapeRedditRemoteJobs(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://www.reddit.com/r/remotejobs/new/.rss', 'Reddit-RemoteJobs', 'reddit-rj', 25)
+}
+
+export async function scrapeRedditForHire(): Promise<JobPosting[]> {
+  return scrapeRssFeed('https://www.reddit.com/r/forhire/new/.rss', 'Reddit-ForHire', 'reddit-fh', 25)
 }
