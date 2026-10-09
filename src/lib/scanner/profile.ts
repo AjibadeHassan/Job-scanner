@@ -1,6 +1,6 @@
 // Profile loader — fetches GitHub repos + parses resume to build a candidate profile
 import { getAIClient } from './ai'
-import { readFileSync, existsSync, writeFileSync } from 'fs'
+import { readFileSync, existsSync, writeFileSync, mkdirSync } from 'fs'
 import { join } from 'path'
 
 export interface CandidateProfile {
@@ -104,6 +104,9 @@ export async function loadProfile(): Promise<CandidateProfile> {
     bio: PORTFOLIO_CONTEXT, updatedAt: new Date().toISOString(),
   }
 
+  // Ensure data directory exists before writing
+  const dataDir = join(process.cwd(), 'data')
+  if (!existsSync(dataDir)) mkdirSync(dataDir, { recursive: true })
   writeFileSync(CACHE_FILE, JSON.stringify(profile, null, 2))
   console.log('✓ Profile cached')
   return profile
