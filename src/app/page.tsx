@@ -101,6 +101,12 @@ export default function Home() {
   }
 
   const handleApply = async (job: MatchedJob) => {
+    // Open the job listing page IMMEDIATELY (before any async calls)
+    // Browsers block window.open() inside async callbacks as popups
+    const jobUrl = job.applyUrl || job.url
+    window.open(jobUrl, '_blank')
+
+    // Now record the application + get cover letter
     try {
       const res = await fetch('/api/apply', {
         method: 'POST',
@@ -108,11 +114,6 @@ export default function Home() {
         body: JSON.stringify({ jobId: job.id }),
       })
       const result = await res.json()
-
-      // Open the job listing page in a new tab FIRST
-      if (result.applyUrl) {
-        window.open(result.applyUrl, '_blank')
-      }
 
       // Show the cover letter modal (with copy + email options)
       if (result.coverLetter) {
