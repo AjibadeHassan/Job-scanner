@@ -47,7 +47,14 @@ export class AIClient {
   }
 
   private async callGroq(messages: ChatMessage[]): Promise<string> {
-    const model = 'llama-3.3-70b-versatile'
+    // Try multiple models — some accounts don't have access to all models
+    const models = [
+      'llama-3.3-70b-versatile',
+      'llama-3.1-70b-versatile',
+      'llama3-70b-8192',
+      'gemma2-9b-it',
+      'mixtral-8x7b-32768',
+    ]
     const endpoint = 'https://api.groq.com/openai/v1/chat/completions'
 
     // Convert to OpenAI-compatible format
@@ -56,29 +63,47 @@ export class AIClient {
       content: m.content,
     }))
 
-    const res = await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.groqKey}`,
-      },
-      body: JSON.stringify({
-        model,
-        messages: openaiMessages,
-        temperature: 0.7,
-        max_tokens: 2048,
-      }),
-    })
+    let lastError: any
+    for (const model of models) {
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${this.groqKey}`,
+          },
+          body: JSON.stringify({
+            model,
+            messages: openaiMessages,
+            temperature: 0.7,
+            max_tokens: 2048,
+          }),
+        })
 
-    if (!res.ok) {
-      const err = await res.text()
-      throw new Error(`Groq API error (${res.status}): ${err.slice(0, 200)}`)
+        if (res.ok) {
+          const data = await res.json()
+          const text = data.choices?.[0]?.message?.content
+          if (text) return text
+        }
+
+        const errText = await res.text()
+        // 404 = model not found → try next model
+        // 403 = forbidden → try next model
+        if (res.status === 404 || res.status === 403) {
+          lastError = new Error(`Groq ${res.status}: ${errText.slice(0, 100)}`)
+          continue
+        }
+        // Other errors (429, 500, etc.) → throw immediately
+        throw new Error(`Groq API error (${res.status}): ${errText.slice(0, 200)}`)
+      } catch (err: any) {
+        if (err.message?.includes('404') || err.message?.includes('403')) {
+          lastError = err
+          continue
+        }
+        throw err
+      }
     }
-
-    const data = await res.json()
-    const text = data.choices?.[0]?.message?.content
-    if (!text) throw new Error('Groq returned empty response')
-    return text
+    throw lastError || new Error('All Groq models failed')
   }
 
   private async callGemini(messages: ChatMessage[]): Promise<string> {

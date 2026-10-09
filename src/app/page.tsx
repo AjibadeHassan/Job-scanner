@@ -54,6 +54,7 @@ interface ScanData {
 export default function Home() {
   const [data, setData] = useState<ScanData | null>(null)
   const [loading, setLoading] = useState(true)
+  const [scanning, setScanning] = useState(false)
   const [selectedJob, setSelectedJob] = useState<MatchedJob | null>(null)
   const [copied, setCopied] = useState(false)
   const [appliedJobs, setAppliedJobs] = useState<Set<string>>(new Set())
@@ -69,6 +70,26 @@ export default function Home() {
       })
       .catch(() => setLoading(false))
   }, [])
+
+  const handleScan = async () => {
+    try {
+      setScanning(true)
+      await fetch('/api/scan', { method: 'POST' })
+      // Poll for results after a delay
+      setTimeout(() => {
+        fetch('/api/jobs')
+          .then((res) => res.json())
+          .then((json) => {
+            setData(json)
+            setScanning(false)
+          })
+          .catch(() => setScanning(false))
+      }, 15000)
+    } catch (err) {
+      console.error('Scan failed:', err)
+      setScanning(false)
+    }
+  }
 
   const handleApply = async (job: MatchedJob) => {
     try {
@@ -141,6 +162,14 @@ export default function Home() {
                 {data.applicationStats.applied} applied
               </Badge>
             )}
+            <Button
+              onClick={handleScan}
+              disabled={scanning}
+              className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white border-0"
+            >
+              <RefreshCw className={cn('mr-2 h-4 w-4', scanning && 'animate-spin')} />
+              {scanning ? 'Scanning...' : 'Scan Now'}
+            </Button>
           </div>
         </div>
       </header>
@@ -199,7 +228,15 @@ export default function Home() {
           <Card className="border-dashed"><CardContent className="p-12 text-center">
             <Search className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
             <h2 className="text-xl font-semibold mb-2">No scans yet</h2>
-            <p className="text-muted-foreground">The scanner runs hourly via GitHub Actions. Check back soon.</p>
+            <p className="text-muted-foreground mb-6">Click below to run a scan now, or wait for the hourly GitHub Actions cron.</p>
+            <Button
+              onClick={handleScan}
+              disabled={scanning}
+              className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white border-0"
+            >
+              <RefreshCw className={cn('mr-2 h-4 w-4', scanning && 'animate-spin')} />
+              {scanning ? 'Scanning...' : 'Run First Scan'}
+            </Button>
           </CardContent></Card>
         ) : filteredJobs.length === 0 ? (
           <Card className="border-dashed"><CardContent className="p-12 text-center">

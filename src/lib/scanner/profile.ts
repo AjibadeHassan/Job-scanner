@@ -82,7 +82,7 @@ export async function loadProfile(): Promise<CandidateProfile> {
     resumeHighlights = await parseResumeWithLLM()
     console.log('✓ Resume parsed')
   } catch (err) {
-    console.error('Resume parsing error:', err)
+    console.log('⚠️  Resume parsing skipped (AI unavailable), using portfolio context')
     resumeHighlights = PORTFOLIO_CONTEXT
   }
 
