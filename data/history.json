@@ -82,5 +82,18 @@
       "Jobicy"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-09T23:01:32.865Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [
+      "LandingJobs",
+      "RemotePeople",
+      "Upwork-Node",
+      "Reddit-RemoteJobs"
+    ],
+    "notified": false
   }
 ]

@@ -94,5 +94,21 @@
   "Jobicy": {
     "lastScraped": "2026-10-09T18:39:32.251Z",
     "jobsFound": 0
+  },
+  "LandingJobs": {
+    "lastScraped": "2026-10-09T23:01:32.864Z",
+    "jobsFound": 0
+  },
+  "RemotePeople": {
+    "lastScraped": "2026-10-09T23:01:32.864Z",
+    "jobsFound": 0
+  },
+  "Upwork-Node": {
+    "lastScraped": "2026-10-09T23:01:32.864Z",
+    "jobsFound": 0
+  },
+  "Reddit-RemoteJobs": {
+    "lastScraped": "2026-10-09T23:01:32.864Z",
+    "jobsFound": 0
   }
 }
