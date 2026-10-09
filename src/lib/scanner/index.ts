@@ -111,7 +111,11 @@ export async function runScan(): Promise<ScanResult> {
   return result
 }
 
-runScan().then(() => process.exit(0)).catch((err) => {
-  console.error('Scan failed:', err)
-  process.exit(1)
-})
+// Only auto-run when executed directly via `bun run src/lib/scanner/index.ts`
+// NOT during Next.js build (which imports this module for type collection)
+if (process.argv[1]?.endsWith('scanner/index.ts') || process.argv[1]?.endsWith('scanner\\index.ts')) {
+  runScan().then(() => process.exit(0)).catch((err) => {
+    console.error('Scan failed:', err)
+    process.exit(1)
+  })
+}
