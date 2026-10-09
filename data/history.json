@@ -40,5 +40,47 @@
       "Otta"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-09T18:39:33.485Z",
+    "totalScraped": 57,
+    "totalNew": 52,
+    "totalMatched": 30,
+    "sourcesUsed": [
+      "Remote.co",
+      "Reddit-ForHire",
+      "JustRemote",
+      "Freelancer",
+      "PythonJobs",
+      "Guru",
+      "Crossover",
+      "WeWorkRemotely-DevOps",
+      "EuropeRemote",
+      "Upwork-AI",
+      "Wellfound",
+      "Jobicy"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-09T18:39:33.485Z",
+    "totalScraped": 57,
+    "totalNew": 52,
+    "totalMatched": 30,
+    "sourcesUsed": [
+      "Remote.co",
+      "Reddit-ForHire",
+      "JustRemote",
+      "Freelancer",
+      "PythonJobs",
+      "Guru",
+      "Crossover",
+      "WeWorkRemotely-DevOps",
+      "EuropeRemote",
+      "Upwork-AI",
+      "Wellfound",
+      "Jobicy"
+    ],
+    "notified": true
   }
 ]
