@@ -1,0 +1,44 @@
+[
+  {
+    "scanDate": "2026-10-09T14:31:44.359Z",
+    "totalScraped": 316,
+    "totalNew": 261,
+    "totalMatched": 30,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Upwork-Python",
+      "DailyRemote",
+      "Upwork",
+      "Otta"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-09T14:31:44.359Z",
+    "totalScraped": 316,
+    "totalNew": 261,
+    "totalMatched": 30,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Upwork-Python",
+      "DailyRemote",
+      "Upwork",
+      "Otta"
+    ],
+    "notified": true
+  }
+]
