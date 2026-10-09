@@ -1,29 +1,46 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { runScan } from '@/lib/scanner/index'
 
-// Manual scan trigger (for testing or on-demand scans)
+// Manual scan trigger — dispatches GitHub Actions workflow
+// (can't run scan in-process on Vercel due to serverless timeout)
 export async function POST(req: NextRequest) {
-  // Simple auth check (optional — can be disabled for local dev)
-  const authHeader = req.headers.get('authorization')
-  const expectedToken = process.env.SCAN_API_TOKEN
-
-  if (expectedToken && authHeader !== `Bearer ${expectedToken}`) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
-
   try {
-    // Run the scan in the background (don't block the response)
-    runScan()
-      .then((result) => {
-        console.log('Manual scan complete:', result.totalMatched, 'jobs matched')
-      })
-      .catch((err) => {
-        console.error('Manual scan failed:', err)
-      })
+    const ghToken = process.env.GH_DISPATCH_TOKEN || process.env.GITHUB_TOKEN
 
+    if (!ghToken) {
+      // No token — return link to Actions page
+      return NextResponse.json({
+        message: 'No dispatch token configured. Trigger scan manually on GitHub.',
+        actionsUrl: 'https://github.com/AjibadeHassan/Job-scanner/actions/workflows/scan.yml',
+        dispatched: false,
+      })
+    }
+
+    // Dispatch the workflow via GitHub API
+    const res = await fetch(
+      'https://api.github.com/repos/AjibadeHassan/Job-scanner/actions/workflows/scan.yml/dispatches',
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${ghToken}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ref: 'main' }),
+      }
+    )
+
+    if (res.ok) {
+      return NextResponse.json({
+        message: 'Scan dispatched! Check GitHub Actions — results will appear in 2-3 minutes.',
+        dispatched: true,
+      })
+    }
+
+    // Token doesn't have workflow scope — fall back to link
     return NextResponse.json({
-      message: 'Scan started in background. Check back in a few minutes.',
-      startedAt: new Date().toISOString(),
+      message: 'Could not dispatch automatically. Trigger scan manually on GitHub.',
+      actionsUrl: 'https://github.com/AjibadeHassan/Job-scanner/actions/workflows/scan.yml',
+      dispatched: false,
     })
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 })

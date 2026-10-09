@@ -74,8 +74,17 @@ export default function Home() {
   const handleScan = async () => {
     try {
       setScanning(true)
-      await fetch('/api/scan', { method: 'POST' })
-      // Poll for results after a delay
+      const res = await fetch('/api/scan', { method: 'POST' })
+      const data = await res.json()
+
+      if (data.actionsUrl && !data.dispatched) {
+        // No token — open GitHub Actions page for manual trigger
+        window.open(data.actionsUrl, '_blank')
+        setScanning(false)
+        return
+      }
+
+      // Scan dispatched — poll for results after 60 seconds
       setTimeout(() => {
         fetch('/api/jobs')
           .then((res) => res.json())
@@ -84,7 +93,7 @@ export default function Home() {
             setScanning(false)
           })
           .catch(() => setScanning(false))
-      }, 15000)
+      }, 60000)
     } catch (err) {
       console.error('Scan failed:', err)
       setScanning(false)
@@ -100,15 +109,17 @@ export default function Home() {
       })
       const result = await res.json()
 
-      if (result.mailtoLink) {
-        window.open(result.mailtoLink, '_self')
-      }
+      // Open the job listing page in a new tab FIRST
       if (result.applyUrl) {
         window.open(result.applyUrl, '_blank')
       }
+
+      // Show the cover letter modal (with copy + email options)
       if (result.coverLetter) {
         setSelectedJob({ ...job, coverLetter: result.coverLetter })
       }
+
+      // Mark as applied
       setAppliedJobs((prev) => new Set(prev).add(job.id))
     } catch (err) {
       console.error('Apply failed:', err)
