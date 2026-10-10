@@ -153,5 +153,47 @@
       "Upwork-Python"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-10T20:28:33.353Z",
+    "totalScraped": 59,
+    "totalNew": 20,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "Freelancer",
+      "Guru",
+      "Crossover",
+      "WeWorkRemotely-DevOps",
+      "PythonJobs",
+      "Upwork-AI",
+      "Remote.co",
+      "Jobicy",
+      "Reddit-ForHire",
+      "Wellfound",
+      "EuropeRemote",
+      "JustRemote"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-10T20:28:33.353Z",
+    "totalScraped": 59,
+    "totalNew": 20,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "Freelancer",
+      "Guru",
+      "Crossover",
+      "WeWorkRemotely-DevOps",
+      "PythonJobs",
+      "Upwork-AI",
+      "Remote.co",
+      "Jobicy",
+      "Reddit-ForHire",
+      "Wellfound",
+      "EuropeRemote",
+      "JustRemote"
+    ],
+    "notified": true
   }
 ]
