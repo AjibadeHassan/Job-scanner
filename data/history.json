@@ -111,5 +111,47 @@
     "totalMatched": 0,
     "sourcesUsed": [],
     "notified": false
+  },
+  {
+    "scanDate": "2026-10-10T16:08:18.795Z",
+    "totalScraped": 317,
+    "totalNew": 55,
+    "totalMatched": 13,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Otta",
+      "Upwork",
+      "DailyRemote",
+      "Upwork-Python"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-10T16:08:18.795Z",
+    "totalScraped": 317,
+    "totalNew": 55,
+    "totalMatched": 13,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Otta",
+      "Upwork",
+      "DailyRemote",
+      "Upwork-Python"
+    ],
+    "notified": true
   }
 ]
