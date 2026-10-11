@@ -266,5 +266,47 @@
       "Upwork"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-11T22:40:23.364Z",
+    "totalScraped": 59,
+    "totalNew": 20,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "Jobicy",
+      "PythonJobs",
+      "Crossover",
+      "WeWorkRemotely-DevOps",
+      "Wellfound",
+      "Guru",
+      "Remote.co",
+      "EuropeRemote",
+      "JustRemote",
+      "Freelancer",
+      "Upwork-AI",
+      "Reddit-ForHire"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-11T22:40:23.364Z",
+    "totalScraped": 59,
+    "totalNew": 20,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "Jobicy",
+      "PythonJobs",
+      "Crossover",
+      "WeWorkRemotely-DevOps",
+      "Wellfound",
+      "Guru",
+      "Remote.co",
+      "EuropeRemote",
+      "JustRemote",
+      "Freelancer",
+      "Upwork-AI",
+      "Reddit-ForHire"
+    ],
+    "notified": true
   }
 ]
