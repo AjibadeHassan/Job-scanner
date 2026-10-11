@@ -195,5 +195,18 @@
       "JustRemote"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-11T00:05:41.700Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [
+      "LandingJobs",
+      "Upwork-Node",
+      "RemotePeople",
+      "Reddit-RemoteJobs"
+    ],
+    "notified": false
   }
 ]
