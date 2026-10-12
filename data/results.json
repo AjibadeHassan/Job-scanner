@@ -1,16 +1,11 @@
 {
-  "scanDate": "2026-10-12T02:03:15.643Z",
+  "scanDate": "2026-10-12T10:14:03.348Z",
   "totalScraped": 0,
   "totalNew": 0,
   "totalMatched": 0,
-  "sourcesUsed": [
-    "RemotePeople",
-    "Reddit-RemoteJobs",
-    "LandingJobs",
-    "Upwork-Node"
-  ],
-  "sourcesSkipped": 24,
+  "sourcesUsed": [],
+  "sourcesSkipped": 28,
   "jobs": [],
   "notified": false,
-  "aiProvider": "groq"
+  "aiProvider": "none"
 }
