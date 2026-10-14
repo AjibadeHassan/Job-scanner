@@ -539,5 +539,31 @@
       "Remote.co"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-14T13:19:20.303Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 6,
+    "sourcesUsed": [
+      "LandingJobs",
+      "JustRemote",
+      "Crossover",
+      "Freelancer"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-14T13:19:20.303Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 6,
+    "sourcesUsed": [
+      "LandingJobs",
+      "JustRemote",
+      "Crossover",
+      "Freelancer"
+    ],
+    "notified": true
   }
 ]
