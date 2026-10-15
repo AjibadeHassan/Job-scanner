@@ -673,5 +673,31 @@
       "Wellfound"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-15T17:36:12.258Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "JustRemote",
+      "LandingJobs",
+      "Freelancer",
+      "Crossover"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-15T17:36:12.258Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "JustRemote",
+      "LandingJobs",
+      "Freelancer",
+      "Crossover"
+    ],
+    "notified": true
   }
 ]
