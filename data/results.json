@@ -1,11 +1,107 @@
 {
-  "scanDate": "2026-10-15T06:57:54.482Z",
-  "totalScraped": 0,
-  "totalNew": 0,
-  "totalMatched": 0,
-  "sourcesUsed": [],
-  "sourcesSkipped": 28,
-  "jobs": [],
-  "notified": false,
-  "aiProvider": "none"
+  "scanDate": "2026-10-15T12:33:35.303Z",
+  "totalScraped": 40,
+  "totalNew": 4,
+  "totalMatched": 4,
+  "sourcesUsed": [
+    "WeWorkRemotely-DevOps",
+    "Reddit-ForHire",
+    "RemotePeople",
+    "Jobicy",
+    "Upwork-Node",
+    "PythonJobs",
+    "EuropeRemote",
+    "Upwork-AI",
+    "Remote.co",
+    "Guru",
+    "Reddit-RemoteJobs",
+    "Wellfound"
+  ],
+  "sourcesSkipped": 16,
+  "jobs": [
+    {
+      "id": "python-0",
+      "title": "Software Engineer - Full Stack",
+      "company": "3Gimbals",
+      "description": "",
+      "url": "https://www.python.org/jobs/8177/",
+      "applyUrl": "https://www.python.org/jobs/8177/",
+      "location": "Remote",
+      "category": "Python",
+      "tags": [
+        "python"
+      ],
+      "postedAt": "2026-10-15T12:33:24.964Z",
+      "source": "PythonJobs",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior-mid",
+      "redFlags": [],
+      "matchMethod": "keyword",
+      "coverLetter": "Dear 3Gimbals Team,\n\nI came across the Software Engineer - Full Stack role at 3Gimbals and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to 3Gimbals. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+    },
+    {
+      "id": "python-1",
+      "title": "Junior Machine Learning Engineer",
+      "company": "HFT Architecture",
+      "description": "",
+      "url": "https://www.python.org/jobs/8176/",
+      "applyUrl": "https://www.python.org/jobs/8176/",
+      "location": "Remote",
+      "category": "Python",
+      "tags": [
+        "python"
+      ],
+      "postedAt": "2026-10-15T12:33:24.964Z",
+      "source": "PythonJobs",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior",
+      "redFlags": [],
+      "matchMethod": "keyword",
+      "coverLetter": "Dear HFT Architecture Team,\n\nI came across the Junior Machine Learning Engineer role at HFT Architecture and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to HFT Architecture. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+    },
+    {
+      "id": "python-2",
+      "title": "Machine Learning Engineer",
+      "company": "HFT Architecture",
+      "description": "",
+      "url": "https://www.python.org/jobs/8175/",
+      "applyUrl": "https://www.python.org/jobs/8175/",
+      "location": "Remote",
+      "category": "Python",
+      "tags": [
+        "python"
+      ],
+      "postedAt": "2026-10-15T12:33:24.964Z",
+      "source": "PythonJobs",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior-mid",
+      "redFlags": [],
+      "matchMethod": "keyword",
+      "coverLetter": "Dear HFT Architecture Team,\n\nI came across the Machine Learning Engineer role at HFT Architecture and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to HFT Architecture. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+    },
+    {
+      "id": "wwr-devops-0",
+      "title": "Customer Solutions Engineer, EMEA",
+      "company": "Abnormal",
+      "description": "",
+      "url": "https://weworkremotely.com/remote-jobs/abnormal-customer-solutions-engineer-emea",
+      "applyUrl": "https://weworkremotely.com/remote-jobs/abnormal-customer-solutions-engineer-emea",
+      "location": "Remote",
+      "category": "General",
+      "tags": [],
+      "postedAt": "2026-10-15T07:31:14.000Z",
+      "source": "WeWorkRemotely-DevOps",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior-mid",
+      "redFlags": [],
+      "matchMethod": "keyword",
+      "coverLetter": "Dear Abnormal Team,\n\nI came across the Customer Solutions Engineer, EMEA role at Abnormal and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Abnormal. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+    }
+  ],
+  "notified": true,
+  "aiProvider": "groq"
 }
