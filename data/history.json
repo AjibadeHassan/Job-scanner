@@ -807,5 +807,31 @@
       "Wellfound"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-16T17:48:40.950Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 3,
+    "sourcesUsed": [
+      "Freelancer",
+      "Crossover",
+      "LandingJobs",
+      "JustRemote"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-16T17:48:40.950Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 3,
+    "sourcesUsed": [
+      "Freelancer",
+      "Crossover",
+      "LandingJobs",
+      "JustRemote"
+    ],
+    "notified": true
   }
 ]
