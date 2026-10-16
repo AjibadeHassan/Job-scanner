@@ -757,5 +757,13 @@
       "Otta"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-16T08:45:04.990Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
