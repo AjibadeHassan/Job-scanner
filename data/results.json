@@ -1,11 +1,65 @@
 {
-  "scanDate": "2026-10-17T12:41:38.930Z",
-  "totalScraped": 0,
-  "totalNew": 0,
-  "totalMatched": 0,
-  "sourcesUsed": [],
-  "sourcesSkipped": 28,
-  "jobs": [],
-  "notified": false,
-  "aiProvider": "none"
+  "scanDate": "2026-10-17T16:08:38.156Z",
+  "totalScraped": 40,
+  "totalNew": 3,
+  "totalMatched": 2,
+  "sourcesUsed": [
+    "EuropeRemote",
+    "RemotePeople",
+    "Reddit-ForHire",
+    "WeWorkRemotely-DevOps",
+    "Upwork-Node",
+    "Guru",
+    "Reddit-RemoteJobs",
+    "Jobicy",
+    "Upwork-AI",
+    "Remote.co",
+    "Wellfound",
+    "PythonJobs"
+  ],
+  "sourcesSkipped": 16,
+  "jobs": [
+    {
+      "id": "python-3",
+      "title": "Python Backend Engineer",
+      "company": "Uvik Software",
+      "description": "",
+      "url": "https://www.python.org/jobs/8174/",
+      "applyUrl": "https://www.python.org/jobs/8174/",
+      "location": "Remote",
+      "category": "Python",
+      "tags": [
+        "python"
+      ],
+      "postedAt": "2026-10-17T16:08:28.124Z",
+      "source": "PythonJobs",
+      "matchScore": 60,
+      "matchReason": "Matches 1 skills: Python",
+      "experienceFit": "junior-mid",
+      "redFlags": [],
+      "matchMethod": "keyword",
+      "coverLetter": "Dear Uvik Software Team,\n\nI came across the Python Backend Engineer role at Uvik Software and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Uvik Software. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+    },
+    {
+      "id": "wwr-devops-11",
+      "title": "Cyber Defense Engineer",
+      "company": "BeyondTrust",
+      "description": "",
+      "url": "https://weworkremotely.com/remote-jobs/beyondtrust-cyber-defense-engineer",
+      "applyUrl": "https://weworkremotely.com/remote-jobs/beyondtrust-cyber-defense-engineer",
+      "location": "Remote",
+      "category": "General",
+      "tags": [],
+      "postedAt": "2026-10-10T07:30:48.000Z",
+      "source": "WeWorkRemotely-DevOps",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior-mid",
+      "redFlags": [],
+      "matchMethod": "keyword",
+      "coverLetter": "Dear BeyondTrust Team,\n\nI came across the Cyber Defense Engineer role at BeyondTrust and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to BeyondTrust. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+    }
+  ],
+  "notified": true,
+  "aiProvider": "groq"
 }
