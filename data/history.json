@@ -1091,5 +1091,31 @@
       "EuropeRemote"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-18T19:13:45.231Z",
+    "totalScraped": 20,
+    "totalNew": 19,
+    "totalMatched": 6,
+    "sourcesUsed": [
+      "Freelancer",
+      "Crossover",
+      "JustRemote",
+      "LandingJobs"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-18T19:13:45.231Z",
+    "totalScraped": 20,
+    "totalNew": 19,
+    "totalMatched": 6,
+    "sourcesUsed": [
+      "Freelancer",
+      "Crossover",
+      "JustRemote",
+      "LandingJobs"
+    ],
+    "notified": true
   }
 ]
