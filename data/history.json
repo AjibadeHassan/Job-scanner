@@ -1049,5 +1049,47 @@
     "totalMatched": 0,
     "sourcesUsed": [],
     "notified": false
+  },
+  {
+    "scanDate": "2026-10-18T16:26:29.583Z",
+    "totalScraped": 40,
+    "totalNew": 4,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "Jobicy",
+      "Reddit-RemoteJobs",
+      "PythonJobs",
+      "Wellfound",
+      "RemotePeople",
+      "Guru",
+      "Upwork-Node",
+      "Remote.co",
+      "Reddit-ForHire",
+      "Upwork-AI",
+      "WeWorkRemotely-DevOps",
+      "EuropeRemote"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-18T16:26:29.583Z",
+    "totalScraped": 40,
+    "totalNew": 4,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "Jobicy",
+      "Reddit-RemoteJobs",
+      "PythonJobs",
+      "Wellfound",
+      "RemotePeople",
+      "Guru",
+      "Upwork-Node",
+      "Remote.co",
+      "Reddit-ForHire",
+      "Upwork-AI",
+      "WeWorkRemotely-DevOps",
+      "EuropeRemote"
+    ],
+    "notified": true
   }
 ]
