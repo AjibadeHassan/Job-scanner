@@ -1183,5 +1183,47 @@
       "Otta"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-19T19:01:05.506Z",
+    "totalScraped": 40,
+    "totalNew": 29,
+    "totalMatched": 20,
+    "sourcesUsed": [
+      "PythonJobs",
+      "WeWorkRemotely-DevOps",
+      "Reddit-ForHire",
+      "Reddit-RemoteJobs",
+      "EuropeRemote",
+      "Upwork-Node",
+      "Upwork-AI",
+      "Wellfound",
+      "Guru",
+      "Jobicy",
+      "Remote.co",
+      "RemotePeople"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-19T19:01:05.506Z",
+    "totalScraped": 40,
+    "totalNew": 29,
+    "totalMatched": 20,
+    "sourcesUsed": [
+      "PythonJobs",
+      "WeWorkRemotely-DevOps",
+      "Reddit-ForHire",
+      "Reddit-RemoteJobs",
+      "EuropeRemote",
+      "Upwork-Node",
+      "Upwork-AI",
+      "Wellfound",
+      "Guru",
+      "Jobicy",
+      "Remote.co",
+      "RemotePeople"
+    ],
+    "notified": true
   }
 ]
