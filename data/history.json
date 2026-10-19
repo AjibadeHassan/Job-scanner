@@ -1225,5 +1225,31 @@
       "RemotePeople"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-19T23:18:12.988Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 5,
+    "sourcesUsed": [
+      "Freelancer",
+      "Crossover",
+      "JustRemote",
+      "LandingJobs"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-19T23:18:12.988Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 5,
+    "sourcesUsed": [
+      "Freelancer",
+      "Crossover",
+      "JustRemote",
+      "LandingJobs"
+    ],
+    "notified": true
   }
 ]
