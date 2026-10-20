@@ -1251,5 +1251,13 @@
       "LandingJobs"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-20T03:26:17.424Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
