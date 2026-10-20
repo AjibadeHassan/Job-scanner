@@ -1,377 +1,5 @@
 [
   {
-    "url": "https://remoteok.com/remote-jobs/remote-associate-data-scientist-algaecal-1137531",
-    "title": "Associate Data Scientist",
-    "company": "AlgaeCal",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-director-of-it-and-workplace-hippocratic-ai-1137530",
-    "title": "Director of IT and Workplace",
-    "company": "Hippocratic AI",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-customer-success-associate-voltus-1137529",
-    "title": "Customer Success Associate",
-    "company": "Voltus",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-account-manager-mid-market-allego-1137528",
-    "title": "Account Manager Mid Market",
-    "company": "Allego",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-senior-software-engineer-ii-applied-ai-wrapbook-1137527",
-    "title": "Senior Software Engineer II Applied AI",
-    "company": "Wrapbook",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-director-us-tax-accounting-35344-manila-recruitment-1137525",
-    "title": "Director US Tax & Accounting #35344",
-    "company": "Manila Recruitment",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-project-and-quality-administrator-work-from-home-dayshift-twoconnect-1137524",
-    "title": "Project and Quality Administrator Work From Home Dayshift",
-    "company": "Twoconnect",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-technical-customer-support-quickmail-1137506",
-    "title": "Technical Customer Support",
-    "company": "QuickMail",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-senior-sales-executive-central-region-simspace-corporation-1137498",
-    "title": "Senior Sales Executive Central Region",
-    "company": "SimSpace Corporation",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-senior-react-full-stack-developer-lemon-io-1137475",
-    "title": "Senior React Full stack Developer",
-    "company": "Lemon.io",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remoteok.com/remote-jobs/remote-product-design-lead-fuel50-1137474",
-    "title": "Product Design Lead",
-    "company": "Fuel50",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remotive.com/remote-jobs/software-development/tech-lead-full-stack-rails-engineer-2069746",
-    "title": "Tech Lead Full-Stack Rails Engineer",
-    "company": "Mitre Media",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495",
-    "title": "Remote Office Assistant",
-    "company": "Coalition Technologies ",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://remotive.com/remote-jobs/sales/inside-sales-contractor-2086540",
-    "title": "Inside Sales Contractor",
-    "company": "Credit Wellness, LLC",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/shiftmove/remote-interim-senior-bi-analyst-all-genders-germany-169194",
-    "title": "Interim Senior BI Analyst (All Genders)",
-    "company": "Shiftmove",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/tracium-gmbh/working-student-ai-engineering-document-intelligence-berlin-357203",
-    "title": "Working Student — AI Engineering & Document Intelligence",
-    "company": "Tracium GmbH",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/tracium-gmbh/full-stack-engineer-ai-authoring-platform-hamburg-483900",
-    "title": "Full-Stack Engineer — AI Authoring Platform",
-    "company": "Tracium GmbH",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/tracium-gmbh/senior-data-engineer-document-ai-pipelines-berlin-415387",
-    "title": "Senior Data Engineer — Document & AI Pipelines",
-    "company": "Tracium GmbH",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/tracium-gmbh/senior-ai-engineer-document-intelligence-berlin-350144",
-    "title": "Senior AI Engineer — Document Intelligence",
-    "company": "Tracium GmbH",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/engagedmd/remote-head-of-urology-232681",
-    "title": "Head of Urology",
-    "company": "Engagedmd",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/camunda/remote-senior-engineering-operations-manager-128137",
-    "title": "Senior Engineering Operations Manager",
-    "company": "Camunda",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/velptec-gmbh/weiterbildung-zum-visual-audio-designer-100-forderbar-berlin-457366",
-    "title": "Weiterbildung zum Visual & Audio Designer (m/w/d) – (100 % förderbar)",
-    "company": "velpTEC GmbH",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/code-gaia/sustainability-account-associate-junior-level-all-genders-berlin-156202",
-    "title": "Sustainability Account Associate - Junior Level (all genders)",
-    "company": "Code Gaia",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.com/jobs/companies/hopkins-rechtsanwaltsgesellschaft-mbh/legal-product-manager-legal-engineer-jurist-in-berlin-124081",
-    "title": "Legal Product Manager | Legal Engineer (Jurist/in) (x/w/m)",
-    "company": "Hopkins Rechtsanwaltsgesellschaft mbH",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.co.uk/jobs/companies/uforce/remote-corporate-development-analyst-53138",
-    "title": "Corporate Development Analyst",
-    "company": "Uforce",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.co.uk/jobs/companies/uforce/remote-vp-fpa-126681",
-    "title": "VP FP&A",
-    "company": "Uforce",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.fr/jobs/companies/gitlab/remote-regional-sales-director-france-141913",
-    "title": "Regional Sales Director - France",
-    "company": "gitlab",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://www.arbeitnow.ch/jobs/companies/tetrascience/remote-senior-scientific-data-engineer-switzerland-5487",
-    "title": "Senior Scientific Data Engineer",
-    "company": "Tetrascience",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/legion-principal-product-manager-agentic-ai",
-    "title": "Principal Product Manager, Agentic AI",
-    "company": "Legion",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/customer-io-mid-market-account-executive-emea",
-    "title": "Mid-Market Account Executive, EMEA",
-    "company": "Customer.io",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/abnormal-area-vice-president-west-south-central",
-    "title": "Area Vice President, West/South Central",
-    "company": "Abnormal",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/beyondtrust-enterprise-account-manager-riyadh-saudi-national",
-    "title": "Enterprise Account Manager - Riyadh",
-    "company": "BeyondTrust",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/celonis-client-director-financial-services",
-    "title": "Client Director - Financial Services",
-    "company": "Celonis",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/customer-io-global-controller",
-    "title": "Global Controller",
-    "company": "Customer.io",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/mixpanel-customer-value-architect-iii-1",
-    "title": "Customer Value Architect III",
-    "company": "Mixpanel",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/legion-enterprise-account-executive-namer",
-    "title": "Enterprise Account Executive - NAMER",
-    "company": "Legion",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/expel-senior-detection-response-engineer",
-    "title": "Senior Detection &amp; Response Engineer",
-    "company": "Expel",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/beyondtrust-enterprise-account-manager-east-region-saudi-national",
-    "title": "Enterprise Account Manager - East Region",
-    "company": "BeyondTrust",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/collibra-senior-account-executive-ii",
-    "title": "Senior Account Executive II",
-    "company": "Collibra",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/expel-senior-account-executive-ny",
-    "title": "Senior Account Executive - NY",
-    "company": "Expel",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/celonis-account-executive-retail",
-    "title": "Account Executive - Retail",
-    "company": "Celonis",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/mixpanel-customer-value-architect-iii",
-    "title": "Customer Value Architect III",
-    "company": "Mixpanel",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/collibra-manager-professional-services",
-    "title": "Manager, Professional Services",
-    "company": "Collibra",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/ucm-practice-growth-systems-70-100k-potential-for-practice-growth-advisor-sales-position-central-or-eastern",
-    "title": "70-100K Potential for Practice Growth Advisor Sales Position",
-    "company": "UCM Practice Growth Systems",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/sanctuary-computer-head-of-technology",
-    "title": "Head of Technology",
-    "company": "Sanctuary Computer",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/pagerduty-senior-solutions-consultant",
-    "title": "Senior Solutions Consultant",
-    "company": "PagerDuty",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/zscaler-account-executive-enterprise-wisconsin",
-    "title": "Account Executive - Enterprise, Wisconsin",
-    "company": "Zscaler",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/pagerduty-senior-director-solutions-consulting",
-    "title": "Senior Director, Solutions Consulting",
-    "company": "PagerDuty",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/maven-clinic-director-marketing-operations",
-    "title": "Director, Marketing Operations",
-    "company": "Maven Clinic",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/clover-health-contract-technical-recruiter",
-    "title": "Contract Technical Recruiter",
-    "company": "Clover Health",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/ebanx-talent-pool-key-account-managment-specialist",
-    "title": "[Talent pool] Key Account Managment Specialist",
-    "company": "EBANX",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/maven-clinic-care-coach",
-    "title": "Care Coach",
-    "company": "Maven Clinic",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/fivetran-global-alliance-lead-capgemini",
-    "title": "Global Alliance Lead, Capgemini",
-    "company": "Fivetran",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/fivetran-enterprise-sales-director",
-    "title": "Enterprise Sales Director",
-    "company": "Fivetran",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/galileo-vp-commercial-sales-employers",
-    "title": "VP, Commercial Sales - Employers",
-    "company": "Galileo",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/doximity-commercial-data-scientist",
-    "title": "Commercial Data Scientist",
-    "company": "Doximity",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/hex-technologies-legal-ops",
-    "title": "Legal Ops",
-    "company": "Hex Technologies",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/lithic-senior-risk-associate",
-    "title": "Senior Risk Associate",
-    "company": "Lithic",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/discord-engineering-manager-machine-learning-safety",
-    "title": "Engineering Manager, Machine Learning",
-    "company": "Discord",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/melio-senior-talent-acquisition-partner-contract",
-    "title": "Senior Talent Acquisition Partner",
-    "company": "Melio",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/typeform-full-stack-developer",
-    "title": "Full Stack Developer",
-    "company": "Typeform",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/jumio-machine-learning-engineer-iv-computer-vision",
-    "title": "Machine Learning Engineer - IV",
-    "company": "Jumio",
-    "firstSeen": "2026-10-17T08:15:36.106Z"
-  },
-  {
     "url": "https://weworkremotely.com/remote-jobs/huntress-sales-development-representative-service-provider",
     "title": "Sales Development Representative - Service Provider",
     "company": "Huntress",
@@ -2410,5 +2038,497 @@
     "title": "<![CDATA[Mechanical Package Engineer]]>",
     "company": "Unknown",
     "firstSeen": "2026-10-19T23:18:12.384Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-senior-software-engineer-sothebys-1137545",
+    "title": "Senior Software Engineer",
+    "company": "Sothebyâs",
+    "firstSeen": "2026-10-20T14:40:01.898Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-senior-backend-engineer-rain-1137544",
+    "title": "Senior Backend Engineer",
+    "company": "Rain",
+    "firstSeen": "2026-10-20T14:40:01.898Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-associate-data-scientist-algaecal-1137531",
+    "title": "Associate Data Scientist",
+    "company": "AlgaeCal",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-director-of-it-and-workplace-hippocratic-ai-1137530",
+    "title": "Director of IT and Workplace",
+    "company": "Hippocratic AI",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-customer-success-associate-voltus-1137529",
+    "title": "Customer Success Associate",
+    "company": "Voltus",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-account-manager-mid-market-allego-1137528",
+    "title": "Account Manager Mid Market",
+    "company": "Allego",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-senior-software-engineer-ii-applied-ai-wrapbook-1137527",
+    "title": "Senior Software Engineer II Applied AI",
+    "company": "Wrapbook",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-director-us-tax-accounting-35344-manila-recruitment-1137525",
+    "title": "Director US Tax & Accounting #35344",
+    "company": "Manila Recruitment",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-project-and-quality-administrator-work-from-home-dayshift-twoconnect-1137524",
+    "title": "Project and Quality Administrator Work From Home Dayshift",
+    "company": "Twoconnect",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-technical-customer-support-quickmail-1137506",
+    "title": "Technical Customer Support",
+    "company": "QuickMail",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-senior-sales-executive-central-region-simspace-corporation-1137498",
+    "title": "Senior Sales Executive Central Region",
+    "company": "SimSpace Corporation",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-senior-react-full-stack-developer-lemon-io-1137475",
+    "title": "Senior React Full stack Developer",
+    "company": "Lemon.io",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs/remote-product-design-lead-fuel50-1137474",
+    "title": "Product Design Lead",
+    "company": "Fuel50",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remoteok.com/remote-jobs",
+    "title": "Sales Development Representative Attributeâ",
+    "company": "DoiT",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remotive.com/remote-jobs/software-development/tech-lead-full-stack-rails-engineer-2069746",
+    "title": "Tech Lead Full-Stack Rails Engineer",
+    "company": "Mitre Media",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495",
+    "title": "Remote Office Assistant",
+    "company": "Coalition Technologies ",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://remotive.com/remote-jobs/sales/inside-sales-contractor-2086540",
+    "title": "Inside Sales Contractor",
+    "company": "Credit Wellness, LLC",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/barz-burodienstleistung/recruiter-headhunter-nur-fur-unser-unternehmen-remote-konz-458655",
+    "title": "Recruiter (m/w/d) - Headhunter (w/m/d) - nur für unser Unternehmen - Remote",
+    "company": "Barz-Bürodienstleistung",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/vexcash-ag/systems-analyst-it-project-manager-as-freelancer-all-genders-berlin-466967",
+    "title": "Systems Analyst/ IT Project Manager as Freelancer (all genders)",
+    "company": "Vexcash AG",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/vexcash-ag/quality-and-assurance-manager-as-freelancer-all-genders-berlin-432924",
+    "title": "Quality and Assurance Manager as Freelancer (all genders)",
+    "company": "Vexcash AG",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/purestorage/remote-account-executive-commercial-455658",
+    "title": "Account Executive, Commercial",
+    "company": "purestorage",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/caspar-health/senior-software-engineer-all-identities-healthcare-integrations-berlin-82856",
+    "title": "Senior Software Engineer (all identities) - Healthcare Integrations",
+    "company": "Caspar Health",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/replug/senior-sales-manager-mobile-performance-advertising-berlin-207173",
+    "title": "Senior Sales Manager – Mobile Performance Advertising",
+    "company": "REPLUG",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/realstudio-gmbh/senior-performance-marketing-manager-berlin-103705",
+    "title": "Senior Performance-Marketing Manager (m/w/d)",
+    "company": "RealStudio GmbH",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/honda-bank-gmbh/dealer-training-and-renewal-performance-lead-berlin-246498",
+    "title": "Dealer Training and Renewal Performance Lead (w/m/d)",
+    "company": "Honda Bank GmbH",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/gitlab/remote-regional-sales-director-142142",
+    "title": "Regional Sales Director",
+    "company": "gitlab",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/ffg-finanzcheck-finanzportale-gmbh/telesales-agent-im-home-office-outbound-berlin-401656",
+    "title": "Telesales Agent (w/m/d) im Home-Office (Outbound)",
+    "company": "FFG FINANZCHECK Finanzportale GmbH",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/ffg-finanzcheck-finanzportale-gmbh/kundenberater-kreditabsicherung-im-homeoffice-berlin-213195",
+    "title": "Kundenberater - Kreditabsicherung im Homeoffice (w/m/d)",
+    "company": "FFG FINANZCHECK Finanzportale GmbH",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/ffg-finanzcheck-finanzportale-gmbh/absicherungsspezialist-kredit-im-homeoffice-berlin-262929",
+    "title": "Absicherungsspezialist - Kredit im Homeoffice (w/m/d)",
+    "company": "FFG FINANZCHECK Finanzportale GmbH",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/ffg-finanzcheck-finanzportale-gmbh/vertriebsmitarbeiter-im-homeoffice-deutschlandweit-berlin-96695",
+    "title": "Vertriebsmitarbeiter im Homeoffice deutschlandweit (w/m/d)",
+    "company": "FFG FINANZCHECK Finanzportale GmbH",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.com/jobs/companies/ffg-finanzcheck-finanzportale-gmbh/sales-manager-im-homeoffice-deutschlandweit-berlin-229940",
+    "title": "Sales Manager im Homeoffice deutschlandweit (w/m/d)",
+    "company": "FFG FINANZCHECK Finanzportale GmbH",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.co.uk/jobs/companies/veeamsoftware/remote-director-commercial-legal-emea-137103",
+    "title": "Director Commercial Legal, EMEA",
+    "company": "veeamsoftware",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.co.uk/jobs/companies/tanium/remote-director-of-strategic-accounts-emerging-enterprise-278857",
+    "title": "Director of Strategic Accounts - Emerging Enterprise",
+    "company": "tanium",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.co.uk/jobs/companies/gitlab/remote-backend-engineer-ruby-create-change-record-484067",
+    "title": "Backend Engineer (Ruby), Create: Change Record",
+    "company": "gitlab",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.fr/jobs/companies/veeamsoftware/remote-senior-sales-engineer-data-ai-security-173217",
+    "title": "Senior Sales Engineer - Data & AI Security",
+    "company": "veeamsoftware",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.fr/jobs/companies/everfield/senior-hr-business-partner-france-paris-446863",
+    "title": "Senior HR Business Partner France",
+    "company": "Everfield",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.fr/jobs/companies/seeq/remote-senior-analytics-engineer-emea-france-234875",
+    "title": "Senior Analytics Engineer - EMEA",
+    "company": "Seeq",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.fr/jobs/companies/pennylane-sas/remote-associate-team-lead-customer-support-t2-423291",
+    "title": "Associate Team Lead - Customer Support (T2)",
+    "company": "Pennylane SAS",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.ch/jobs/companies/adaptyv/community-manager-lausanne-240501",
+    "title": "Community Manager",
+    "company": "Adaptyv",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.ch/jobs/companies/adaptyv/head-of-software-engineering-lausanne-192376",
+    "title": "Head of Software Engineering",
+    "company": "Adaptyv",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.ch/jobs/companies/adaptyv/head-of-finance-lausanne-31971",
+    "title": "Head of Finance",
+    "company": "Adaptyv",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-226881",
+    "title": "Software Test Engineer",
+    "company": "SwissPeak Partners GmbH",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.nl/jobs/companies/dewarmte/remote-hoofdmonteur-warmtepompen-85022",
+    "title": "Hoofdmonteur Warmtepompen",
+    "company": "DeWarmte",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.nl/jobs/companies/dura-vermeer/remote-senior-uitvoerder-kabels-leidingen-railinfra-utrecht-406773",
+    "title": "Senior Uitvoerder kabels & leidingen Railinfra",
+    "company": "Dura Vermeer",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://www.arbeitnow.nl/jobs/companies/deephealth/remote-data-privacy-compliance-specialist-amsterdam-rotterdam-445275",
+    "title": "Data Privacy Compliance Specialist",
+    "company": "DeepHealth",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/lemon-io-growth-manager",
+    "title": "Growth Manager",
+    "company": "Lemon.io",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/vertex-marketing-group-distribution-engineer",
+    "title": "Distribution Engineer",
+    "company": "Vertex Marketing Group",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/datadog-manager-ii-developer-advocacy",
+    "title": "Manager II, Developer Advocacy",
+    "company": "Datadog",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/roblox-director-of-public-policy-uae-middle-east",
+    "title": "Director of Public Policy, UAE/Middle East",
+    "company": "Roblox",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/celonis-client-value-partner-cvp-utilities-energy-industry",
+    "title": "Client Value Partner  - Utilities &amp; Energy Industry",
+    "company": "Celonis",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/carrot-director-information-security",
+    "title": "Director, Information Security",
+    "company": "Carrot",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/roblox-developer-engagement-team-contract",
+    "title": "Developer Engagement Team",
+    "company": "Roblox",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/collibra-senior-customer-engineer-collibra-public-sector",
+    "title": "Senior Customer Engineer - Collibra Public Sector",
+    "company": "Collibra",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/celonis-client-value-partner-cvp-oil-gas-industry",
+    "title": "Client Value Partner  - Oil &amp; Gas Industry",
+    "company": "Celonis",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/carrot-business-intelligence-analyst",
+    "title": "Business Intelligence Analyst",
+    "company": "Carrot",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/lucid-software-na-enterprise-expansion-account-executive-strategic-future-opportunities",
+    "title": "NA Enterprise Expansion Account Executive, Strategic - Future Opportunities",
+    "company": "Lucid Software",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/fastly-threat-detection-analyst-japanese-speaking-desirable",
+    "title": "Threat Detection Analyst",
+    "company": "Fastly",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/samsara-account-executive-commercial",
+    "title": "Account Executive, Commercial",
+    "company": "Samsara",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/collibra-senior-account-executive-ii-financial-services",
+    "title": "Senior Account Executive II, Financial Services",
+    "company": "Collibra",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/reddit-community-manager-dutch-speaking-contract",
+    "title": "Community Manager, Dutch Speaking",
+    "company": "Reddit",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/reddit-analytics-engineer",
+    "title": "Analytics Engineer",
+    "company": "Reddit",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/samsara-account-development-representative-ii",
+    "title": "Account Development Representative II",
+    "company": "Samsara",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/reframe-space-inc-full-cycle-sales-success-manager",
+    "title": "Full-Cycle Sales &amp; Success Manager",
+    "company": "Reframe Space Inc.",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/fixd-automotive-client-success-manager-enterprise-accounts",
+    "title": "Client Success Manager - Enterprise Accounts",
+    "company": "FIXD Automotive",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/social-discovery-group-senior-crm-manager",
+    "title": "Senior CRM Manager",
+    "company": "Social Discovery Group",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/veeva-systems-senior-consultant-crm-data-software",
+    "title": "Senior Consultant - CRM Data Software",
+    "company": "Veeva Systems",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/abbott-clinical-specialist-crm-mobile-al",
+    "title": "Clinical Specialist, CRM - Mobile, AL",
+    "company": "Abbott",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/prodware-group-international-direct-sales-representative",
+    "title": "International Direct Sales Representative",
+    "company": "Prodware Group",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/evolve-peptides-operations-support-specialist",
+    "title": "Operations Support Specialist",
+    "company": "Evolve Peptides",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/podcasthub-podcast-distribution-growth-manager",
+    "title": "Podcast Distribution &amp; Growth Manager",
+    "company": "podcasthub",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/growth-minded-senior-data-engineer",
+    "title": "Senior Data Engineer",
+    "company": "Growth Minded",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/doximity-commercial-data-scientist",
+    "title": "Commercial Data Scientist",
+    "company": "Doximity",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/hex-technologies-legal-ops",
+    "title": "Legal Ops",
+    "company": "Hex Technologies",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/lithic-senior-risk-associate",
+    "title": "Senior Risk Associate",
+    "company": "Lithic",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/discord-engineering-manager-machine-learning-safety",
+    "title": "Engineering Manager, Machine Learning",
+    "company": "Discord",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/mixpanel-customer-value-architect-iii-1",
+    "title": "Customer Value Architect III",
+    "company": "Mixpanel",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/mixpanel-customer-value-architect-iii",
+    "title": "Customer Value Architect III",
+    "company": "Mixpanel",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/sanctuary-computer-head-of-technology",
+    "title": "Head of Technology",
+    "company": "Sanctuary Computer",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/maven-clinic-director-marketing-operations",
+    "title": "Director, Marketing Operations",
+    "company": "Maven Clinic",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/maven-clinic-care-coach",
+    "title": "Care Coach",
+    "company": "Maven Clinic",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/fivetran-global-alliance-lead-capgemini",
+    "title": "Global Alliance Lead, Capgemini",
+    "company": "Fivetran",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/melio-senior-talent-acquisition-partner-contract",
+    "title": "Senior Talent Acquisition Partner",
+    "company": "Melio",
+    "firstSeen": "2026-10-20T14:40:01.899Z"
   }
 ]
