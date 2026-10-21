@@ -1359,5 +1359,31 @@
       "Reddit-ForHire"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-21T01:17:00.971Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "Freelancer",
+      "JustRemote",
+      "Crossover",
+      "LandingJobs"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-21T01:17:00.971Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 4,
+    "sourcesUsed": [
+      "Freelancer",
+      "JustRemote",
+      "Crossover",
+      "LandingJobs"
+    ],
+    "notified": true
   }
 ]
