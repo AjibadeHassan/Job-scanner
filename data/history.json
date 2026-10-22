@@ -1493,5 +1493,31 @@
       "PythonJobs"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-22T07:06:09.611Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 6,
+    "sourcesUsed": [
+      "JustRemote",
+      "LandingJobs",
+      "Freelancer",
+      "Crossover"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-22T07:06:09.611Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 6,
+    "sourcesUsed": [
+      "JustRemote",
+      "LandingJobs",
+      "Freelancer",
+      "Crossover"
+    ],
+    "notified": true
   }
 ]
