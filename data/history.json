@@ -1,39 +1,5 @@
 [
   {
-    "scanDate": "2026-10-10T20:28:33.353Z",
-    "totalScraped": 59,
-    "totalNew": 20,
-    "totalMatched": 4,
-    "sourcesUsed": [
-      "Freelancer",
-      "Guru",
-      "Crossover",
-      "WeWorkRemotely-DevOps",
-      "PythonJobs",
-      "Upwork-AI",
-      "Remote.co",
-      "Jobicy",
-      "Reddit-ForHire",
-      "Wellfound",
-      "EuropeRemote",
-      "JustRemote"
-    ],
-    "notified": true
-  },
-  {
-    "scanDate": "2026-10-11T00:05:41.700Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [
-      "LandingJobs",
-      "Upwork-Node",
-      "RemotePeople",
-      "Reddit-RemoteJobs"
-    ],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-11T06:48:14.849Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1493,5 +1459,47 @@
     "totalMatched": 0,
     "sourcesUsed": [],
     "notified": false
+  },
+  {
+    "scanDate": "2026-10-23T23:49:27.674Z",
+    "totalScraped": 276,
+    "totalNew": 71,
+    "totalMatched": 21,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Otta",
+      "DailyRemote",
+      "Upwork-Python",
+      "Upwork"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-23T23:49:27.674Z",
+    "totalScraped": 276,
+    "totalNew": 71,
+    "totalMatched": 21,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Otta",
+      "DailyRemote",
+      "Upwork-Python",
+      "Upwork"
+    ],
+    "notified": true
   }
 ]
