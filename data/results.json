@@ -1,97 +1,11 @@
 {
-  "scanDate": "2026-10-23T12:31:03.060Z",
-  "totalScraped": 20,
-  "totalNew": 20,
-  "totalMatched": 4,
-  "sourcesUsed": [
-    "LandingJobs",
-    "Crossover",
-    "Freelancer",
-    "JustRemote"
-  ],
-  "sourcesSkipped": 24,
-  "jobs": [
-    {
-      "id": "freelancer-10",
-      "title": "<![CDATA[Modern IT Services Website]]>",
-      "company": "Unknown",
-      "description": "I need a fresh online presence for Spark Nest IT Solutions &amp; Digital Marketing that convincingly showcases everything we do. The site must look tailor-made, load fast on every device, remain secure, and be structured for easy crawling so our SEO efforts start on solid ground... (Budget: $250 - $750 USD, Jobs: CSS, HTML, JavaScript, MySQL, PHP, SEO, Web Development, Website Design)",
-      "url": "https://www.freelancer.com/projects/web-development/Modern-Services-Website.html",
-      "applyUrl": "https://www.freelancer.com/projects/web-development/Modern-Services-Website.html",
-      "location": "Remote",
-      "category": "General",
-      "tags": [],
-      "postedAt": "2026-10-23T12:15:01.000Z",
-      "source": "Freelancer",
-      "matchScore": 90,
-      "matchReason": "Matches 4 skills: JavaScript, MySQL, Git, SEO",
-      "experienceFit": "junior-mid",
-      "redFlags": [],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear Unknown Team,\n\nI came across the <![CDATA[Modern IT Services Website]]> role at Unknown and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Unknown. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    },
-    {
-      "id": "freelancer-2",
-      "title": "<![CDATA[Web Browser Task Automation Script -- 2]]>",
-      "company": "Unknown",
-      "description": "Every day I repeat the exact same sequence of clicks inside a web browser—open a site, sign in, navigate through a couple of pages, download a file, then trigger an upload elsewhere. I want a Python-based solution that takes this chore off my hands by reproducing each step reliably and quickly... (Budget: $15 - $25 USD, Jobs: Automation, JavaScript, JSON, Python, Selenium, Software Architecture, Web Development, Web Scraping)",
-      "url": "https://www.freelancer.com/projects/javascript/Web-Browser-Task-Automation-Script.html",
-      "applyUrl": "https://www.freelancer.com/projects/javascript/Web-Browser-Task-Automation-Script.html",
-      "location": "Remote",
-      "category": "General",
-      "tags": [],
-      "postedAt": "2026-10-23T12:19:39.000Z",
-      "source": "Freelancer",
-      "matchScore": 50,
-      "matchReason": "Matches 2 skills: JavaScript, Python",
-      "experienceFit": "senior",
-      "redFlags": [
-        "Senior role — may require 5+ years"
-      ],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear Unknown Team,\n\nI came across the <![CDATA[Web Browser Task Automation Script -- 2]]> role at Unknown and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Unknown. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    },
-    {
-      "id": "freelancer-7",
-      "title": "<![CDATA[Web Browser Task Automation Script]]>",
-      "company": "Unknown",
-      "description": "Every day I repeat the exact same sequence of clicks inside a web browser—open a site, sign in, navigate through a couple of pages, download a file, then trigger an upload elsewhere. I want a Python-based solution that takes this chore off my hands by reproducing each step reliably and quickly... (Budget: $10 - $30 USD, Jobs: Automation, JavaScript, JSON, Python, Selenium, Software Architecture, Web Development, Web Scraping)",
-      "url": "https://www.freelancer.com/projects/selenium/Web-Browser-Task-Automation-Script.html",
-      "applyUrl": "https://www.freelancer.com/projects/selenium/Web-Browser-Task-Automation-Script.html",
-      "location": "Remote",
-      "category": "General",
-      "tags": [],
-      "postedAt": "2026-10-23T12:17:54.000Z",
-      "source": "Freelancer",
-      "matchScore": 50,
-      "matchReason": "Matches 2 skills: JavaScript, Python",
-      "experienceFit": "senior",
-      "redFlags": [
-        "Senior role — may require 5+ years"
-      ],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear Unknown Team,\n\nI came across the <![CDATA[Web Browser Task Automation Script]]> role at Unknown and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Unknown. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    },
-    {
-      "id": "freelancer-18",
-      "title": "<![CDATA[Rewrite AI Sales SaaS Copy]]>",
-      "company": "Unknown",
-      "description": "Project Title: SaaS Website &amp; In-App Content Rewrite-  I’m looking for an experienced SaaS copywriter to rewrite the website and in-app content for an existing software product undergoing a major repositioning... (Budget: ₹600 - ₹1500 INR, Jobs: Article Writing, B2B Marketing, Content Strategy, Content Writing, Copywriting, Product Descriptions, SaaS, Website Design)",
-      "url": "https://www.freelancer.com/projects/saas/Rewrite-Sales-SaaS-Copy.html",
-      "applyUrl": "https://www.freelancer.com/projects/saas/Rewrite-Sales-SaaS-Copy.html",
-      "location": "Remote",
-      "category": "General",
-      "tags": [],
-      "postedAt": "2026-10-23T11:52:00.000Z",
-      "source": "Freelancer",
-      "matchScore": 50,
-      "matchReason": "Relevant developer role",
-      "experienceFit": "mid",
-      "redFlags": [],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear Unknown Team,\n\nI came across the <![CDATA[Rewrite AI Sales SaaS Copy]]> role at Unknown and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Unknown. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    }
-  ],
-  "notified": true,
-  "aiProvider": "groq"
+  "scanDate": "2026-10-23T17:42:47.912Z",
+  "totalScraped": 0,
+  "totalNew": 0,
+  "totalMatched": 0,
+  "sourcesUsed": [],
+  "sourcesSkipped": 28,
+  "jobs": [],
+  "notified": false,
+  "aiProvider": "none"
 }
