@@ -1,26 +1,5 @@
 [
   {
-    "scanDate": "2026-10-09T18:39:33.485Z",
-    "totalScraped": 57,
-    "totalNew": 52,
-    "totalMatched": 30,
-    "sourcesUsed": [
-      "Remote.co",
-      "Reddit-ForHire",
-      "JustRemote",
-      "Freelancer",
-      "PythonJobs",
-      "Guru",
-      "Crossover",
-      "WeWorkRemotely-DevOps",
-      "EuropeRemote",
-      "Upwork-AI",
-      "Wellfound",
-      "Jobicy"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-10-09T23:01:32.865Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1514,5 +1493,13 @@
       "DailyRemote"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-23T01:12:27.111Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
