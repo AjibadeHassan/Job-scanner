@@ -1,13 +1,5 @@
 [
   {
-    "scanDate": "2026-10-11T06:48:14.849Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-11T13:46:10.758Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1501,5 +1493,13 @@
       "Upwork"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-24T03:19:17.840Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
