@@ -1,13 +1,5 @@
 [
   {
-    "scanDate": "2026-10-14T01:35:52.016Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-14T07:06:24.072Z",
     "totalScraped": 40,
     "totalNew": 4,
@@ -1449,6 +1441,14 @@
   },
   {
     "scanDate": "2026-10-25T21:25:57.360Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-25T23:48:48.622Z",
     "totalScraped": 0,
     "totalNew": 0,
     "totalMatched": 0,
