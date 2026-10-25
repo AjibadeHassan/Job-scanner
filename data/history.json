@@ -18,27 +18,6 @@
       "Reddit-RemoteJobs",
       "Remote.co"
     ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-10-13T02:25:18.194Z",
-    "totalScraped": 40,
-    "totalNew": 34,
-    "totalMatched": 26,
-    "sourcesUsed": [
-      "Guru",
-      "PythonJobs",
-      "Upwork-Node",
-      "WeWorkRemotely-DevOps",
-      "Jobicy",
-      "EuropeRemote",
-      "Wellfound",
-      "Reddit-ForHire",
-      "RemotePeople",
-      "Upwork-AI",
-      "Reddit-RemoteJobs",
-      "Remote.co"
-    ],
     "notified": true
   },
   {
@@ -1480,5 +1459,13 @@
       "Upwork"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-25T05:41:05.020Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
