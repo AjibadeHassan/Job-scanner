@@ -1,26 +1,5 @@
 [
   {
-    "scanDate": "2026-10-13T10:06:14.254Z",
-    "totalScraped": 20,
-    "totalNew": 19,
-    "totalMatched": 5,
-    "sourcesUsed": [
-      "Freelancer",
-      "JustRemote",
-      "Crossover",
-      "LandingJobs"
-    ],
-    "notified": true
-  },
-  {
-    "scanDate": "2026-10-13T17:56:25.856Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-13T22:23:22.407Z",
     "totalScraped": 315,
     "totalNew": 89,
@@ -1473,6 +1452,32 @@
       "Reddit-RemoteJobs",
       "Guru",
       "RemotePeople"
+    ],
+    "notified": true
+  },
+  {
+    "scanDate": "2026-10-25T14:48:30.222Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 7,
+    "sourcesUsed": [
+      "LandingJobs",
+      "JustRemote",
+      "Crossover",
+      "Freelancer"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-25T14:48:30.222Z",
+    "totalScraped": 20,
+    "totalNew": 20,
+    "totalMatched": 7,
+    "sourcesUsed": [
+      "LandingJobs",
+      "JustRemote",
+      "Crossover",
+      "Freelancer"
     ],
     "notified": true
   }
