@@ -1,13 +1,5 @@
 [
   {
-    "scanDate": "2026-10-14T22:02:58.851Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-15T01:12:37.794Z",
     "totalScraped": 287,
     "totalNew": 55,
@@ -1470,5 +1462,18 @@
       "LandingJobs"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-26T21:21:02.691Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [
+      "RemotePeople",
+      "EuropeRemote",
+      "Upwork-Node",
+      "Wellfound"
+    ],
+    "notified": false
   }
 ]
