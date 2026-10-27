@@ -1,18 +1,5 @@
 [
   {
-    "scanDate": "2026-10-15T17:36:12.258Z",
-    "totalScraped": 20,
-    "totalNew": 20,
-    "totalMatched": 4,
-    "sourcesUsed": [
-      "JustRemote",
-      "LandingJobs",
-      "Freelancer",
-      "Crossover"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-10-15T20:56:47.925Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1470,5 +1457,18 @@
       "Freelancer"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-27T23:29:06.784Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [
+      "Upwork-Node",
+      "RemotePeople",
+      "EuropeRemote",
+      "Wellfound"
+    ],
+    "notified": false
   }
 ]
