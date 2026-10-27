@@ -18,27 +18,6 @@
       "Upwork-Python",
       "Upwork"
     ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-10-15T01:12:37.794Z",
-    "totalScraped": 287,
-    "totalNew": 55,
-    "totalMatched": 13,
-    "sourcesUsed": [
-      "RemoteOK",
-      "Remotive",
-      "HackerNews",
-      "Arbeitnow",
-      "WeWorkRemotely",
-      "WeWorkRemotely-Dev",
-      "WeWorkRemotely-Frontend",
-      "WeWorkRemotely-FullStack",
-      "DailyRemote",
-      "Otta",
-      "Upwork-Python",
-      "Upwork"
-    ],
     "notified": true
   },
   {
@@ -1474,6 +1453,14 @@
       "Upwork-Node",
       "Wellfound"
     ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-27T01:08:12.486Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
     "notified": false
   }
 ]
