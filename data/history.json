@@ -1,13 +1,5 @@
 [
   {
-    "scanDate": "2026-10-16T23:14:53.307Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-17T03:01:14.215Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1491,5 +1483,13 @@
       "DailyRemote"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-10-29T21:31:39.324Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
