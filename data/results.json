@@ -1,16 +1,11 @@
 {
-  "scanDate": "2026-10-29T02:05:28.901Z",
+  "scanDate": "2026-10-29T09:20:51.466Z",
   "totalScraped": 0,
   "totalNew": 0,
   "totalMatched": 0,
-  "sourcesUsed": [
-    "EuropeRemote",
-    "RemotePeople",
-    "Upwork-Node",
-    "Wellfound"
-  ],
-  "sourcesSkipped": 24,
+  "sourcesUsed": [],
+  "sourcesSkipped": 28,
   "jobs": [],
   "notified": false,
-  "aiProvider": "groq"
+  "aiProvider": "none"
 }

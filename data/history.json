@@ -10,19 +10,6 @@
       "LandingJobs",
       "JustRemote"
     ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-10-16T17:48:40.950Z",
-    "totalScraped": 20,
-    "totalNew": 20,
-    "totalMatched": 3,
-    "sourcesUsed": [
-      "Freelancer",
-      "Crossover",
-      "LandingJobs",
-      "JustRemote"
-    ],
     "notified": true
   },
   {
@@ -1474,6 +1461,14 @@
       "Upwork-Node",
       "Wellfound"
     ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-29T09:20:51.466Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
     "notified": false
   }
 ]
