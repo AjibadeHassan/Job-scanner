@@ -1,47 +1,5 @@
 [
   {
-    "scanDate": "2026-10-18T08:32:58.615Z",
-    "totalScraped": 297,
-    "totalNew": 75,
-    "totalMatched": 23,
-    "sourcesUsed": [
-      "RemoteOK",
-      "Remotive",
-      "HackerNews",
-      "Arbeitnow",
-      "WeWorkRemotely",
-      "WeWorkRemotely-Dev",
-      "WeWorkRemotely-Frontend",
-      "WeWorkRemotely-FullStack",
-      "DailyRemote",
-      "Otta",
-      "Upwork",
-      "Upwork-Python"
-    ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-10-18T08:32:58.615Z",
-    "totalScraped": 297,
-    "totalNew": 75,
-    "totalMatched": 23,
-    "sourcesUsed": [
-      "RemoteOK",
-      "Remotive",
-      "HackerNews",
-      "Arbeitnow",
-      "WeWorkRemotely",
-      "WeWorkRemotely-Dev",
-      "WeWorkRemotely-Frontend",
-      "WeWorkRemotely-FullStack",
-      "DailyRemote",
-      "Otta",
-      "Upwork",
-      "Upwork-Python"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-10-18T12:58:37.013Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1517,5 +1475,47 @@
     "totalMatched": 0,
     "sourcesUsed": [],
     "notified": false
+  },
+  {
+    "scanDate": "2026-10-31T22:11:42.314Z",
+    "totalScraped": 298,
+    "totalNew": 103,
+    "totalMatched": 30,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Otta",
+      "Upwork",
+      "DailyRemote",
+      "Upwork-Python"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-31T22:11:42.314Z",
+    "totalScraped": 298,
+    "totalNew": 103,
+    "totalMatched": 30,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Otta",
+      "Upwork",
+      "DailyRemote",
+      "Upwork-Python"
+    ],
+    "notified": true
   }
 ]
