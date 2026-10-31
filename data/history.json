@@ -1,13 +1,5 @@
 [
   {
-    "scanDate": "2026-10-18T03:03:26.615Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-18T08:32:58.615Z",
     "totalScraped": 297,
     "totalNew": 75,
@@ -1516,6 +1508,14 @@
       "Wellfound",
       "EuropeRemote"
     ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-10-31T18:10:16.024Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
     "notified": false
   }
 ]
