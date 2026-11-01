@@ -1,151 +1,16 @@
 {
-  "scanDate": "2026-11-01T08:42:37.147Z",
-  "totalScraped": 60,
-  "totalNew": 26,
-  "totalMatched": 6,
+  "scanDate": "2026-11-01T15:45:17.260Z",
+  "totalScraped": 0,
+  "totalNew": 0,
+  "totalMatched": 0,
   "sourcesUsed": [
-    "Guru",
-    "Crossover",
-    "Jobicy",
-    "Reddit-RemoteJobs",
-    "Remote.co",
-    "Upwork-AI",
-    "LandingJobs",
-    "JustRemote",
-    "WeWorkRemotely-DevOps",
-    "Reddit-ForHire",
-    "PythonJobs",
-    "Freelancer"
+    "Wellfound",
+    "EuropeRemote",
+    "RemotePeople",
+    "Upwork-Node"
   ],
-  "sourcesSkipped": 16,
-  "jobs": [
-    {
-      "id": "python-4",
-      "title": "Junior Machine Learning Engineer",
-      "company": "HFT Architecture",
-      "description": "",
-      "url": "https://www.python.org/jobs/8176/",
-      "applyUrl": "https://www.python.org/jobs/8176/",
-      "location": "Remote",
-      "category": "Python",
-      "tags": [
-        "python"
-      ],
-      "postedAt": "2026-11-01T08:42:26.543Z",
-      "source": "PythonJobs",
-      "matchScore": 50,
-      "matchReason": "Relevant developer role",
-      "experienceFit": "junior",
-      "redFlags": [],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear HFT Architecture Team,\n\nI came across the Junior Machine Learning Engineer role at HFT Architecture and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to HFT Architecture. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    },
-    {
-      "id": "python-5",
-      "title": "Machine Learning Engineer",
-      "company": "HFT Architecture",
-      "description": "",
-      "url": "https://www.python.org/jobs/8175/",
-      "applyUrl": "https://www.python.org/jobs/8175/",
-      "location": "Remote",
-      "category": "Python",
-      "tags": [
-        "python"
-      ],
-      "postedAt": "2026-11-01T08:42:26.543Z",
-      "source": "PythonJobs",
-      "matchScore": 50,
-      "matchReason": "Relevant developer role",
-      "experienceFit": "junior-mid",
-      "redFlags": [],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear HFT Architecture Team,\n\nI came across the Machine Learning Engineer role at HFT Architecture and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to HFT Architecture. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    },
-    {
-      "id": "freelancer-19",
-      "title": "<![CDATA[PLC Automation Programming and Panel Design]]>",
-      "company": "Unknown",
-      "description": "We'll guide you to create the perAutomation with the experience in programming development  and commissioning of various PLC s.  Have a experience in Control Panel design , Wiring and Testing.  Have a Experience in Protocols like Modbus, Profinet, Profibus ... (Budget: ₹12500 - ₹37500 INR, Jobs: AutoCAD, Automation, Bill of Materials (BOM) Analysis, Control Systems Engineering (PID / MPC), Electrical Engineering, Electronics, PCB Layout, PLC, Process Automation)",
-      "url": "https://www.freelancer.com/projects/plc/PLC-Automation-Programming-Panel-Design.html",
-      "applyUrl": "https://www.freelancer.com/projects/plc/PLC-Automation-Programming-Panel-Design.html",
-      "location": "Remote",
-      "category": "General",
-      "tags": [],
-      "postedAt": "2026-11-01T07:48:27.000Z",
-      "source": "Freelancer",
-      "matchScore": 50,
-      "matchReason": "Relevant developer role",
-      "experienceFit": "junior-mid",
-      "redFlags": [],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear Unknown Team,\n\nI came across the <![CDATA[PLC Automation Programming and Panel Design]]> role at Unknown and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Unknown. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    },
-    {
-      "id": "wwr-devops-12",
-      "title": "Bilingual Channel Sales Engineer, French",
-      "company": "Keeper Security",
-      "description": "",
-      "url": "https://weworkremotely.com/remote-jobs/keeper-security-bilingual-channel-sales-engineer-french-emea",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/keeper-security-bilingual-channel-sales-engineer-french-emea",
-      "location": "Remote",
-      "category": "General",
-      "tags": [],
-      "postedAt": "2026-10-25T07:30:54.000Z",
-      "source": "WeWorkRemotely-DevOps",
-      "matchScore": 50,
-      "matchReason": "Relevant developer role",
-      "experienceFit": "junior-mid",
-      "redFlags": [],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear Keeper Security Team,\n\nI came across the Bilingual Channel Sales Engineer, French role at Keeper Security and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Keeper Security. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    },
-    {
-      "id": "python-1",
-      "title": "Senior Software Engineer — Python",
-      "company": "React &amp; AI",
-      "description": "",
-      "url": "https://www.python.org/jobs/8181/",
-      "applyUrl": "https://www.python.org/jobs/8181/",
-      "location": "Remote",
-      "category": "Python",
-      "tags": [
-        "python"
-      ],
-      "postedAt": "2026-11-01T08:42:26.543Z",
-      "source": "PythonJobs",
-      "matchScore": 40,
-      "matchReason": "Matches 1 skills: Python",
-      "experienceFit": "senior",
-      "redFlags": [
-        "Senior role — may require 5+ years"
-      ],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear React &amp; AI Team,\n\nI came across the Senior Software Engineer — Python role at React &amp; AI and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to React &amp; AI. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    },
-    {
-      "id": "python-2",
-      "title": "Senior Python Engineer (Barcelona-based / Relocation support to Barcelona)",
-      "company": "Manychat",
-      "description": "",
-      "url": "https://www.python.org/jobs/8180/",
-      "applyUrl": "https://www.python.org/jobs/8180/",
-      "location": "Remote",
-      "category": "Python",
-      "tags": [
-        "python"
-      ],
-      "postedAt": "2026-11-01T08:42:26.543Z",
-      "source": "PythonJobs",
-      "matchScore": 40,
-      "matchReason": "Matches 1 skills: Python",
-      "experienceFit": "senior",
-      "redFlags": [
-        "Senior role — may require 5+ years"
-      ],
-      "matchMethod": "keyword",
-      "coverLetter": "Dear Manychat Team,\n\nI came across the Senior Python Engineer (Barcelona-based / Relocation support to Barcelona) role at Manychat and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Manychat. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
-    }
-  ],
-  "notified": true,
+  "sourcesSkipped": 24,
+  "jobs": [],
+  "notified": false,
   "aiProvider": "groq"
 }
