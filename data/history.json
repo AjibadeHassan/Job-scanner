@@ -1,31 +1,5 @@
 [
   {
-    "scanDate": "2026-10-19T23:18:12.988Z",
-    "totalScraped": 20,
-    "totalNew": 20,
-    "totalMatched": 5,
-    "sourcesUsed": [
-      "Freelancer",
-      "Crossover",
-      "JustRemote",
-      "LandingJobs"
-    ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-10-19T23:18:12.988Z",
-    "totalScraped": 20,
-    "totalNew": 20,
-    "totalMatched": 5,
-    "sourcesUsed": [
-      "Freelancer",
-      "Crossover",
-      "JustRemote",
-      "LandingJobs"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-10-20T03:26:17.424Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1536,6 +1510,32 @@
       "LandingJobs",
       "Guru",
       "Upwork"
+    ],
+    "notified": true
+  },
+  {
+    "scanDate": "2026-11-03T07:33:51.635Z",
+    "totalScraped": 20,
+    "totalNew": 17,
+    "totalMatched": 7,
+    "sourcesUsed": [
+      "DailyRemote",
+      "Upwork-Python",
+      "EuropeRemote",
+      "WeWorkRemotely-DevOps"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-11-03T07:33:51.635Z",
+    "totalScraped": 20,
+    "totalNew": 17,
+    "totalMatched": 7,
+    "sourcesUsed": [
+      "DailyRemote",
+      "Upwork-Python",
+      "EuropeRemote",
+      "WeWorkRemotely-DevOps"
     ],
     "notified": true
   }
