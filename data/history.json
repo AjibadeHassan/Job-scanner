@@ -18,27 +18,6 @@
       "WeWorkRemotely-DevOps",
       "Reddit-ForHire"
     ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-10-20T22:06:32.316Z",
-    "totalScraped": 40,
-    "totalNew": 5,
-    "totalMatched": 2,
-    "sourcesUsed": [
-      "Guru",
-      "Reddit-RemoteJobs",
-      "Upwork-Node",
-      "Wellfound",
-      "RemotePeople",
-      "Upwork-AI",
-      "Jobicy",
-      "EuropeRemote",
-      "Remote.co",
-      "PythonJobs",
-      "WeWorkRemotely-DevOps",
-      "Reddit-ForHire"
-    ],
     "notified": true
   },
   {
@@ -1564,5 +1543,18 @@
       "Otta"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-04T08:37:10.242Z",
+    "totalScraped": 20,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [
+      "Upwork-Python",
+      "WeWorkRemotely-DevOps",
+      "EuropeRemote",
+      "DailyRemote"
+    ],
+    "notified": false
   }
 ]
