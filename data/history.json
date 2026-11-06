@@ -1,21 +1,5 @@
 [
   {
-    "scanDate": "2026-10-22T13:27:09.756Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-10-22T18:17:32.612Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-22T22:05:44.545Z",
     "totalScraped": 290,
     "totalNew": 149,
@@ -1583,6 +1567,32 @@
       "Otta",
       "Upwork",
       "Guru"
+    ],
+    "notified": true
+  },
+  {
+    "scanDate": "2026-11-06T15:39:35.772Z",
+    "totalScraped": 20,
+    "totalNew": 18,
+    "totalMatched": 7,
+    "sourcesUsed": [
+      "WeWorkRemotely-DevOps",
+      "DailyRemote",
+      "EuropeRemote",
+      "Upwork-Python"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-11-06T15:39:35.772Z",
+    "totalScraped": 20,
+    "totalNew": 18,
+    "totalMatched": 7,
+    "sourcesUsed": [
+      "WeWorkRemotely-DevOps",
+      "DailyRemote",
+      "EuropeRemote",
+      "Upwork-Python"
     ],
     "notified": true
   }
