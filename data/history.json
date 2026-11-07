@@ -1,18 +1,5 @@
 [
   {
-    "scanDate": "2026-10-23T12:31:03.060Z",
-    "totalScraped": 20,
-    "totalNew": 20,
-    "totalMatched": 4,
-    "sourcesUsed": [
-      "LandingJobs",
-      "Crossover",
-      "Freelancer",
-      "JustRemote"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-10-23T17:42:47.912Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1589,6 +1576,19 @@
     "totalNew": 0,
     "totalMatched": 0,
     "sourcesUsed": [],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-11-07T19:52:31.030Z",
+    "totalScraped": 20,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [
+      "WeWorkRemotely-DevOps",
+      "EuropeRemote",
+      "Upwork-Python",
+      "DailyRemote"
+    ],
     "notified": false
   }
 ]
