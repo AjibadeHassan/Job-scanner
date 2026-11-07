@@ -10,19 +10,6 @@
       "Freelancer",
       "JustRemote"
     ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-10-23T12:31:03.060Z",
-    "totalScraped": 20,
-    "totalNew": 20,
-    "totalMatched": 4,
-    "sourcesUsed": [
-      "LandingJobs",
-      "Crossover",
-      "Freelancer",
-      "JustRemote"
-    ],
     "notified": true
   },
   {
@@ -1595,5 +1582,13 @@
       "Upwork"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-07T15:24:42.094Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
