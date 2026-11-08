@@ -18,27 +18,6 @@
       "PythonJobs",
       "Guru"
     ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-10-24T08:39:34.748Z",
-    "totalScraped": 40,
-    "totalNew": 7,
-    "totalMatched": 5,
-    "sourcesUsed": [
-      "Remote.co",
-      "Wellfound",
-      "Reddit-ForHire",
-      "Upwork-Node",
-      "Jobicy",
-      "Reddit-RemoteJobs",
-      "Upwork-AI",
-      "RemotePeople",
-      "EuropeRemote",
-      "WeWorkRemotely-DevOps",
-      "PythonJobs",
-      "Guru"
-    ],
     "notified": true
   },
   {
@@ -1616,5 +1595,13 @@
       "Guru"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-08T17:37:12.543Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
