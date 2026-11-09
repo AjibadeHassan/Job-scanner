@@ -1,18 +1,5 @@
 [
   {
-    "scanDate": "2026-10-24T13:06:45.419Z",
-    "totalScraped": 20,
-    "totalNew": 20,
-    "totalMatched": 6,
-    "sourcesUsed": [
-      "Freelancer",
-      "LandingJobs",
-      "Crossover",
-      "JustRemote"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-10-24T17:12:42.462Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1595,5 +1582,13 @@
       "Upwork-Python"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-09T01:25:21.503Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
