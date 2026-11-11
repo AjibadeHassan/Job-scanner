@@ -1,13 +1,5 @@
 [
   {
-    "scanDate": "2026-10-25T21:25:57.360Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-25T23:48:48.622Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1642,5 +1634,18 @@
       "Otta"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-11T07:41:16.404Z",
+    "totalScraped": 20,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [
+      "Upwork-Python",
+      "EuropeRemote",
+      "DailyRemote",
+      "WeWorkRemotely-DevOps"
+    ],
+    "notified": false
   }
 ]
