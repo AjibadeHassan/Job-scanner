@@ -1,18 +1,5 @@
 [
   {
-    "scanDate": "2026-10-29T02:05:28.901Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [
-      "EuropeRemote",
-      "RemotePeople",
-      "Upwork-Node",
-      "Wellfound"
-    ],
-    "notified": false
-  },
-  {
     "scanDate": "2026-10-29T09:20:51.466Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1661,6 +1648,14 @@
       "EuropeRemote",
       "DailyRemote"
     ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-11-14T21:58:19.661Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
     "notified": false
   }
 ]
