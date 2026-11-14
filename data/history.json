@@ -1,26 +1,5 @@
 [
   {
-    "scanDate": "2026-10-28T10:58:02.020Z",
-    "totalScraped": 282,
-    "totalNew": 94,
-    "totalMatched": 21,
-    "sourcesUsed": [
-      "RemoteOK",
-      "Remotive",
-      "HackerNews",
-      "Arbeitnow",
-      "WeWorkRemotely",
-      "WeWorkRemotely-Dev",
-      "WeWorkRemotely-Frontend",
-      "WeWorkRemotely-FullStack",
-      "Upwork",
-      "Otta",
-      "Upwork-Python",
-      "DailyRemote"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-10-28T17:03:53.207Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1670,5 +1649,13 @@
       "Reddit-RemoteJobs"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-14T04:57:19.127Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
