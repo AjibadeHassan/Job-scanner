@@ -1,26 +1,5 @@
 [
   {
-    "scanDate": "2026-10-29T16:35:25.929Z",
-    "totalScraped": 290,
-    "totalNew": 136,
-    "totalMatched": 30,
-    "sourcesUsed": [
-      "RemoteOK",
-      "Remotive",
-      "HackerNews",
-      "Arbeitnow",
-      "WeWorkRemotely",
-      "WeWorkRemotely-Dev",
-      "WeWorkRemotely-Frontend",
-      "WeWorkRemotely-FullStack",
-      "Upwork",
-      "Upwork-Python",
-      "Otta",
-      "DailyRemote"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-10-29T21:31:39.324Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1670,5 +1649,13 @@
       "Wellfound"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-15T08:49:29.728Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
