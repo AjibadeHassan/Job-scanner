@@ -18,27 +18,6 @@
       "PythonJobs",
       "Freelancer"
     ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-11-01T08:42:37.147Z",
-    "totalScraped": 60,
-    "totalNew": 26,
-    "totalMatched": 6,
-    "sourcesUsed": [
-      "Guru",
-      "Crossover",
-      "Jobicy",
-      "Reddit-RemoteJobs",
-      "Remote.co",
-      "Upwork-AI",
-      "LandingJobs",
-      "JustRemote",
-      "WeWorkRemotely-DevOps",
-      "Reddit-ForHire",
-      "PythonJobs",
-      "Freelancer"
-    ],
     "notified": true
   },
   {
@@ -1693,5 +1672,13 @@
       "LandingJobs"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-18T02:43:50.448Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
