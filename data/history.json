@@ -18,27 +18,6 @@
       "Freelancer",
       "Crossover"
     ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-11-03T21:29:17.887Z",
-    "totalScraped": 40,
-    "totalNew": 23,
-    "totalMatched": 7,
-    "sourcesUsed": [
-      "Upwork-Node",
-      "JustRemote",
-      "Jobicy",
-      "Upwork-AI",
-      "PythonJobs",
-      "Reddit-RemoteJobs",
-      "Wellfound",
-      "Remote.co",
-      "RemotePeople",
-      "Reddit-ForHire",
-      "Freelancer",
-      "Crossover"
-    ],
     "notified": true
   },
   {
@@ -1698,5 +1677,13 @@
       "Upwork"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-20T18:18:45.892Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
