@@ -1,34 +1,34 @@
 {
   "RemoteOK": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
-    "jobsFound": 97
+    "lastScraped": "2026-11-21T16:04:00.458Z",
+    "jobsFound": 100
   },
   "Remotive": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
-    "jobsFound": 15
+    "lastScraped": "2026-11-21T16:04:00.458Z",
+    "jobsFound": 16
   },
   "HackerNews": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
+    "lastScraped": "2026-11-21T16:04:00.458Z",
     "jobsFound": 40
   },
   "Arbeitnow": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
-    "jobsFound": 30
+    "lastScraped": "2026-11-21T16:04:00.458Z",
+    "jobsFound": 17
   },
   "WeWorkRemotely": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
+    "lastScraped": "2026-11-21T16:04:00.458Z",
     "jobsFound": 50
   },
   "WeWorkRemotely-Dev": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
+    "lastScraped": "2026-11-21T16:04:00.458Z",
     "jobsFound": 25
   },
   "WeWorkRemotely-Frontend": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
-    "jobsFound": 10
+    "lastScraped": "2026-11-21T16:04:00.458Z",
+    "jobsFound": 13
   },
   "WeWorkRemotely-FullStack": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
+    "lastScraped": "2026-11-21T16:04:00.458Z",
     "jobsFound": 30
   },
   "Upwork-Python": {
@@ -40,11 +40,11 @@
     "jobsFound": 0
   },
   "Upwork": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
+    "lastScraped": "2026-11-21T16:04:00.458Z",
     "jobsFound": 0
   },
   "Otta": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
+    "lastScraped": "2026-11-21T16:04:00.458Z",
     "jobsFound": 0
   },
   "Remote.co": {
@@ -68,7 +68,7 @@
     "jobsFound": 20
   },
   "Guru": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
+    "lastScraped": "2026-11-21T16:04:00.458Z",
     "jobsFound": 0
   },
   "Crossover": {
@@ -96,7 +96,7 @@
     "jobsFound": 0
   },
   "LandingJobs": {
-    "lastScraped": "2026-11-20T09:40:42.426Z",
+    "lastScraped": "2026-11-21T16:04:00.458Z",
     "jobsFound": 0
   },
   "RemotePeople": {
