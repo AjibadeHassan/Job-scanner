@@ -1,11 +1,36 @@
 {
-  "scanDate": "2026-11-20T18:18:45.892Z",
-  "totalScraped": 0,
-  "totalNew": 0,
-  "totalMatched": 0,
-  "sourcesUsed": [],
-  "sourcesSkipped": 28,
-  "jobs": [],
-  "notified": false,
-  "aiProvider": "none"
+  "scanDate": "2026-11-21T00:37:36.386Z",
+  "totalScraped": 20,
+  "totalNew": 6,
+  "totalMatched": 1,
+  "sourcesUsed": [
+    "WeWorkRemotely-DevOps",
+    "EuropeRemote",
+    "Upwork-Python",
+    "DailyRemote"
+  ],
+  "sourcesSkipped": 24,
+  "jobs": [
+    {
+      "id": "wwr-devops-5",
+      "title": "Software Engineer",
+      "company": "Upsun",
+      "description": "",
+      "url": "https://weworkremotely.com/remote-jobs/upsun-software-engineer",
+      "applyUrl": "https://weworkremotely.com/remote-jobs/upsun-software-engineer",
+      "location": "Remote",
+      "category": "General",
+      "tags": [],
+      "postedAt": "2026-11-20T18:30:43.000Z",
+      "source": "WeWorkRemotely-DevOps",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior-mid",
+      "redFlags": [],
+      "matchMethod": "keyword",
+      "coverLetter": "Dear Upsun Team,\n\nI came across the Software Engineer role at Upsun and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Upsun. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+    }
+  ],
+  "notified": true,
+  "aiProvider": "groq"
 }
