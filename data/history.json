@@ -1,26 +1,5 @@
 [
   {
-    "scanDate": "2026-11-06T00:44:26.779Z",
-    "totalScraped": 40,
-    "totalNew": 34,
-    "totalMatched": 20,
-    "sourcesUsed": [
-      "JustRemote",
-      "Reddit-ForHire",
-      "Jobicy",
-      "Wellfound",
-      "Remote.co",
-      "Reddit-RemoteJobs",
-      "RemotePeople",
-      "Crossover",
-      "Upwork-Node",
-      "Freelancer",
-      "PythonJobs",
-      "Upwork-AI"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-11-06T07:39:14.812Z",
     "totalScraped": 286,
     "totalNew": 109,
@@ -1690,5 +1669,13 @@
       "Otta"
     ],
     "notified": true
+  },
+  {
+    "scanDate": "2026-11-22T23:59:02.438Z",
+    "totalScraped": 0,
+    "totalNew": 0,
+    "totalMatched": 0,
+    "sourcesUsed": [],
+    "notified": false
   }
 ]
