@@ -1,11 +1,55 @@
 {
-  "scanDate": "2026-11-22T23:59:02.438Z",
-  "totalScraped": 0,
-  "totalNew": 0,
-  "totalMatched": 0,
-  "sourcesUsed": [],
-  "sourcesSkipped": 28,
-  "jobs": [],
-  "notified": false,
-  "aiProvider": "none"
+  "scanDate": "2026-11-23T07:18:37.916Z",
+  "totalScraped": 20,
+  "totalNew": 12,
+  "totalMatched": 2,
+  "sourcesUsed": [
+    "Upwork-Python",
+    "DailyRemote",
+    "WeWorkRemotely-DevOps",
+    "EuropeRemote"
+  ],
+  "sourcesSkipped": 24,
+  "jobs": [
+    {
+      "id": "wwr-devops-6",
+      "title": "Bilingual Systems Support Engineer, Spanish",
+      "company": "Keeper Security",
+      "description": "",
+      "url": "https://weworkremotely.com/remote-jobs/keeper-security-bilingual-systems-support-engineer-spanish-wednesday-sunday",
+      "applyUrl": "https://weworkremotely.com/remote-jobs/keeper-security-bilingual-systems-support-engineer-spanish-wednesday-sunday",
+      "location": "Remote",
+      "category": "General",
+      "tags": [],
+      "postedAt": "2026-11-22T18:31:39.000Z",
+      "source": "WeWorkRemotely-DevOps",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior-mid",
+      "redFlags": [],
+      "matchMethod": "keyword",
+      "coverLetter": "Dear Keeper Security Team,\n\nI came across the Bilingual Systems Support Engineer, Spanish role at Keeper Security and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Keeper Security. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+    },
+    {
+      "id": "wwr-devops-7",
+      "title": "Regional Manager, Sales Engineering - Key Accounts",
+      "company": "Datadog",
+      "description": "",
+      "url": "https://weworkremotely.com/remote-jobs/datadog-regional-manager-sales-engineering-key-accounts-east",
+      "applyUrl": "https://weworkremotely.com/remote-jobs/datadog-regional-manager-sales-engineering-key-accounts-east",
+      "location": "Remote",
+      "category": "General",
+      "tags": [],
+      "postedAt": "2026-11-22T18:31:25.000Z",
+      "source": "WeWorkRemotely-DevOps",
+      "matchScore": 50,
+      "matchReason": "Relevant developer role",
+      "experienceFit": "junior-mid",
+      "redFlags": [],
+      "matchMethod": "keyword",
+      "coverLetter": "Dear Datadog Team,\n\nI came across the Regional Manager, Sales Engineering - Key Accounts role at Datadog and it immediately caught my attention. The combination of technologies and the remote-first approach aligns perfectly with how I work best — independently, with ownership, and across the full stack.\n\nI'm a full-stack developer based in Lagos, Nigeria, with hands-on experience in React, Next.js, TypeScript, and Node.js. In my recent work, I built Waste-management and Dev-profile — projects that required deep problem-solving and attention to user experience. I thrive in environments where I can contribute to both the frontend and backend, and I'm particularly drawn to roles that involve building real products used by real people.\n\nI'd welcome the chance to discuss how my experience could contribute to Datadog. Thank you for taking the time to review my application.\n\nBest regards,\nAjibade Hassan"
+    }
+  ],
+  "notified": true,
+  "aiProvider": "groq"
 }
