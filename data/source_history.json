@@ -1,34 +1,34 @@
 {
   "RemoteOK": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
+    "lastScraped": "2026-11-26T02:38:22.456Z",
     "jobsFound": 100
   },
   "Remotive": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
-    "jobsFound": 15
+    "lastScraped": "2026-11-26T02:38:22.456Z",
+    "jobsFound": 16
   },
   "HackerNews": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
+    "lastScraped": "2026-11-26T02:38:22.456Z",
     "jobsFound": 40
   },
   "Arbeitnow": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
-    "jobsFound": 19
+    "lastScraped": "2026-11-26T02:38:22.456Z",
+    "jobsFound": 31
   },
   "WeWorkRemotely": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
+    "lastScraped": "2026-11-26T02:38:22.456Z",
     "jobsFound": 50
   },
   "WeWorkRemotely-Dev": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
+    "lastScraped": "2026-11-26T02:38:22.456Z",
     "jobsFound": 25
   },
   "WeWorkRemotely-Frontend": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
-    "jobsFound": 20
+    "lastScraped": "2026-11-26T02:38:22.456Z",
+    "jobsFound": 24
   },
   "WeWorkRemotely-FullStack": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
+    "lastScraped": "2026-11-26T02:38:22.456Z",
     "jobsFound": 30
   },
   "Upwork-Python": {
@@ -52,7 +52,7 @@
     "jobsFound": 0
   },
   "Reddit-ForHire": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
+    "lastScraped": "2026-11-26T02:38:22.456Z",
     "jobsFound": 0
   },
   "JustRemote": {
@@ -72,7 +72,7 @@
     "jobsFound": 0
   },
   "Crossover": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
+    "lastScraped": "2026-11-26T02:38:22.456Z",
     "jobsFound": 0
   },
   "WeWorkRemotely-DevOps": {
@@ -88,7 +88,7 @@
     "jobsFound": 0
   },
   "Wellfound": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
+    "lastScraped": "2026-11-26T02:38:22.456Z",
     "jobsFound": 0
   },
   "Jobicy": {
@@ -100,7 +100,7 @@
     "jobsFound": 0
   },
   "RemotePeople": {
-    "lastScraped": "2026-11-25T00:20:50.250Z",
+    "lastScraped": "2026-11-26T02:38:22.456Z",
     "jobsFound": 0
   },
   "Upwork-Node": {

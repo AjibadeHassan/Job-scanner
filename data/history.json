@@ -1,47 +1,5 @@
 [
   {
-    "scanDate": "2026-11-08T11:46:17.175Z",
-    "totalScraped": 310,
-    "totalNew": 114,
-    "totalMatched": 23,
-    "sourcesUsed": [
-      "RemoteOK",
-      "Remotive",
-      "HackerNews",
-      "Arbeitnow",
-      "WeWorkRemotely",
-      "WeWorkRemotely-Dev",
-      "WeWorkRemotely-Frontend",
-      "WeWorkRemotely-FullStack",
-      "Otta",
-      "LandingJobs",
-      "Upwork",
-      "Guru"
-    ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-11-08T11:46:17.175Z",
-    "totalScraped": 310,
-    "totalNew": 114,
-    "totalMatched": 23,
-    "sourcesUsed": [
-      "RemoteOK",
-      "Remotive",
-      "HackerNews",
-      "Arbeitnow",
-      "WeWorkRemotely",
-      "WeWorkRemotely-Dev",
-      "WeWorkRemotely-Frontend",
-      "WeWorkRemotely-FullStack",
-      "Otta",
-      "LandingJobs",
-      "Upwork",
-      "Guru"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-11-08T17:37:12.543Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1692,5 +1650,47 @@
       "WeWorkRemotely-DevOps"
     ],
     "notified": false
+  },
+  {
+    "scanDate": "2026-11-26T02:38:23.669Z",
+    "totalScraped": 316,
+    "totalNew": 174,
+    "totalMatched": 22,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Wellfound",
+      "RemotePeople",
+      "Crossover",
+      "Reddit-ForHire"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-11-26T02:38:23.669Z",
+    "totalScraped": 316,
+    "totalNew": 174,
+    "totalMatched": 22,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Wellfound",
+      "RemotePeople",
+      "Crossover",
+      "Reddit-ForHire"
+    ],
+    "notified": true
   }
 ]
