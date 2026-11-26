@@ -1,26 +1,5 @@
 [
   {
-    "scanDate": "2026-11-08T21:41:19.645Z",
-    "totalScraped": 20,
-    "totalNew": 2,
-    "totalMatched": 1,
-    "sourcesUsed": [
-      "DailyRemote",
-      "WeWorkRemotely-DevOps",
-      "EuropeRemote",
-      "Upwork-Python"
-    ],
-    "notified": true
-  },
-  {
-    "scanDate": "2026-11-09T01:25:21.503Z",
-    "totalScraped": 0,
-    "totalNew": 0,
-    "totalMatched": 0,
-    "sourcesUsed": [],
-    "notified": false
-  },
-  {
     "scanDate": "2026-11-09T09:06:57.869Z",
     "totalScraped": 40,
     "totalNew": 34,
@@ -1711,6 +1690,32 @@
       "Upwork-AI",
       "PythonJobs",
       "Remote.co"
+    ],
+    "notified": true
+  },
+  {
+    "scanDate": "2026-11-26T20:55:44.680Z",
+    "totalScraped": 20,
+    "totalNew": 15,
+    "totalMatched": 10,
+    "sourcesUsed": [
+      "WeWorkRemotely-DevOps",
+      "Upwork-Python",
+      "DailyRemote",
+      "EuropeRemote"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-11-26T20:55:44.680Z",
+    "totalScraped": 20,
+    "totalNew": 15,
+    "totalMatched": 10,
+    "sourcesUsed": [
+      "WeWorkRemotely-DevOps",
+      "Upwork-Python",
+      "DailyRemote",
+      "EuropeRemote"
     ],
     "notified": true
   }
