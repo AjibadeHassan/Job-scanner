@@ -1,23 +1,5 @@
 [
   {
-    "url": "https://weworkremotely.com/remote-jobs/gemini-staff-platform-security-engineer",
-    "title": "Staff Platform Security Engineer",
-    "company": "Gemini",
-    "firstSeen": "2026-11-24T15:30:50.017Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/gemini-staff-platform-engineer",
-    "title": "Staff Platform Engineer",
-    "company": "Gemini",
-    "firstSeen": "2026-11-24T15:30:50.017Z"
-  },
-  {
-    "url": "https://weworkremotely.com/remote-jobs/upsun-general-accountant-accounts-payable",
-    "title": "General Accountant - Accounts Payable",
-    "company": "Upsun",
-    "firstSeen": "2026-11-24T15:30:50.017Z"
-  },
-  {
     "url": "https://remoteok.com/remote-jobs/remote-senior-manager-enterprise-application-development-engineering-gitlab-1138079",
     "title": "Senior Manager, Enterprise Application Development Engineering",
     "company": "GitLab",
@@ -3514,5 +3496,119 @@
     "title": "Agentic Python Engineer",
     "company": "Evaboot",
     "firstSeen": "2026-11-27T13:29:13.061Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/coder-technologies-inc-senior-platform-engineer",
+    "title": "Senior Platform Engineer",
+    "company": "Coder Technologies Inc.",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/keeper-security-google-cloud-gemini-enterprise-administrator",
+    "title": "Google Cloud &amp; Gemini Enterprise Administrator",
+    "company": "Keeper Security",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/abnormal-director-professional-services",
+    "title": "Director, Professional Services",
+    "company": "Abnormal",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/keeper-security-enterprise-sales-executive-uk",
+    "title": "Enterprise Sales Executive",
+    "company": "Keeper Security",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/6sense-staff-security-engineer-secops-threats",
+    "title": "Staff Security Engineer - SecOps &amp; Threats",
+    "company": "6sense",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/6sense-staff-security-engineer-appsec",
+    "title": "Staff Security Engineer - AppSec",
+    "company": "6sense",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/ping-identity-sales-development-representative-federal-east-coast",
+    "title": "Sales Development Representative- Federal- East Coast",
+    "company": "Ping Identity",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/ping-identity-rvp-channels-alliances-americas",
+    "title": "RVP, Channels &amp; Alliances - Americas",
+    "company": "Ping Identity",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/metamask-noc-engineer",
+    "title": "NOC Engineer",
+    "company": "MetaMask",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/coder-technologies-inc-staff-solutions-engineer-us-east",
+    "title": "Staff Solutions Engineer",
+    "company": "Coder Technologies Inc.",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/snowflake-solution-engineering-manager-expansion",
+    "title": "Solution Engineering Manager",
+    "company": "Snowflake",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/ping-identity-professional-services-engagement-manager",
+    "title": "Professional Services Engagement Manager",
+    "company": "Ping Identity",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/ping-identity-principal-technical-account-manager",
+    "title": "Principal Technical Account Manager",
+    "company": "Ping Identity",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/keeper-security-enterprise-sales-executive-sled",
+    "title": "Enterprise Sales Executive, SLED",
+    "company": "Keeper Security",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/keeper-security-enterprise-sales-executive-emea",
+    "title": "Enterprise Sales Executive, EMEA",
+    "company": "Keeper Security",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/upstart-principal-platform-security-engineer",
+    "title": "Principal Platform Security Engineer",
+    "company": "Upstart",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/fivetran-resident-solution-architect",
+    "title": "Resident Solution Architect",
+    "company": "Fivetran",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/datadog-senior-security-sales-engineer-1",
+    "title": "Senior Security Sales Engineer",
+    "company": "Datadog",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
+  },
+  {
+    "url": "https://weworkremotely.com/remote-jobs/datadog-senior-security-sales-engineer",
+    "title": "Senior Security Sales Engineer",
+    "company": "Datadog",
+    "firstSeen": "2026-11-27T22:28:58.036Z"
   }
 ]
