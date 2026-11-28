@@ -1,47 +1,5 @@
 [
   {
-    "scanDate": "2026-11-10T12:06:22.503Z",
-    "totalScraped": 40,
-    "totalNew": 23,
-    "totalMatched": 7,
-    "sourcesUsed": [
-      "Reddit-ForHire",
-      "Crossover",
-      "PythonJobs",
-      "Freelancer",
-      "Jobicy",
-      "Upwork-AI",
-      "Wellfound",
-      "Upwork-Node",
-      "Remote.co",
-      "JustRemote",
-      "Reddit-RemoteJobs",
-      "RemotePeople"
-    ],
-    "notified": false
-  },
-  {
-    "scanDate": "2026-11-10T12:06:22.503Z",
-    "totalScraped": 40,
-    "totalNew": 23,
-    "totalMatched": 7,
-    "sourcesUsed": [
-      "Reddit-ForHire",
-      "Crossover",
-      "PythonJobs",
-      "Freelancer",
-      "Jobicy",
-      "Upwork-AI",
-      "Wellfound",
-      "Upwork-Node",
-      "Remote.co",
-      "JustRemote",
-      "Reddit-RemoteJobs",
-      "RemotePeople"
-    ],
-    "notified": true
-  },
-  {
     "scanDate": "2026-11-10T20:12:41.857Z",
     "totalScraped": 0,
     "totalNew": 0,
@@ -1716,6 +1674,48 @@
       "DailyRemote",
       "EuropeRemote",
       "WeWorkRemotely-DevOps"
+    ],
+    "notified": true
+  },
+  {
+    "scanDate": "2026-11-28T04:31:11.522Z",
+    "totalScraped": 305,
+    "totalNew": 145,
+    "totalMatched": 21,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Crossover",
+      "Reddit-ForHire",
+      "RemotePeople",
+      "Wellfound"
+    ],
+    "notified": false
+  },
+  {
+    "scanDate": "2026-11-28T04:31:11.522Z",
+    "totalScraped": 305,
+    "totalNew": 145,
+    "totalMatched": 21,
+    "sourcesUsed": [
+      "RemoteOK",
+      "Remotive",
+      "HackerNews",
+      "Arbeitnow",
+      "WeWorkRemotely",
+      "WeWorkRemotely-Dev",
+      "WeWorkRemotely-Frontend",
+      "WeWorkRemotely-FullStack",
+      "Crossover",
+      "Reddit-ForHire",
+      "RemotePeople",
+      "Wellfound"
     ],
     "notified": true
   }
